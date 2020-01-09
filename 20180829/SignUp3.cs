@@ -56,6 +56,8 @@ namespace _20180829
             WbDB.Singleton.AddMember(SignUp.sign_up[0]);
             //DB에 vacation 데이터를 보내는 함수
 
+
+
             WbDB.Singleton.Close();
 
             Login l_form = new Login();

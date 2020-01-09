@@ -20,6 +20,15 @@ namespace _20180829
         //상단바
         bool TagMove;
         int MValX, MValY;
+        public static List<Board> board = new List<Board>();
+        static Label[] label = new Label[5];
+        static Panel[] PanelPage = new Panel[100];
+        static Panel[] PanelLine = new Panel[100];
+        Button btn = new Button();
+
+
+        int X = 0;
+        int Y = 0;
         private void panel3_MouseDown(object sender, MouseEventArgs e)
         {
             TagMove = true;
@@ -103,6 +112,18 @@ namespace _20180829
             a_form.ShowDialog();
             this.Close();
         }
+
+        private void B_board_Load(object sender, EventArgs e)
+        {
+
+            WbDB.Singleton.Open();
+            board = WbDB.Singleton.Write(board);
+           // panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+          
+
+            //SetBoard();
+        }
+
         private void button3_MouseDown(object sender, MouseEventArgs e)
         {
             button3.Image = Properties.Resources.administrator_32px;

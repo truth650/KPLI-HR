@@ -29,8 +29,8 @@ namespace _20180829
         {
             if (conn.State == ConnectionState.Open)
                 throw new Exception("이미 연결된 상태입니다.");
-            conn.ConnectionString = @"Server=192.168.1.242;database=
-                                   server;uid=hoyeong;pwd=1111;";
+            conn.ConnectionString = @"Server=67.231.26.149;database=
+                                   kapli;uid=kapli;pwd=tjd1gh2dud3!;";
 
 
             conn.Open();    //  데이터베이스 연결
@@ -57,7 +57,7 @@ namespace _20180829
 
 
             //=====================================================
-            string comtext = "insert into Member values (@ID,@PW,@F_Name,@L_Name,@Year,@Month,@Day,@Coun_Phone,@Phone,@Addr_1,@Addr_2,@Addr_City" +
+            string comtext = "insert into member values (@ID,@PW,@F_Name,@L_Name,@Year,@Month,@Day,@Coun_Phone,@Phone,@Addr_1,@Addr_2,@Addr_City" +
                ",@Addr_State,@Addr_ZipCode,@Gender,@Department,@Office,@Join_Date,@Position,@SSN,@Authority,@Question,@Answer,@Bank,@Acc_Num,@Rou_Num)";
             SqlCommand command = new SqlCommand(comtext, conn);
 
@@ -171,7 +171,7 @@ namespace _20180829
         #region 회원 정보 초기 로드
         public List<User> Member(List<User> userlist)
         {
-            string comtext = "select * from Member";
+            string comtext = "select * from member";
             SqlCommand command = new SqlCommand(comtext, conn);
 
 
@@ -210,7 +210,7 @@ namespace _20180829
 
 
             //=====================================================
-            string comtext = "insert into Notice values (@Category,@Id,@Title,@Contents,@Contents_Info,@File_Name,@File_Binary,@Time)";
+            string comtext = "insert into notice values (@Category,@Id,@Title,@Contents,@Contents_Info,@File_Name,@File_Binary,@Time)";
             SqlCommand command = new SqlCommand(comtext, conn);
 
 
@@ -255,6 +255,107 @@ namespace _20180829
 
 
         }
+
+        public List<Board> Write(List<Board> boardlist)
+        {
+            string comtext = "select * from notice";
+            SqlCommand command = new SqlCommand(comtext, conn);
+
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                boardlist.Add(new Board(int.Parse(reader["Idx"].ToString()), (reader["Category"].ToString()), (reader["Id"].ToString()),
+                    (reader["Title"].ToString()), (reader["Contents"].ToString()), (reader["Contents_Info"].ToString()),
+                    (reader["File_Name"].ToString()), (byte[])reader["File_Binary"],
+                    (Convert.ToDateTime(reader["Time"].ToString()))));
+
+            }
+
+            reader.Close();
+            command.Dispose();
+            conn.Close();
+
+            return boardlist;
+        }
+        #endregion
+
+
+
+        #region 메모
+
+        public void Memo_S(Memo memo)
+        {
+            if (conn.State == ConnectionState.Closed)
+                throw new Exception("DB 미연결상태");
+
+
+
+            //=====================================================
+            string comtext = "insert into memo values (@Id,@Date,@Contents)";
+            SqlCommand command = new SqlCommand(comtext, conn);
+
+
+            //=====================================================
+
+           
+            SqlParameter param_id = new SqlParameter("@Id", memo.ID);
+            command.Parameters.Add(param_id);
+
+            SqlParameter param_Time = new SqlParameter("@Date",memo.Date);
+            command.Parameters.Add(param_Time);
+
+
+            SqlParameter param_contents = new SqlParameter("@Contents", memo.Content);
+            command.Parameters.Add(param_contents);
+
+
+
+           
+            
+
+
+            //=====================================================
+            if (command.ExecuteNonQuery() != 1)
+                throw new Exception("추가 실패");
+
+
+
+        }
+
+
+        public List<Memo> Memo_L(List<Memo> memolist)
+        {
+                
+            string comtext = "select * from memo";
+            SqlCommand command = new SqlCommand(comtext, conn);
+
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                memolist.Add(new Memo((reader["Id"].ToString()), (Convert.ToDateTime(reader["Date"].ToString())),
+                    (reader["Contents"].ToString())));                   
+                   
+
+            }
+
+            reader.Close();
+            command.Dispose();
+            conn.Close();
+
+            return memolist;
+        }
+
+
+
+        #endregion
+
+
     }
+
+
+
+
 }
-#endregion
+

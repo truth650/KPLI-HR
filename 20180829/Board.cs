@@ -8,7 +8,7 @@ namespace _20180829
 {
    public class Board
     {
-        //private int number;
+        private int idx;
         private string category;
         private string id;
         private string title;
@@ -19,9 +19,9 @@ namespace _20180829
         private DateTime time;
         //private int read_num;
 
-        public Board(string category, string id, string title, string contents, string contents_info, string file_name,byte[] file_binary,DateTime time)
+        public Board(int idx, string category, string id, string title, string contents, string contents_info, string file_name,byte[] file_binary,DateTime time)
         {
-            //this.number = number;
+            this.idx = idx;
             this.category = category;
             this.id = id;
             this.title = title;
@@ -33,7 +33,7 @@ namespace _20180829
             //this.read_num = read_num;
         }
 
-        //public int Number { get { return number; } set { number = value; } }
+        public int Idx { get { return idx; } set { idx = value; } }
         public string Category { get { return category; } set { category = value; } }
         public string Id { get { return id; } set { id = value; } }
         public string Title { get { return title; } set { title = value; } }
