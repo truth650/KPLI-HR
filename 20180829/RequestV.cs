@@ -19,9 +19,7 @@ namespace _20180829
         private string contact;
         private string agent;
         private bool approval; //승인여부
-
-
-
+   
         private string content;
 
         public RequestV(string id, string name, DateTime requestdate, string type, DateTime startvacation,
