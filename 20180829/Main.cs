@@ -143,6 +143,9 @@ namespace _20180829
             this.Close();
             form1.Visible = false;
         }
+
+
+
         private void button3_MouseDown(object sender, MouseEventArgs e)
         {
             button3.Image = Properties.Resources.administrator_32px;
