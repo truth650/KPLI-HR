@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{12D8E680-0E76-4D0B-9D99-08267A8E580D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>_20180829</RootNamespace>
+    <AssemblyName>20180829</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddMemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMemo.Designer.cs">
+      <DependentUpon>AddMemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator.Designer.cs">
+      <DependentUpon>Administrator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Approval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Approval.Designer.cs">
+      <DependentUpon>Approval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Board.cs" />
+    <Compile Include="B_board.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="B_board.designer.cs">
+      <DependentUpon>B_board.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Holiday.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Memo.cs" />
+    <Compile Include="Notice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notice.designer.cs">
+      <DependentUpon>Notice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll.designer.cs">
+      <DependentUpon>Payroll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RequestV.cs" />
+    <Compile Include="RequestVacation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RequestVacation.Designer.cs">
+      <DependentUpon>RequestVacation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Schedule.designer.cs">
+      <DependentUpon>Schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteMem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteMem.Designer.cs">
+      <DependentUpon>DeleteMem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteMem2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteMem2.Designer.cs">
+      <DependentUpon>DeleteMem2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUp2.Designer.cs">
+      <DependentUpon>SignUp2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUp3.Designer.cs">
+      <DependentUpon>SignUp3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Title.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Title.designer.cs">
+      <DependentUpon>Title.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserList.Designer.cs">
+      <DependentUpon>UserList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Correct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Correct.Designer.cs">
+      <DependentUpon>Correct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindMem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindMem.Designer.cs">
+      <DependentUpon>FindMem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CorrectionPW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CorrectionPW.Designer.cs">
+      <DependentUpon>CorrectionPW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="Vacation.cs" />
+    <Compile Include="VacationAdministration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VacationAdministration.Designer.cs">
+      <DependentUpon>VacationAdministration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WbDB.cs" />
+    <EmbeddedResource Include="AddMemo.resx">
+      <DependentUpon>AddMemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrator.resx">
+      <DependentUpon>Administrator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Approval.resx">
+      <DependentUpon>Approval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="B_board.resx">
+      <DependentUpon>B_board.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notice.resx">
+      <DependentUpon>Notice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll.resx">
+      <DependentUpon>Payroll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RequestVacation.resx">
+      <DependentUpon>RequestVacation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule.resx">
+      <DependentUpon>Schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteMem.resx">
+      <DependentUpon>DeleteMem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteMem2.resx">
+      <DependentUpon>DeleteMem2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUp2.resx">
+      <DependentUpon>SignUp2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUp3.resx">
+      <DependentUpon>SignUp3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Title.resx">
+      <DependentUpon>Title.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserList.resx">
+      <DependentUpon>UserList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Correct.resx">
+      <DependentUpon>Correct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindMem.resx">
+      <DependentUpon>FindMem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CorrectionPW.resx">
+      <DependentUpon>CorrectionPW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="VacationAdministration.resx">
+      <DependentUpon>VacationAdministration.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\로고.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\캡처2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\요청사항.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\관리자.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\administrator1_32px.png" />
+    <Content Include="Resources\administrator_32px.png" />
+    <Content Include="Resources\back1_32px.png" />
+    <Content Include="Resources\background_login.png" />
+    <Content Include="Resources\background_login_mid.png" />
+    <Content Include="Resources\back_32px.png" />
+    <Content Include="Resources\bulleted_list1_32px.png" />
+    <Content Include="Resources\bulleted_list_32px.png" />
+    <Content Include="Resources\chat_bubble1_32px.png" />
+    <Content Include="Resources\chat_bubble_32px.png" />
+    <Content Include="Resources\check1_32px.png" />
+    <Content Include="Resources\check_32px.png" />
+    <Content Include="Resources\customer1_32px.png" />
+    <Content Include="Resources\customer_32px.png" />
+    <Content Include="Resources\delete_32px.png" />
+    <Content Include="Resources\front1_32px.png" />
+    <Content Include="Resources\front_32px.png" />
+    <Content Include="Resources\home1_32px.png" />
+    <Content Include="Resources\home_32px.png" />
+    <Content Include="Resources\Logo_background.png" />
+    <Content Include="Resources\logo_kapli.png" />
+    <Content Include="Resources\logo_s_kapli.png" />
+    <Content Include="Resources\minimize_window_32px.png" />
+    <Content Include="Resources\password1_32px.png" />
+    <Content Include="Resources\password_32px.png" />
+    <Content Include="Resources\payroll1_32px.png" />
+    <Content Include="Resources\payroll_32px.png" />
+    <Content Include="Resources\schedule1_32px.png" />
+    <Content Include="Resources\schedule_32px.png" />
+    <Content Include="Resources\secured_letter1_32px.png" />
+    <Content Include="Resources\secured_letter_32px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
