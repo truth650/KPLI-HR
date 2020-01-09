@@ -102,11 +102,19 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
+
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(7, 46);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(240, 39);
+
+            this.label5.Font = new System.Drawing.Font("Noto Sans KR Black", 25F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(6, 34);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(269, 50);
+
             this.label5.TabIndex = 22;
             this.label5.Text = "Bulletin board";
             // 

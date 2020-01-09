@@ -260,14 +260,6 @@ namespace _20180829
                 holidaylist.Add(new Holiday("KOR", "Static", "크리스마스", today.Year, 12, 25, 0, "Solar"));
             }
 
-            if(Login.VacationList.Count == 0)
-            {
-                //8시간당 하루, 4시간은 반차
-                Login.VacationList.Add(new Vacation("truth650", "김영종", 20, 40, 0));
-                Login.VacationList.Add(new Vacation("samjasin", "성호영", 24, 48, 0));
-                Login.VacationList.Add(new Vacation("samjasin", "성호영", 24, 48, 0));
-            }
-
             if (Login.MemoList.Count == 0)
             {
                 //임시, 원래는 프로그램 구동시에 DB에서 가져와 리스트에 담아줌 
@@ -279,10 +271,10 @@ namespace _20180829
             if (Login.RequestVList.Count == 0)
             {
                 //임시, 원래는 프로그램 구동시에 DB에서 가져와 리스트에 담아줌 
-                Login.RequestVList.Add(new RequestV("truth650", "김영종", DateTime.Today, "SickDay", DateTime.Today, DateTime.Today.AddDays(1),
-                    "NewYork", "618-723-1234", "성호영", false));
-                Login.RequestVList.Add(new RequestV("truth650", "김영종", DateTime.Today, "Vacation", DateTime.Today, DateTime.Today.AddDays(1),
-                    "NewYork", "618-723-1234", "성호영", false));
+                //Login.RequestVList.Add(new RequestV("truth650", "김영종", DateTime.Today, "SickDay", DateTime.Today, DateTime.Today.AddDays(1),
+                //    "NewYork", "618-723-1234", "성호영", false));
+                //Login.RequestVList.Add(new RequestV("truth650", "김영종", DateTime.Today, "Vacation", DateTime.Today, DateTime.Today.AddDays(1),
+                //    "NewYork", "618-723-1234", "성호영", false));
             }
         }
 

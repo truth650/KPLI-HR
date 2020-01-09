@@ -35,19 +35,19 @@ namespace _20180829
 
             if (Login.RequestVList.Count == 0)
             {
-                DateTime rq = new DateTime(2020, 1, 9, 9, 12, 3);
-                DateTime dt1 = new DateTime(2020, 1, 10, 9, 0, 0);
-                DateTime dt2 = new DateTime(2020, 1, 10, 14, 0, 0);
-                DateTime dt3 = new DateTime(2020, 1, 11, 14, 0, 0);
-                DateTime dt4 = new DateTime(2020, 1, 12, 18, 0, 0);
+                //DateTime rq = new DateTime(2020, 1, 9, 9, 12, 3);
+                //DateTime dt1 = new DateTime(2020, 1, 10, 9, 0, 0);
+                //DateTime dt2 = new DateTime(2020, 1, 10, 14, 0, 0);
+                //DateTime dt3 = new DateTime(2020, 1, 11, 14, 0, 0);
+                //DateTime dt4 = new DateTime(2020, 1, 12, 18, 0, 0);
 
                 //임시, 원래는 프로그램 구동시에 DB에서 가져와 리스트에 담아줌 
-                Login.RequestVList.Add(new RequestV("truth650", "김영종", rq, "SickDay", dt1, dt2,
-                    "NewYork", "618-723-1234", "이창재", false));
-                Login.RequestVList.Add(new RequestV("truth650", "김영종", rq.AddHours(1), "Vacation", dt1, dt3,
-                    "NewYork", "618-723-1234", "이창재", false));
-                Login.RequestVList.Add(new RequestV("samjasin", "성호영", rq.AddHours(3), "Vacation", dt3, dt4,
-                    "NewYork", "618-723-1234", "이창재", false));
+                //Login.RequestVList.Add(new RequestV("truth650", "김영종", rq, "SickDay", dt1, dt2,
+                //    "NewYork", "618-723-1234", "이창재", false));
+                //Login.RequestVList.Add(new RequestV("truth650", "김영종", rq.AddHours(1), "Vacation", dt1, dt3,
+                //    "NewYork", "618-723-1234", "이창재", false));
+                //Login.RequestVList.Add(new RequestV("samjasin", "성호영", rq.AddHours(3), "Vacation", dt3, dt4,
+                //    "NewYork", "618-723-1234", "이창재", false));
             }
             SetVacationList();
             SetRequestList();
