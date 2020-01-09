@@ -57,7 +57,7 @@ namespace _20180829
             //DB 회원추가
             WbDB.Singleton.AddMember(SignUp.sign_up[0]);
             //DB에 vacation 데이터를 보내는 함수
-            Login.VacationList.Add(new Vacation(SignUp.sign_up[0].Id, (SignUp.sign_up[0].F_Name + " " + SignUp.sign_up[0].F_Name),
+            Login.VacationList.Add(new Vacation(SignUp.sign_up[0].Id, (SignUp.sign_up[0].F_Name + " " + SignUp.sign_up[0].L_NAME),
                                                 SickDay, Vacation, Annual));
 
 

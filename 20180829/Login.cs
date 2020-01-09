@@ -40,7 +40,7 @@ namespace _20180829
         {
             WbDB.Singleton.Open();
             UserList = WbDB.Singleton.Member(UserList);
-            //VacationList =
+            VacationList = WbDB.Singleton.Vacation_L(VacationList);
             WbDB.Singleton.Open();
             MemoList = WbDB.Singleton.Memo_L(MemoList);
             //RequestVList =

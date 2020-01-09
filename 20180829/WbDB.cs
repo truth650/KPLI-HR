@@ -352,10 +352,136 @@ namespace _20180829
         #endregion
 
 
+        #region 휴가 부여
+        public void Vacation_S(Vacation vacation)
+        {
+            if (conn.State == ConnectionState.Closed)
+                throw new Exception("DB 미연결상태");
+
+
+
+            //=====================================================
+            string comtext = "insert into vacation values (@Id,@Name,@Sick_Day,@Year_Vacation,@Annual)";
+            SqlCommand command = new SqlCommand(comtext, conn);
+
+
+            //=====================================================
+
+
+            SqlParameter param_id = new SqlParameter("@Id", vacation.ID);
+            command.Parameters.Add(param_id);
+
+            SqlParameter param_Name = new SqlParameter("@Name", vacation.Name);
+            command.Parameters.Add(param_Name);
+
+
+            SqlParameter param_Sick = new SqlParameter("@Sick_Day", vacation.SickDay);
+            param_Sick.SqlDbType = SqlDbType.Int;
+            command.Parameters.Add(param_Sick);
+            
+            SqlParameter param_Year = new SqlParameter("@Year_Vacation", vacation.YearVacation);
+            param_Year.SqlDbType = SqlDbType.Int;
+            command.Parameters.Add(param_Year);
+
+
+            SqlParameter param_acc_Annual = new SqlParameter("@Annual", vacation.Annual);
+            param_acc_Annual.SqlDbType = SqlDbType.Int;
+            command.Parameters.Add(param_acc_Annual);
+            
+            //=====================================================
+            if (command.ExecuteNonQuery() != 1)
+                throw new Exception("추가 실패");
+
+
+
+        }
+
+
+        public List<Vacation> Vacation_L(List<Vacation> vacationlist)
+        {
+
+            string comtext = "select * from vacation";
+            SqlCommand command = new SqlCommand(comtext, conn);
+
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                vacationlist.Add(new Vacation((reader["Id"].ToString()), (reader["Name"].ToString()),
+                    (int.Parse(reader["Sick_Day"].ToString())), (int.Parse(reader["Year_Vacation"].ToString())),
+                    int.Parse((reader["Annual"].ToString()))));
+
+
+            }
+
+            reader.Close();
+            command.Dispose();
+            conn.Close();
+
+            return vacationlist;
+        }
+
+        #endregion
+
+
+
+        #region 로그인 기능
+
+        public void LogIn(ref User user)
+        {
+            if (conn.State == ConnectionState.Closed)
+                throw new Exception("DB 미연결상태");
+
+            string comtext = "select L_Name from member where id =@ID and pw=@PW";
+            SqlCommand command = new SqlCommand(comtext, conn);
+
+            //=====================================================
+            SqlParameter param_id = new SqlParameter("@ID", user.Id);
+            command.Parameters.Add(param_id);
+            SqlParameter param_pw = new SqlParameter("@PW", user.Pw);
+            command.Parameters.Add(param_pw);
+            //=====================================================
+            user.L_NAME = (string)command.ExecuteScalar();
+            if (user.F_Name == null)
+                throw new Exception("로그인 오류");
+
+            //comtext = "update Member set islogin=1 where id =@ID";
+            //command = new SqlCommand(comtext, conn);
+
+            ////=====================================================
+            //SqlParameter param_id1 = new SqlParameter("@ID", user.Id);
+            //command.Parameters.Add(param_id1);
+
+            ////=====================================================
+            command.ExecuteNonQuery();
+
+
+
+        }
+
+        public void LogOut(string id)
+        {
+            string comtext = "update Member set islogin=0 where id =@ID";
+            SqlCommand command = new SqlCommand(comtext, conn);
+
+            //=====================================================
+            SqlParameter param_id = new SqlParameter("@ID", id);
+            command.Parameters.Add(param_id);
+
+            //=====================================================
+            command.ExecuteNonQuery();
+
+
+        }
+
+        #endregion
     }
-
-
-
-
 }
+
+
+
+   
+
+
+
 
