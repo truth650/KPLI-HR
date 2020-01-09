@@ -52,11 +52,11 @@ namespace _20180829
             listView1.GridLines = true;
 
             //신청자 이름조회
-            for (int i = 0; i < Login.RequestVList.Count; i++)
+            for (int i = 0; i < Login.UserList.Count; i++)
             {
-                if (Login.RequestVList[i].ID == Login.LoginID)
+                if (Login.UserList[i].Id == Login.LoginID)
                 {
-                    name = Login.RequestVList[i].Name;
+                    name = Login.UserList[i].F_Name + " " + Login.UserList[i].L_NAME;
                 }
             }
 

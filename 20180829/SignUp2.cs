@@ -37,9 +37,9 @@ namespace _20180829
             SignUp.sign_up[0].Addr_State = comboBox1.Text;
             SignUp.sign_up[0].Addr_Zip = int.Parse(textBox1.Text);
 
-
+            this.Hide();
             SignUp3 form1 = new SignUp3();
-            form1.Show();
+            form1.ShowDialog();
             this.Close();
         }
 

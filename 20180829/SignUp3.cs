@@ -12,8 +12,9 @@ namespace _20180829
 {
     public partial class SignUp3 : Form
     {
-        //회원가입시 휴가정보를 담기위한 리스트(임시)
-        public static List<Vacation> vacationlist = new List<Vacation>();
+        int SickDay = 0;
+        int Vacation = 0;
+        int Annual = 0;
 
         public SignUp3()
         {
@@ -48,18 +49,22 @@ namespace _20180829
             SignUp.sign_up[0].Routing_Num = int.Parse(textBox5.Text);
             SignUp.sign_up[0].Account_Num = int.Parse(textBox6.Text);
 
-            //휴가 입력
+            //휴가계산
             VacationCalculation();
 
             WbDB.Singleton.Open();
 
+            //DB 회원추가
             WbDB.Singleton.AddMember(SignUp.sign_up[0]);
             //DB에 vacation 데이터를 보내는 함수
+            Login.VacationList.Add(new Vacation(SignUp.sign_up[0].Id, (SignUp.sign_up[0].F_Name + " " + SignUp.sign_up[0].F_Name),
+                                                SickDay, Vacation, Annual));
 
             WbDB.Singleton.Close();
 
+            this.Hide();
             Login l_form = new Login();
-            l_form.Show();
+            l_form.ShowDialog();
             this.Close();
         }
 
@@ -187,21 +192,14 @@ namespace _20180829
         //휴가 계산 함수
         private void VacationCalculation()
         {
-            vacationlist[0].ID = SignUp.sign_up[0].Id;
-            vacationlist[0].Name = SignUp.sign_up[0].F_Name + " " + SignUp.sign_up[0].L_NAME;
-            vacationlist[0].SickDay = 24;
+            int Vacation = 0;
+            int Annual = 0;
+            DateTime join = SignUp.sign_up[0].Join_Date;
+            DateTime today = DateTime.Now.Date;
 
-            if((SignUp.sign_up[0].Join_Date.Year - DateTime.Now.Year) == 0)
-            {
-                vacationlist[0].Annual = 0;
-                vacationlist[0].YearVacation = 40 + (8 * 0);
-            }
-            else
-            {
-                int annual = (SignUp.sign_up[0].Join_Date.Year - DateTime.Now.Year) - 1;
-                vacationlist[0].Annual = annual;
-                vacationlist[0].YearVacation = 40 + (8 * annual);
-            }
+            SickDay = 3;
+            Annual = today.Year - join.Year;
+            Vacation = 5 + Annual; 
         }
     }
 }
