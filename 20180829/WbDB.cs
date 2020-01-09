@@ -29,8 +29,8 @@ namespace _20180829
         {
             if (conn.State == ConnectionState.Open)
                 throw new Exception("이미 연결된 상태입니다.");
-            conn.ConnectionString = @"Server=192.168.1.242;database=
-                                   server;uid=hoyeong;pwd=1111;";
+            conn.ConnectionString = @"Server=67.231.26.149;database=
+                                   kapli;uid=kapli;pwd=tjd1gh2dud3!;";
 
 
             conn.Open();    //  데이터베이스 연결
@@ -57,7 +57,7 @@ namespace _20180829
 
 
             //=====================================================
-            string comtext = "insert into Member values (@ID,@PW,@F_Name,@L_Name,@Year,@Month,@Day,@Coun_Phone,@Phone,@Addr_1,@Addr_2,@Addr_City" +
+            string comtext = "insert into member values (@ID,@PW,@F_Name,@L_Name,@Year,@Month,@Day,@Coun_Phone,@Phone,@Addr_1,@Addr_2,@Addr_City" +
                ",@Addr_State,@Addr_ZipCode,@Gender,@Department,@Office,@Join_Date,@Position,@SSN,@Authority,@Question,@Answer,@Bank,@Acc_Num,@Rou_Num)";
             SqlCommand command = new SqlCommand(comtext, conn);
 
