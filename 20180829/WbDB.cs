@@ -171,7 +171,7 @@ namespace _20180829
         #region 회원 정보 초기 로드
         public List<User> Member(List<User> userlist)
         {
-            string comtext = "select * from Member";
+            string comtext = "select * from member";
             SqlCommand command = new SqlCommand(comtext, conn);
 
 
@@ -210,7 +210,7 @@ namespace _20180829
 
 
             //=====================================================
-            string comtext = "insert into Notice values (@Category,@Id,@Title,@Contents,@Contents_Info,@File_Name,@File_Binary,@Time)";
+            string comtext = "insert into notice values (@Category,@Id,@Title,@Contents,@Contents_Info,@File_Name,@File_Binary,@Time)";
             SqlCommand command = new SqlCommand(comtext, conn);
 
 
@@ -255,6 +255,233 @@ namespace _20180829
 
 
         }
+
+        public List<Board> Write(List<Board> boardlist)
+        {
+            string comtext = "select * from notice";
+            SqlCommand command = new SqlCommand(comtext, conn);
+
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                boardlist.Add(new Board(int.Parse(reader["Idx"].ToString()), (reader["Category"].ToString()), (reader["Id"].ToString()),
+                    (reader["Title"].ToString()), (reader["Contents"].ToString()), (reader["Contents_Info"].ToString()),
+                    (reader["File_Name"].ToString()), (byte[])reader["File_Binary"],
+                    (Convert.ToDateTime(reader["Time"].ToString()))));
+
+            }
+
+            reader.Close();
+            command.Dispose();
+            conn.Close();
+
+            return boardlist;
+        }
+        #endregion
+
+
+
+        #region 메모
+
+        public void Memo_S(Memo memo)
+        {
+            if (conn.State == ConnectionState.Closed)
+                throw new Exception("DB 미연결상태");
+
+
+
+            //=====================================================
+            string comtext = "insert into memo values (@Id,@Date,@Contents)";
+            SqlCommand command = new SqlCommand(comtext, conn);
+
+
+            //=====================================================
+
+           
+            SqlParameter param_id = new SqlParameter("@Id", memo.ID);
+            command.Parameters.Add(param_id);
+
+            SqlParameter param_Time = new SqlParameter("@Date",memo.Date);
+            command.Parameters.Add(param_Time);
+
+
+            SqlParameter param_contents = new SqlParameter("@Contents", memo.Content);
+            command.Parameters.Add(param_contents);
+
+
+
+           
+            
+
+
+            //=====================================================
+            if (command.ExecuteNonQuery() != 1)
+                throw new Exception("추가 실패");
+
+
+
+        }
+
+
+        public List<Memo> Memo_L(List<Memo> memolist)
+        {
+                
+            string comtext = "select * from memo";
+            SqlCommand command = new SqlCommand(comtext, conn);
+
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                memolist.Add(new Memo((reader["Id"].ToString()), (Convert.ToDateTime(reader["Date"].ToString())),
+                    (reader["Contents"].ToString())));                   
+                   
+
+            }
+
+            reader.Close();
+            command.Dispose();
+            conn.Close();
+
+            return memolist;
+        }
+
+
+
+        #endregion
+
+
+        #region 휴가 부여
+        public void Vacation_S(Vacation vacation)
+        {
+            if (conn.State == ConnectionState.Closed)
+                throw new Exception("DB 미연결상태");
+
+
+
+            //=====================================================
+            string comtext = "insert into vacation values (@Id,@Name,@Sick_Day,@Year_Vacation,@Annual)";
+            SqlCommand command = new SqlCommand(comtext, conn);
+
+
+            //=====================================================
+
+
+            SqlParameter param_id = new SqlParameter("@Id", vacation.ID);
+            command.Parameters.Add(param_id);
+
+            SqlParameter param_Name = new SqlParameter("@Name", vacation.Name);
+            command.Parameters.Add(param_Name);
+
+
+            SqlParameter param_Sick = new SqlParameter("@Sick_Day", vacation.SickDay);
+            param_Sick.SqlDbType = SqlDbType.Int;
+            command.Parameters.Add(param_Sick);
+            
+            SqlParameter param_Year = new SqlParameter("@Year_Vacation", vacation.YearVacation);
+            param_Year.SqlDbType = SqlDbType.Int;
+            command.Parameters.Add(param_Year);
+
+
+            SqlParameter param_acc_Annual = new SqlParameter("@Annual", vacation.Annual);
+            param_acc_Annual.SqlDbType = SqlDbType.Int;
+            command.Parameters.Add(param_acc_Annual);
+            
+            //=====================================================
+            if (command.ExecuteNonQuery() != 1)
+                throw new Exception("추가 실패");
+
+
+
+        }
+
+
+        public List<Vacation> Vacation_L(List<Vacation> vacationlist)
+        {
+
+            string comtext = "select * from vacation";
+            SqlCommand command = new SqlCommand(comtext, conn);
+
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                vacationlist.Add(new Vacation((reader["Id"].ToString()), (reader["Name"].ToString()),
+                    (int.Parse(reader["Sick_Day"].ToString())), (int.Parse(reader["Year_Vacation"].ToString())),
+                    int.Parse((reader["Annual"].ToString()))));
+
+
+            }
+
+            reader.Close();
+            command.Dispose();
+            conn.Close();
+
+            return vacationlist;
+        }
+
+        #endregion
+
+
+
+        #region 로그인 기능
+
+        public void LogIn(ref User user)
+        {
+            if (conn.State == ConnectionState.Closed)
+                throw new Exception("DB 미연결상태");
+
+            string comtext = "select L_Name from member where id =@ID and pw=@PW";
+            SqlCommand command = new SqlCommand(comtext, conn);
+
+            //=====================================================
+            SqlParameter param_id = new SqlParameter("@ID", user.Id);
+            command.Parameters.Add(param_id);
+            SqlParameter param_pw = new SqlParameter("@PW", user.Pw);
+            command.Parameters.Add(param_pw);
+            //=====================================================
+            user.L_NAME = (string)command.ExecuteScalar();
+            if (user.F_Name == null)
+                throw new Exception("로그인 오류");
+
+            //comtext = "update Member set islogin=1 where id =@ID";
+            //command = new SqlCommand(comtext, conn);
+
+            ////=====================================================
+            //SqlParameter param_id1 = new SqlParameter("@ID", user.Id);
+            //command.Parameters.Add(param_id1);
+
+            ////=====================================================
+            command.ExecuteNonQuery();
+
+
+
+        }
+
+        public void LogOut(string id)
+        {
+            string comtext = "update Member set islogin=0 where id =@ID";
+            SqlCommand command = new SqlCommand(comtext, conn);
+
+            //=====================================================
+            SqlParameter param_id = new SqlParameter("@ID", id);
+            command.Parameters.Add(param_id);
+
+            //=====================================================
+            command.ExecuteNonQuery();
+
+
+        }
+
+        #endregion
     }
 }
-#endregion
+
+
+
+   
+
+
+
+

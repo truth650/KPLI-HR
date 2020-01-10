@@ -84,6 +84,8 @@ namespace _20180829
                         {
                             //휴가연산
                             Login.VacationList[i].SickDay -= result;
+                            WbDB.Singleton.Vacation_S(Login.VacationList[i]);
+                            Login.VacationList.Clear();
                         }
                         else if (textBox3.Text == "Vacation")
                         {

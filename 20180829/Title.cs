@@ -31,7 +31,7 @@ namespace _20180829
         private void Title_Load(object sender, EventArgs e)
         {
             
-            boards.Add(new Board("notice", "samjasin", "abc", "abc", "a", "abc", FileByte, dateTime));
+            boards.Add(new Board(0,"notice", "samjasin", "abc", "abc", "a", "abc", FileByte, dateTime));
 
         }
 

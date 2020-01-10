@@ -12,7 +12,10 @@ namespace _20180829
 {
     public partial class AddMemo : Form
     {
+        public static List<Memo> memos = new List<Memo>();
         Schedule sd;
+        //메모
+        
         public AddMemo()
         {
             InitializeComponent();
@@ -29,6 +32,8 @@ namespace _20180829
             textBox2.Text = Schedule.ChoseMonth.ToString();
             textBox3.Text = Schedule.ChoseDay.ToString();
             this.ActiveControl = textBox4;
+
+            memos.Add(new Memo("a", DateTime.Now.Date, "a"));
         }
 
         //메모 등록 버튼
@@ -37,7 +42,16 @@ namespace _20180829
             //시간 등록
             DateTime dt = new DateTime(Schedule.ChoseYear, Schedule.ChoseMonth, Schedule.ChoseDay,
                 int.Parse(textBox4.Text), int.Parse(textBox5.Text), 0);
-            Login.MemoList.Add(new Memo(Login.LoginID, dt, textBox6.Text));
+
+            memos[0].ID = Login.LoginID;
+            memos[0].Date = dt;
+            memos[0].Content = textBox6.Text;
+
+
+            WbDB.Singleton.Open();
+             WbDB.Singleton.Memo_S(memos[0]);
+ 
+            WbDB.Singleton.Memo_L(Login.MemoList);
             sd.SetMemoList();
             this.Close();
         }

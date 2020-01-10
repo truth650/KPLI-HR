@@ -18,8 +18,7 @@ namespace _20180829
         public static int LoginIndex = 0;
         //개인정보
         public static List<User> UserList = new List<User>();
-        //메모
-        public static List<Memo> MemoList = new List<Memo>();
+       public static List<Memo> MemoList = new List<Memo>();
         //남은휴가정보
         public static List<Vacation> VacationList = new List<Vacation>();
         //휴가신청정보
@@ -40,10 +39,13 @@ namespace _20180829
         private void Container()
         {
             WbDB.Singleton.Open();
-            //VacationList =
-            //MemoList = 
-            //RequestVList =
             UserList = WbDB.Singleton.Member(UserList);
+            VacationList = WbDB.Singleton.Vacation_L(VacationList);
+            WbDB.Singleton.Open();
+            MemoList = WbDB.Singleton.Memo_L(MemoList);
+            //RequestVList =
+
+
         }
 
         //회원가입 창 열기
