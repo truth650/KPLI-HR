@@ -49,7 +49,7 @@ namespace _20180829
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            this.Close();
         }
         //상단바
 
@@ -170,6 +170,5 @@ namespace _20180829
         }
 
         //이벤트
-
     }
 }
