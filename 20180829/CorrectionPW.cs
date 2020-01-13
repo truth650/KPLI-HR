@@ -34,5 +34,38 @@ namespace _20180829
                 MessageBox.Show("비밀번호가 일치하지 않습니다.");
             }
         }
+        //상단바
+        bool TagMove;
+        int MValX, MValY;
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            TagMove = true;
+            MValX = e.X;
+            MValY = e.Y;
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (TagMove == true)
+            {
+                this.SetDesktopLocation(MousePosition.X - MValX, MousePosition.Y - MValY);
+            }
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            TagMove = false;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        //상단바
     }
 }

@@ -15,6 +15,7 @@ namespace _20180829
         string name = ""; //신청자 이름
         Schedule sd;
         static int result;
+       public static List<RequestV> request = new List<RequestV>();       
 
         public RequestVacation()
         {
@@ -28,7 +29,7 @@ namespace _20180829
 
         private void RequestVacation_Load_1(object sender, EventArgs e)
         {
-            this.ActiveControl = radioButton1;
+            this.ActiveControl = radioButton2;
             textBox1.Text = DateTime.Now.ToString("yyyy-MM-dd");
             SetRequestList();
         }
@@ -66,13 +67,13 @@ namespace _20180829
                 //리스트뷰 업데이트
                 if (Login.LoginID == Login.RequestVList[i].ID)
                 {
-                    string[] arr = new string[9];
-                    arr[0] = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
+                    string[] arr = new string[9];                   
+                    arr[0] = Login.RequestVList[i].RequestDate.ToString("yyyy-MM-dd HH:mm:ss");
                     arr[1] = name;
                     arr[2] = Login.RequestVList[i].Type;
                     arr[3] = Login.RequestVList[i].StartVacation.ToString("yyyy-MM-dd HH");
                     arr[4] = Login.RequestVList[i].EndVacation.ToString("yyyy-MM-dd HH");
-                    arr[5] = Login.RequestVList[i].Destination;
+                    arr[5] = Login.RequestVList[i].Destination; 
                     arr[6] = Login.RequestVList[i].Contact;
                     arr[7] = Login.RequestVList[i].Agent;
                     if (Login.RequestVList[i].Approval == false)
@@ -92,12 +93,12 @@ namespace _20180829
         }
 
         //휴가신청
-        private void button1_Click_1(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            if (comboBox1.Text != null && comboBox2.Text != null && textBox3.Text != null && textBox4.Text != null && textBox6.Text != null)
+            if (comboBox1.Text != null && comboBox2.Text != null && textBox2.Text != null && textBox3.Text != null && textBox6.Text != null)
             {
                 int hour = 0;
-                if(comboBox1.Text == "09:00")
+                if (comboBox1.Text == "09:00")
                 {
                     hour = 9;
                 }
@@ -121,16 +122,30 @@ namespace _20180829
 
                 //사용가능한지 여부 체크
                 Calculator(start, end);
-                for(int i = 0; i < Login.VacationList.Count; i++)
+                for (int i = 0; i < Login.VacationList.Count; i++)
                 {
                     if (Login.VacationList[i].ID == Login.LoginID)
                     {
-                        if (radioButton1.Checked) //병가
+                        if (radioButton2.Checked) //병가
                         {
-                            if(Login.VacationList[i].SickDay >= result)
+                            if (Login.VacationList[i].SickDay >= result)
                             {
-                                Login.RequestVList.Add(new RequestV(Login.LoginID, name, DateTime.Now.Date, "SickDay",
+                                DateTime dt = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, 
+                                    DateTime.Now.Minute, DateTime.Now.Second);
+                                request.Clear();
+                                request.Add(new RequestV(Login.LoginID, name, dt, "SickDay",
                                 start, end, textBox3.Text, textBox4.Text, textBox6.Text, false));
+
+                                WbDB.Singleton.Open();
+                                WbDB.Singleton.Requse_S(request);
+                                Login.RequestVList.Clear();
+                                WbDB.Singleton.Open();
+                                WbDB.Singleton.Requse_L(Login.RequestVList);
+                                SetRequestList();
+
+
+                                Login.RequestVList.Add(new RequestV(Login.LoginID, name, DateTime.Now.Date, "SickDay",
+                                start, end, textBox2.Text, textBox3.Text, textBox6.Text, false));
                             }
                             else
                             {
@@ -138,26 +153,40 @@ namespace _20180829
                             }
 
                         }
-                        else if (radioButton2.Checked) //연가
+                        else if (radioButton1.Checked) //연가
                         {
                             if (Login.VacationList[i].YearVacation >= result)
                             {
-                                Login.RequestVList.Add(new RequestV(Login.LoginID, name, DateTime.Now.Date, "Vacation",
+                                DateTime dt = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour,
+                                    DateTime.Now.Minute, DateTime.Now.Second);
+                                request.Clear();
+                                request.Add(new RequestV(Login.LoginID, name, dt, "Vacation",
                                 start, end, textBox3.Text, textBox4.Text, textBox6.Text, false));
+
+                                WbDB.Singleton.Open();
+                                WbDB.Singleton.Requse_S(request);
+                                Login.RequestVList.Clear();
+                                WbDB.Singleton.Open();
+                                WbDB.Singleton.Requse_L(Login.RequestVList);
+                                SetRequestList();
+                                Login.RequestVList.Add(new RequestV(Login.LoginID, name, DateTime.Now.Date, "Vacation",
+                                start, end, textBox2.Text, textBox3.Text, textBox6.Text, false));
                             }
                             else
                             {
                                 MessageBox.Show("잔여휴가가 부족합니다.");
                             }
                         }
-                        SetRequestList();
+                                            
                     }
+                   
                 }
             }
             else
             {
                 MessageBox.Show("Plese write content");
             }
+
         }
 
         private void Calculator(DateTime start, DateTime end)
@@ -171,7 +200,14 @@ namespace _20180829
             //하루이하 사용
             if (start.Day == end.Day)
             {
-                result = end.Hour - start.Hour;
+                if (end.Hour == 14)
+                {
+                    result = 4;
+                }
+                else
+                {
+                    result = end.Hour - start.Hour;
+                }
             }
             //하루이상 사용
             else
@@ -234,8 +270,11 @@ namespace _20180829
             this.WindowState = FormWindowState.Minimized;
         }
 
+        
+
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+            WbDB.Singleton.Close();
             this.Close();
         }
         //상단바

@@ -130,6 +130,7 @@
             this.button1.TabIndex = 25;
             this.button1.Text = "Logout";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label5
             // 
@@ -207,7 +208,7 @@
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(70)))), ((int)(((byte)(143)))));
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(179)))), ((int)(((byte)(123)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.button3.Font = new System.Drawing.Font("Noto Sans KR Medium", 14.25F, System.Drawing.FontStyle.Bold);
             this.button3.ForeColor = System.Drawing.Color.Black;
             this.button3.Image = global::_20180829.Properties.Resources.administrator1_32px;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -675,9 +676,9 @@
             this.label9.Font = new System.Drawing.Font("Noto Sans KR Medium", 16F, System.Drawing.FontStyle.Bold);
             this.label9.Location = new System.Drawing.Point(168, 554);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(173, 33);
+            this.label9.Size = new System.Drawing.Size(183, 33);
             this.label9.TabIndex = 43;
-            this.label9.Text = "Hoilday Check";
+            this.label9.Text = "Vacation Check";
             // 
             // button7
             // 
@@ -691,9 +692,9 @@
             this.button7.Location = new System.Drawing.Point(738, 652);
             this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(200, 40);
+            this.button7.Size = new System.Drawing.Size(210, 40);
             this.button7.TabIndex = 44;
-            this.button7.Text = "holiday Application";
+            this.button7.Text = "Vacation Application";
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 

@@ -50,9 +50,9 @@ namespace _20180829
 
             WbDB.Singleton.Open();
             WbDB.Singleton.Memo_S(memos[0]);
-
             Login.MemoList.Clear();
             WbDB.Singleton.Memo_L(Login.MemoList);
+            WbDB.Singleton.Close();
             sd.SetMemoList();
             this.Close();
         }

@@ -112,6 +112,7 @@ namespace _20180829
                     sign_up[0].Pw = textBox3.Text;
                     sign_up[0].Question = comboBox6.Text;
                     sign_up[0].Answer = textBox4.Text;
+                    this.Hide();
                     SignUp2 form1 = new SignUp2();
                     form1.ShowDialog();
                     this.Close();

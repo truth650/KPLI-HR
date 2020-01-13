@@ -98,6 +98,7 @@
             this.button1.TabIndex = 25;
             this.button1.Text = "Logout";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label5
             // 
@@ -210,7 +211,6 @@
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
-            this.button6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button6_MouseDown);
             // 
             // button5
             // 
@@ -320,8 +320,13 @@
             this.button7.Location = new System.Drawing.Point(306, 139);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(200, 73);
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Noto Sans KR Regular", 12F);
+            this.button7.Location = new System.Drawing.Point(612, 538);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(316, 49);
             this.button7.TabIndex = 41;
-            this.button7.Text = "휴가관리 및 승인";
+            this.button7.Text = "Holiday manage and approval";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 

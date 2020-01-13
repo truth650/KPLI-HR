@@ -22,33 +22,55 @@ namespace _20180829
             InitializeComponent();
         }
 
+        //상단바
+        bool TagMove;
+        int MValX, MValY;
+        private void panel3_MouseDown(object sender, MouseEventArgs e)
+        {
+            TagMove = true;
+            MValX = e.X;
+            MValY = e.Y;
+        }
+
+        private void panel3_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (TagMove == true)
+            {
+                this.SetDesktopLocation(MousePosition.X - MValX, MousePosition.Y - MValY);
+            }
+        }
+
+        private void panel3_MouseUp(object sender, MouseEventArgs e)
+        {
+            TagMove = false;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        //상단바
 
         private void VacationAdministration_Load(object sender, EventArgs e)
         {
-            if (Login.VacationList.Count == 0)
-            {
-                //8시간당 하루, 4시간은 반차
-                Login.VacationList.Add(new Vacation("truth650", "김영종", 20, 40, 0));
-                Login.VacationList.Add(new Vacation("samjasin", "성호영", 24, 48, 0));
-                Login.VacationList.Add(new Vacation("leechangjae", "이창재", 24, 48, 0));
-            }
+            //if (Login.VacationList.Count == 0)
+            //{
+            //    //8시간당 하루, 4시간은 반차
+            //    Login.VacationList.Add(new Vacation("truth650", "김영종", 20, 40, 0));
+            //    Login.VacationList.Add(new Vacation("samjasin", "성호영", 24, 48, 0));
+            //    Login.VacationList.Add(new Vacation("leechangjae", "이창재", 24, 48, 0));
+            //}
 
-            if (Login.RequestVList.Count == 0)
-            {
-                //DateTime rq = new DateTime(2020, 1, 9, 9, 12, 3);
-                //DateTime dt1 = new DateTime(2020, 1, 10, 9, 0, 0);
-                //DateTime dt2 = new DateTime(2020, 1, 10, 14, 0, 0);
-                //DateTime dt3 = new DateTime(2020, 1, 11, 14, 0, 0);
-                //DateTime dt4 = new DateTime(2020, 1, 12, 18, 0, 0);
+            //if (Login.RequestVList.Count == 0)
+            //{
 
-                //임시, 원래는 프로그램 구동시에 DB에서 가져와 리스트에 담아줌 
-                //Login.RequestVList.Add(new RequestV("truth650", "김영종", rq, "SickDay", dt1, dt2,
-                //    "NewYork", "618-723-1234", "이창재", false));
-                //Login.RequestVList.Add(new RequestV("truth650", "김영종", rq.AddHours(1), "Vacation", dt1, dt3,
-                //    "NewYork", "618-723-1234", "이창재", false));
-                //Login.RequestVList.Add(new RequestV("samjasin", "성호영", rq.AddHours(3), "Vacation", dt3, dt4,
-                //    "NewYork", "618-723-1234", "이창재", false));
-            }
+            //}
+            
             SetVacationList();
             SetRequestList();
         }
@@ -287,8 +309,8 @@ namespace _20180829
           
             }
         }
+
         #endregion
-
-
+       
     }
 }

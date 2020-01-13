@@ -213,6 +213,16 @@ namespace _20180829.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap delete1_32px {
+            get {
+                object obj = ResourceManager.GetObject("delete1_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap front_32px {
             get {
                 object obj = ResourceManager.GetObject("front_32px", resourceCulture);
@@ -286,6 +296,16 @@ namespace _20180829.Properties {
         internal static System.Drawing.Bitmap minimize_window_32px {
             get {
                 object obj = ResourceManager.GetObject("minimize_window_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap minimize_window1_32px {
+            get {
+                object obj = ResourceManager.GetObject("minimize_window1_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

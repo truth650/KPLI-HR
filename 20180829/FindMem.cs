@@ -13,6 +13,8 @@ namespace _20180829
     public partial class FindMem : Form
     {
         public static int SelectedNum = 0;
+        public static List<User> UserList = new List<User>();
+        public static List<Memo> MemoList = new List<Memo>();
 
         public FindMem()
         {
@@ -49,55 +51,9 @@ namespace _20180829
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            this.Close();
         }
         //상단바
-
-        //아이디 찾기
-        //private void Button1_Click(object sender, EventArgs e)
-        //{
-        //    bool findid = false;
-
-        //    for(int i = 0; i < Login.UserList.Count; i++)
-        //    {
-        //        if(Login.UserList[i].Name == textBox1.Text &&
-        //            Login.UserList[i].Age.ToString() == comboBox1.Text &&
-        //            Login.UserList[i].Position == comboBox2.Text)
-        //        {
-        //            MessageBox.Show("아이디: " + Login.UserList[i].Id);
-        //            findid = true;
-        //            break;
-        //        }
-        //    }
-        //    if (findid == false)
-        //    {
-        //        MessageBox.Show("일치하는 사용자가 없습니다.");
-        //    }
-        //}
-
-        ////비밀번호 찾기
-        //private void Button2_Click(object sender, EventArgs e)
-        //{
-        //    bool findpw = false;
-
-        //    for (int i = 0; i < Login.UserList.Count; i++)
-        //    {
-        //        if (Login.UserList[i].Id == textBox2.Text &&
-        //            Login.UserList[i].Name == textBox3.Text &&
-        //            Login.UserList[i].Age.ToString() == comboBox3.Text)
-        //        {
-        //            SelectedNum = i;
-        //            findpw = true;
-        //            CorrectionPW form9 = new CorrectionPW();
-        //            form9.Show();
-        //            break;
-        //        }
-        //    }
-        //    if (findpw == false)
-        //    {
-        //        MessageBox.Show("일치하는 사용자가 없습니다.");
-        //    }
-        //}
 
 
         //이벤트
@@ -136,8 +92,27 @@ namespace _20180829
             textBox5.ForeColor = Color.Black;
 
         }
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            bool findid = false;
 
-        
+            for (int i = 0; i < UserList.Count; i++)
+            {
+                if (UserList[i].F_Name == textBox1.Text &&
+                    UserList[i].L_NAME == textBox4.Text &&
+                    UserList[i].Phone.ToString() == textBox5.Text )
+                {
+                    MessageBox.Show(UserList[i].F_Name + "의 아이디 " + UserList[i].Id + "입니다.");
+                    findid = true;
+                    break;
+                }
+            }
+            if (findid == false)
+            {
+                MessageBox.Show("일치하는 사용자가 없습니다.");
+            }
+        }
+
 
 
         //비번 찾기(비번 바꾸기)
@@ -169,7 +144,31 @@ namespace _20180829
             textBox3.ForeColor = Color.Black;
         }
 
-        //이벤트
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            bool findpw = false;
 
+            for (int i = 0; i < UserList.Count; i++)
+            {
+                if (UserList[i].Id == textBox2.Text &&
+                    UserList[i].Question == comboBox6.Text &&
+                    UserList[i].Answer == textBox3.Text)
+                {
+                    SelectedNum = i;
+                    findpw = true;
+                    MessageBox.Show("비밀번호 변경 페이지로 이동합니다.");
+                    this.Hide();
+                    CorrectionPW form9 = new CorrectionPW();
+                    form9.ShowDialog();
+                    this.Close();
+                    break;
+                }
+            }
+            if (findpw == false)
+            {
+                MessageBox.Show("일치하는 사용자가 없습니다.");
+            }
+        }
+        //이벤트
     }
 }
