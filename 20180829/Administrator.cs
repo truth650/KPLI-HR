@@ -104,6 +104,20 @@ namespace _20180829
             p_form.ShowDialog();
             this.Close();
         }
+        private void button6_MouseDown(object sender, MouseEventArgs e)
+        {
+            button6.Image = Properties.Resources.check_32px;
+            button6.ForeColor = Color.FromArgb(255, 255, 255);
+        }
+        
+        //로그아웃      
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Login form1 = new Login();
+            form1.Visible = true; //로그인창 보이기
+            Login.IsLogin = false; //로그아웃 상태로 변경
+            this.Close();
+        }
 
         //휴가관리 및 승인
         private void button7_Click(object sender, EventArgs e)
@@ -111,12 +125,5 @@ namespace _20180829
             VacationAdministration va = new VacationAdministration();
             va.Show();
         }
-
-        private void button6_MouseDown(object sender, MouseEventArgs e)
-        {
-            button6.Image = Properties.Resources.check_32px;
-            button6.ForeColor = Color.FromArgb(255, 255, 255);
-        }
-
     }
 }

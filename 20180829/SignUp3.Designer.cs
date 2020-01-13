@@ -99,6 +99,8 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.button2.Location = new System.Drawing.Point(48, 644);
+            this.button2.Font = new System.Drawing.Font("Noto Sans KR Bold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.button2.Location = new System.Drawing.Point(42, 515);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(434, 56);
@@ -110,6 +112,8 @@
             // textBox9
             // 
             this.textBox9.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox9.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBox9.Enabled = false;
             this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox9.ForeColor = System.Drawing.Color.Gray;
@@ -118,6 +122,13 @@
             this.textBox9.Name = "textBox9";
             this.textBox9.ReadOnly = true;
             this.textBox9.Size = new System.Drawing.Size(257, 29);
+            this.textBox9.Font = new System.Drawing.Font("Noto Sans KR Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBox9.ForeColor = System.Drawing.Color.Black;
+            this.textBox9.Location = new System.Drawing.Point(42, 307);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.ReadOnly = true;
+            this.textBox9.Size = new System.Drawing.Size(225, 23);
             this.textBox9.TabIndex = 5;
             this.textBox9.Text = "Employee";
             this.textBox9.Click += new System.EventHandler(this.textBox9_Click);
@@ -137,6 +148,8 @@
             // 
             this.comboBox8.BackColor = System.Drawing.Color.WhiteSmoke;
             this.comboBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.comboBox8.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.comboBox8.Font = new System.Drawing.Font("Noto Sans KR Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.comboBox8.ForeColor = System.Drawing.Color.Gray;
             this.comboBox8.FormattingEnabled = true;
             this.comboBox8.Items.AddRange(new object[] {
@@ -157,6 +170,8 @@
             // 
             this.comboBox6.BackColor = System.Drawing.Color.WhiteSmoke;
             this.comboBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.comboBox6.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.comboBox6.Font = new System.Drawing.Font("Noto Sans KR Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.comboBox6.ForeColor = System.Drawing.Color.Gray;
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.Location = new System.Drawing.Point(184, 229);
@@ -171,6 +186,8 @@
             // 
             this.comboBox3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.comboBox3.Font = new System.Drawing.Font("Noto Sans KR Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.comboBox3.ForeColor = System.Drawing.Color.Gray;
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
@@ -203,6 +220,12 @@
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(257, 30);
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Noto Sans KR Regular", 12F);
+            this.dateTimePicker1.Font = new System.Drawing.Font("Noto Sans KR Regular", 12F);
+            this.dateTimePicker1.Location = new System.Drawing.Point(42, 127);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(225, 31);
             this.dateTimePicker1.TabIndex = 0;
             this.dateTimePicker1.Value = new System.DateTime(2020, 1, 6, 0, 0, 0, 0);
             // 
@@ -221,6 +244,8 @@
             // 
             this.textBox6.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox6.Font = new System.Drawing.Font("Noto Sans KR Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox6.ForeColor = System.Drawing.Color.Gray;
             this.textBox6.Location = new System.Drawing.Point(48, 526);
             this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -235,6 +260,8 @@
             // 
             this.textBox7.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox7.Font = new System.Drawing.Font("Noto Sans KR Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox7.ForeColor = System.Drawing.Color.Gray;
             this.textBox7.Location = new System.Drawing.Point(48, 480);
             this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -249,6 +276,8 @@
             // 
             this.textBox5.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox5.Font = new System.Drawing.Font("Noto Sans KR Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox5.ForeColor = System.Drawing.Color.Gray;
             this.textBox5.Location = new System.Drawing.Point(265, 480);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -263,6 +292,8 @@
             // 
             this.comboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.comboBox1.Font = new System.Drawing.Font("Noto Sans KR Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.comboBox1.ForeColor = System.Drawing.Color.Gray;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
@@ -318,6 +349,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(549, 738);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(480, 590);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -338,6 +371,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "SignUp3";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "SignUp3";
             this.Load += new System.EventHandler(this.SignUp3_Load);
             this.panel1.ResumeLayout(false);

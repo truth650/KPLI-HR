@@ -53,29 +53,30 @@
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(88)))), ((int)(((byte)(125)))));
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Font = new System.Drawing.Font("Noto Sans KR Bold", 12F, System.Drawing.FontStyle.Bold);
             this.textBox2.ForeColor = System.Drawing.Color.White;
             this.textBox2.HideSelection = false;
-            this.textBox2.Location = new System.Drawing.Point(103, 222);
+            this.textBox2.Location = new System.Drawing.Point(102, 217);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(149, 19);
+            this.textBox2.Size = new System.Drawing.Size(149, 24);
             this.textBox2.TabIndex = 1;
             this.textBox2.Text = "Password";
             this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
             this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
+            this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
             // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(95)))), ((int)(((byte)(138)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Noto Sans KR Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.White;
             this.textBox1.HideSelection = false;
-            this.textBox1.Location = new System.Drawing.Point(104, 158);
+            this.textBox1.Location = new System.Drawing.Point(102, 153);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(149, 19);
+            this.textBox1.Size = new System.Drawing.Size(149, 24);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "Username";
             this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
@@ -88,7 +89,7 @@
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.button2.Font = new System.Drawing.Font("Noto Sans KR Bold", 14.25F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(62, 317);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -104,7 +105,7 @@
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button1.Font = new System.Drawing.Font("Noto Sans KR Bold", 14.25F, System.Drawing.FontStyle.Bold);
             this.button1.Location = new System.Drawing.Point(62, 264);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
@@ -122,7 +123,7 @@
             this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Font = new System.Drawing.Font("Noto Sans KR Light", 8.249999F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Transparent;
             this.button4.Location = new System.Drawing.Point(62, 361);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -130,7 +131,7 @@
             this.button4.Size = new System.Drawing.Size(190, 25);
             this.button4.TabIndex = 4;
             this.button4.Text = "Forget your Username/Password?";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.Button4_Click);
             // 

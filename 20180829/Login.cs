@@ -59,17 +59,10 @@ namespace _20180829
             this.Visible = false;
         }
 
-        
-       
 
-        //엔터 로그인
-        //private void TextBox2_KeyDown(object sender, KeyEventArgs e)
-        //{
-        //    if (e.KeyCode == Keys.Enter)
-        //    {
-        //        this.Button1_Click(sender, e);
-        //    }
-        //}
+
+
+       
 
         //ID/PW 찾기
         private void Button4_Click(object sender, EventArgs e)
@@ -175,6 +168,8 @@ namespace _20180829
         }
 
 
+
+
         //로그인
         private void button1_Click(object sender, EventArgs e)
         {
@@ -217,7 +212,7 @@ namespace _20180829
                 {
                     
                     MessageBox.Show("Welcome to " + UserList[Index].F_Name);
-                    form2.Show();  //메인 창 띄우기
+                    form2.ShowDialog();  //메인 창 띄우기
                     IsLogin = true; //로그인 상태변경
                     LoginIndex = Index;
                     LoginID = textBox1.Text; //로그인된 아이디 정보 담아주기
@@ -229,6 +224,13 @@ namespace _20180829
                 MessageBox.Show("아이디나 비밀번호를 입력해주세요.");
             }
         }
-        
+        //엔터 로그인
+        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.button1_Click(sender, e);
+            }
+        }
     }
 }

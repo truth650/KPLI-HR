@@ -70,6 +70,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Find Username";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button2
             // 
@@ -84,6 +85,7 @@
             this.button2.TabIndex = 7;
             this.button2.Text = "Find Password";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // label2
             // 
@@ -100,6 +102,7 @@
             // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.textBox3.ForeColor = System.Drawing.Color.Gray;
             this.textBox3.Location = new System.Drawing.Point(7, 178);
@@ -114,6 +117,7 @@
             // comboBox6
             // 
             this.comboBox6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox6.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.comboBox6.ForeColor = System.Drawing.Color.DimGray;
             this.comboBox6.FormattingEnabled = true;
@@ -181,6 +185,7 @@
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.textBox2.ForeColor = System.Drawing.Color.Gray;
             this.textBox2.Location = new System.Drawing.Point(7, 74);
@@ -207,6 +212,7 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.textBox1.ForeColor = System.Drawing.Color.Gray;
             this.textBox1.Location = new System.Drawing.Point(8, 74);
@@ -221,6 +227,7 @@
             // textBox4
             // 
             this.textBox4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.textBox4.ForeColor = System.Drawing.Color.Gray;
             this.textBox4.Location = new System.Drawing.Point(191, 74);
@@ -235,6 +242,7 @@
             // textBox5
             // 
             this.textBox5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.textBox5.ForeColor = System.Drawing.Color.Gray;
             this.textBox5.Location = new System.Drawing.Point(8, 144);
@@ -348,6 +356,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FindMem";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form8";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

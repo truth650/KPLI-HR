@@ -78,11 +78,12 @@ namespace _20180829
             if (res == DialogResult.OK)
             {
                 Calculator();
-                for(int i = 0; i < Login.VacationList.Count; i++)
+                for (int i = 0; i < Login.VacationList.Count; i++)
                 {
                     if(Login.VacationList[i].ID == id && Login.RequestVList[i].RequestDate.ToString("yyyy-MM-dd HH:mm:ss") == rd)
+                    if (Login.VacationList[i].ID == id)
                     {
-                        if(textBox3.Text == "SickDay")
+                        if (textBox3.Text == "SickDay")
                         {
                             //휴가연산
                             //Login.VacationList[i].SickDay -= result;
@@ -91,7 +92,7 @@ namespace _20180829
                             Login.VacationList.Clear();
                             WbDB.Singleton.Vacation_U(Login.LoginID, "SickDay", a);                            
                         }
-                        else if(textBox3.Text == "Vacation")
+                        else if (textBox3.Text == "Vacation")
                         {
                             //Login.VacationList[i].YearVacation -= result;
                             WbDB.Singleton.Open();
@@ -102,7 +103,7 @@ namespace _20180829
                         //휴가상태 변경
                         for (int j = 0; j < Login.RequestVList.Count; j++)
                         {
-                            if (Login.RequestVList[j].ID == id && Login.RequestVList[j].RequestDate.ToString("yyyy-MM-dd HH:mm:ss") == 
+                            if (Login.RequestVList[j].ID == id && Login.RequestVList[j].RequestDate.ToString("yyyy-MM-dd HH:mm:ss") ==
                                 VacationAdministration.RequestDate)
                             {
                                 state = Login.RequestVList[j].Approval = true;
@@ -183,6 +184,42 @@ namespace _20180829
                 result += c;
             }
         }
+
+        //상단바
+        bool TagMove;
+        int MValX, MValY;
+        private void panel3_MouseDown(object sender, MouseEventArgs e)
+        {
+            TagMove = true;
+            MValX = e.X;
+            MValY = e.Y;
+        }
+
+        private void panel3_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (TagMove == true)
+            {
+                this.SetDesktopLocation(MousePosition.X - MValX, MousePosition.Y - MValY);
+            }
+        }
+
+        private void panel3_MouseUp(object sender, MouseEventArgs e)
+        {
+            TagMove = false;
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+       
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        //상단바
     }
 
 }
