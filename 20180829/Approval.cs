@@ -95,7 +95,7 @@ namespace _20180829
                             if (Login.RequestVList[j].ID == id && Login.RequestVList[j].RequestDate.ToString("yyyy-MM-dd HH:mm:ss") == 
                                 VacationAdministration.RequestDate)
                             {
-                                Login.RequestVList[j].Approval = true;
+                                Login.RequestVList[j].Approval = true;                                                          
                             }
                         }
                     }

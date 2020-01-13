@@ -1,4 +1,4 @@
-﻿C:\Users\alvin\Downloads\github\KAPLI-HR\20180829\bin\Debug\20180829.exe.config
+C:\Users\alvin\Downloads\github\KAPLI-HR\20180829\bin\Debug\20180829.exe.config
 C:\Users\alvin\Downloads\github\KAPLI-HR\20180829\bin\Debug\20180829.exe
 C:\Users\alvin\Downloads\github\KAPLI-HR\20180829\obj\Debug\_20180829.B_board.resources
 C:\Users\alvin\Downloads\github\KAPLI-HR\20180829\obj\Debug\_20180829.Login.resources
@@ -143,3 +143,5 @@ C:\Users\alvin\Downloads\github\KPLI-HR\20180829\obj\Debug\_20180829.VacationAdm
 C:\Users\alvin\Downloads\github\KPLI-HR\20180829\obj\Debug\20180829.csproj.GenerateResource.cache
 C:\Users\alvin\Downloads\github\KPLI-HR\20180829\obj\Debug\20180829.exe
 C:\Users\alvin\Downloads\github\KPLI-HR\20180829\obj\Debug\20180829.pdb
+C:\Users\김영종\Documents\GitHub\KPLI-HR\20180829\obj\Debug\_20180829.ExpenseStatus.resources
+C:\Users\김영종\Documents\GitHub\KPLI-HR\20180829\obj\Debug\_20180829.PayrollAdministration.resources

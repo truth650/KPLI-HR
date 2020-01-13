@@ -23,6 +23,8 @@ namespace _20180829
         public static List<Vacation> VacationList = new List<Vacation>();
         //휴가신청정보
         public static List<RequestV> RequestVList = new List<RequestV>();
+        //영수증신청정보
+        public static List<Expense> ExpenseList = new List<Expense>();
         public Login()
         {
             InitializeComponent();
@@ -44,8 +46,8 @@ namespace _20180829
             WbDB.Singleton.Open();
             MemoList = WbDB.Singleton.Memo_L(MemoList);
             //RequestVList =
-
-
+            WbDB.Singleton.Open();
+            ExpenseList = WbDB.Singleton.LoadExpense(ExpenseList);
         }
 
         //회원가입 창 열기

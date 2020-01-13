@@ -63,10 +63,6 @@ namespace _20180829
 
             //=====================================================
 
-
-
-
-
             //=====================================================
             SqlParameter param_id = new SqlParameter("@ID", user.Id);
             command.Parameters.Add(param_id);
@@ -289,13 +285,9 @@ namespace _20180829
             if (conn.State == ConnectionState.Closed)
                 throw new Exception("DB 미연결상태");
 
-
-
             //=====================================================
             string comtext = "insert into memo values (@Id,@Date,@Contents)";
             SqlCommand command = new SqlCommand(comtext, conn);
-
-
             //=====================================================
 
            
@@ -305,24 +297,12 @@ namespace _20180829
             SqlParameter param_Time = new SqlParameter("@Date",memo.Date);
             command.Parameters.Add(param_Time);
 
-
             SqlParameter param_contents = new SqlParameter("@Contents", memo.Content);
-            command.Parameters.Add(param_contents);
-
-
-
-           
-            
-
-
+            command.Parameters.Add(param_contents);         
             //=====================================================
             if (command.ExecuteNonQuery() != 1)
                 throw new Exception("추가 실패");
-
-
-
         }
-
 
         public List<Memo> Memo_L(List<Memo> memolist)
         {
@@ -336,19 +316,110 @@ namespace _20180829
             {
                 memolist.Add(new Memo((reader["Id"].ToString()), (Convert.ToDateTime(reader["Date"].ToString())),
                     (reader["Contents"].ToString())));                   
-                   
-
+                  
             }
 
             reader.Close();
             command.Dispose();
             conn.Close();
-
             return memolist;
         }
 
+        //영수증 신청
+        public void InsertExpense(Expense expense)
+        {
+            if (conn.State == ConnectionState.Closed)
+                throw new Exception("DB 미연결상태");
 
+            //=====================================================
+            string comtext = "insert into expense values (@Date, @ID, @Name, @AE, @ME, @OS, @Gift, @OE, @Advertisement, " +
+                             "@ETC, @Total, @Contents, @IMG, @Extension, @Approval)";
+            SqlCommand command = new SqlCommand(comtext, conn);
+            //=====================================================
+            SqlParameter param_date = new SqlParameter("@Date", expense.Date);
+            command.Parameters.Add(param_date);
 
+            SqlParameter param_id = new SqlParameter("@ID", expense.ID);
+            command.Parameters.Add(param_id);
+
+            SqlParameter param_name = new SqlParameter("@Name", expense.Name);
+            command.Parameters.Add(param_name);
+
+            SqlParameter param_ae = new SqlParameter("@AE", expense.AE);
+            command.Parameters.Add(param_ae);
+
+            SqlParameter param_me = new SqlParameter("@ME", expense.ME);
+            command.Parameters.Add(param_me);
+
+            SqlParameter param_os = new SqlParameter("@OS", expense.OS);
+            command.Parameters.Add(param_os);
+
+            SqlParameter param_gift = new SqlParameter("@Gift", expense.Gift);
+            command.Parameters.Add(param_gift);
+
+            SqlParameter param_oe = new SqlParameter("@OE", expense.OE);
+            command.Parameters.Add(param_oe);
+
+            SqlParameter param_advertisment = new SqlParameter("@Advertisement", expense.Advertisment);
+            command.Parameters.Add(param_advertisment);
+
+            SqlParameter param_etc = new SqlParameter("@ETC", expense.ETC);
+            command.Parameters.Add(param_etc);
+
+            SqlParameter param_total = new SqlParameter("@Total", expense.Total);
+            command.Parameters.Add(param_total);
+
+            SqlParameter param_contents = new SqlParameter("@Contents", expense.Contents);
+            command.Parameters.Add(param_contents);
+
+            SqlParameter param_img = new SqlParameter("@IMG", expense.Image);
+            command.Parameters.Add(param_img);
+
+            SqlParameter param_extension = new SqlParameter("@Extension", expense.Extension);
+            command.Parameters.Add(param_extension);
+
+            SqlParameter param_approval = new SqlParameter("@Approval", expense.Approval);
+            command.Parameters.Add(param_approval);
+            //=====================================================
+
+            if (command.ExecuteNonQuery() != 1)
+                throw new Exception("추가 실패");
+            else
+            {
+                MessageBox.Show("등록완료");
+            }
+
+            command.Dispose();
+            conn.Close();
+        }
+
+        //영수증 정보 가져오기
+        public List<Expense> LoadExpense(List<Expense> expenselist)
+        {
+            if (conn.State == ConnectionState.Closed)
+                throw new Exception("DB 미연결상태");
+
+            //=====================================================
+            string comtext = "select * from expense";
+            SqlCommand command = new SqlCommand(comtext, conn);
+
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                expenselist.Add(new Expense(Convert.ToDateTime((reader["Date"]).ToString()), (reader["Id"]).ToString(), (reader["Name"]).ToString(),
+                float.Parse((reader["Ae"]).ToString()), float.Parse((reader["Me"]).ToString()), float.Parse((reader["Os"]).ToString()), 
+                float.Parse((reader["Gift"]).ToString()), float.Parse((reader["Oe"]).ToString()), float.Parse((reader["Advertisement"]).ToString()),
+                float.Parse((reader["Etc"]).ToString()), float.Parse((reader["Total"]).ToString()), (reader["Contents"]).ToString(),
+                (byte[])reader["Image"], (reader["Extension"]).ToString(), (reader["Approval"]).ToString()));
+            }
+            reader.Close();
+            command.Dispose();
+            conn.Close();
+
+            return expenselist;
+
+        }
         #endregion
 
 

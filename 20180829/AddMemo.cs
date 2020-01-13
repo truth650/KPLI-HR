@@ -49,12 +49,15 @@ namespace _20180829
 
 
             WbDB.Singleton.Open();
-             WbDB.Singleton.Memo_S(memos[0]);
- 
+            WbDB.Singleton.Memo_S(memos[0]);
+
+            Login.MemoList.Clear();
             WbDB.Singleton.Memo_L(Login.MemoList);
             sd.SetMemoList();
             this.Close();
         }
+
+
         //상단바
         bool TagMove;
         int MValX, MValY;

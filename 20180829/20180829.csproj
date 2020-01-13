@@ -72,6 +72,13 @@
     <Compile Include="B_board.designer.cs">
       <DependentUpon>B_board.cs</DependentUpon>
     </Compile>
+    <Compile Include="Expense.cs" />
+    <Compile Include="ExpenseStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExpenseStatus.Designer.cs">
+      <DependentUpon>ExpenseStatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Holiday.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -97,6 +104,12 @@
     </Compile>
     <Compile Include="Payroll.designer.cs">
       <DependentUpon>Payroll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayrollAdministration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayrollAdministration.Designer.cs">
+      <DependentUpon>PayrollAdministration.cs</DependentUpon>
     </Compile>
     <Compile Include="RequestV.cs" />
     <Compile Include="RequestVacation.cs">
@@ -194,6 +207,9 @@
     <EmbeddedResource Include="B_board.resx">
       <DependentUpon>B_board.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ExpenseStatus.resx">
+      <DependentUpon>ExpenseStatus.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Payroll.resx">
       <DependentUpon>Payroll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayrollAdministration.resx">
+      <DependentUpon>PayrollAdministration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RequestVacation.resx">
       <DependentUpon>RequestVacation.cs</DependentUpon>
