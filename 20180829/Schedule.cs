@@ -146,6 +146,14 @@ namespace _20180829
             button3.Image = Properties.Resources.administrator_32px;
             button3.ForeColor = Color.FromArgb(255, 255, 255);
         }
+        //로그아웃
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Login form1 = new Login();
+            form1.Visible = true; //로그인창 보이기
+            Login.IsLogin = false; //로그아웃 상태로 변경
+            this.Close();
+        }
         //이벤트(바)
 
         private void Schedule_Load(object sender, EventArgs e)
@@ -1098,6 +1106,9 @@ namespace _20180829
             }
             button11.Visible = false;
         }
+
+
+
         private void button12_Click(object sender, EventArgs e)
         {
             panel10.Visible = false;

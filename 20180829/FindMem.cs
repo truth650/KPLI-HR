@@ -163,6 +163,7 @@ namespace _20180829
             textBox3.Clear();
             textBox3.ForeColor = Color.Black;
         }
+
         private void textBox3_Enter(object sender, EventArgs e)
         {
             textBox3.Clear();

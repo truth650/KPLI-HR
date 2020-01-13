@@ -96,6 +96,7 @@
             // textBox16
             // 
             this.textBox16.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox16.Font = new System.Drawing.Font("Noto Sans KR Light", 10.25F);
             this.textBox16.ForeColor = System.Drawing.Color.Gray;
             this.textBox16.Location = new System.Drawing.Point(42, 245);
@@ -121,6 +122,7 @@
             // comboBox3
             // 
             this.comboBox3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBox3.Font = new System.Drawing.Font("Noto Sans KR Light", 10.25F);
             this.comboBox3.ForeColor = System.Drawing.Color.Gray;
             this.comboBox3.FormattingEnabled = true;
@@ -171,6 +173,7 @@
             // textBox6
             // 
             this.textBox6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox6.Font = new System.Drawing.Font("Noto Sans KR Light", 10.25F);
             this.textBox6.ForeColor = System.Drawing.Color.Gray;
             this.textBox6.Location = new System.Drawing.Point(278, 244);
@@ -185,6 +188,7 @@
             // textBox4
             // 
             this.textBox4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox4.Font = new System.Drawing.Font("Noto Sans KR Light", 10.25F);
             this.textBox4.ForeColor = System.Drawing.Color.Gray;
             this.textBox4.Location = new System.Drawing.Point(42, 124);
@@ -199,6 +203,7 @@
             // textBox5
             // 
             this.textBox5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox5.Font = new System.Drawing.Font("Noto Sans KR Light", 10.25F);
             this.textBox5.ForeColor = System.Drawing.Color.Gray;
             this.textBox5.Location = new System.Drawing.Point(245, 124);
@@ -214,11 +219,11 @@
             // 
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Noto Sans KR Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.WhiteSmoke;
-            this.dateTimePicker1.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold);
+            this.dateTimePicker1.Font = new System.Drawing.Font("Noto Sans KR Regular", 12F);
             this.dateTimePicker1.Location = new System.Drawing.Point(42, 185);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(201, 25);
+            this.dateTimePicker1.Size = new System.Drawing.Size(201, 31);
             this.dateTimePicker1.TabIndex = 2;
             this.dateTimePicker1.Value = new System.DateTime(1987, 6, 17, 0, 0, 0, 0);
             // 
@@ -241,6 +246,7 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Noto Sans KR Light", 10.25F);
             this.textBox1.ForeColor = System.Drawing.Color.Gray;
             this.textBox1.Location = new System.Drawing.Point(170, 448);
@@ -255,6 +261,7 @@
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBox1.Font = new System.Drawing.Font("Noto Sans KR Light", 10.25F);
             this.comboBox1.ForeColor = System.Drawing.Color.Gray;
             this.comboBox1.FormattingEnabled = true;
@@ -320,6 +327,7 @@
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox2.Font = new System.Drawing.Font("Noto Sans KR Light", 10.25F);
             this.textBox2.ForeColor = System.Drawing.Color.Gray;
             this.textBox2.Location = new System.Drawing.Point(42, 449);
@@ -334,6 +342,7 @@
             // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox3.Font = new System.Drawing.Font("Noto Sans KR Light", 10.25F);
             this.textBox3.ForeColor = System.Drawing.Color.Gray;
             this.textBox3.Location = new System.Drawing.Point(42, 408);
@@ -348,6 +357,7 @@
             // textBox7
             // 
             this.textBox7.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox7.Font = new System.Drawing.Font("Noto Sans KR Light", 10.25F);
             this.textBox7.ForeColor = System.Drawing.Color.Gray;
             this.textBox7.Location = new System.Drawing.Point(42, 371);
@@ -395,6 +405,7 @@
             // comboBox2
             // 
             this.comboBox2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBox2.Font = new System.Drawing.Font("Noto Sans KR Light", 10.25F);
             this.comboBox2.ForeColor = System.Drawing.Color.Gray;
             this.comboBox2.FormattingEnabled = true;
@@ -413,6 +424,7 @@
             // comboBox4
             // 
             this.comboBox4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox4.Font = new System.Drawing.Font("Noto Sans KR Light", 10.25F);
             this.comboBox4.ForeColor = System.Drawing.Color.Gray;
             this.comboBox4.FormattingEnabled = true;

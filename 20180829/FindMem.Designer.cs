@@ -100,6 +100,7 @@
             // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.textBox3.ForeColor = System.Drawing.Color.Gray;
             this.textBox3.Location = new System.Drawing.Point(7, 178);
@@ -114,6 +115,7 @@
             // comboBox6
             // 
             this.comboBox6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox6.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.comboBox6.ForeColor = System.Drawing.Color.DimGray;
             this.comboBox6.FormattingEnabled = true;
@@ -181,6 +183,7 @@
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.textBox2.ForeColor = System.Drawing.Color.Gray;
             this.textBox2.Location = new System.Drawing.Point(7, 74);
@@ -207,6 +210,7 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.textBox1.ForeColor = System.Drawing.Color.Gray;
             this.textBox1.Location = new System.Drawing.Point(8, 74);
@@ -221,6 +225,7 @@
             // textBox4
             // 
             this.textBox4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.textBox4.ForeColor = System.Drawing.Color.Gray;
             this.textBox4.Location = new System.Drawing.Point(191, 74);
@@ -235,6 +240,7 @@
             // textBox5
             // 
             this.textBox5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.textBox5.ForeColor = System.Drawing.Color.Gray;
             this.textBox5.Location = new System.Drawing.Point(8, 144);

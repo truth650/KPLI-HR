@@ -124,6 +124,14 @@ namespace _20180829
             //SetBoard();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Login form1 = new Login();
+            form1.Visible = true; //로그인창 보이기
+            Login.IsLogin = false; //로그아웃 상태로 변경
+            this.Close();
+        }
+
         private void button3_MouseDown(object sender, MouseEventArgs e)
         {
             button3.Image = Properties.Resources.administrator_32px;

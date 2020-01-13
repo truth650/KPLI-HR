@@ -107,6 +107,8 @@
             // textBox9
             // 
             this.textBox9.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox9.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBox9.Enabled = false;
             this.textBox9.Font = new System.Drawing.Font("Noto Sans KR Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox9.ForeColor = System.Drawing.Color.Black;
@@ -114,7 +116,7 @@
             this.textBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox9.Name = "textBox9";
             this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(225, 30);
+            this.textBox9.Size = new System.Drawing.Size(225, 23);
             this.textBox9.TabIndex = 5;
             this.textBox9.Text = "Employee";
             this.textBox9.Click += new System.EventHandler(this.textBox9_Click);
@@ -133,6 +135,7 @@
             // comboBox8
             // 
             this.comboBox8.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox8.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBox8.Font = new System.Drawing.Font("Noto Sans KR Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.comboBox8.ForeColor = System.Drawing.Color.Gray;
             this.comboBox8.FormattingEnabled = true;
@@ -153,6 +156,7 @@
             // comboBox6
             // 
             this.comboBox6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox6.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBox6.Font = new System.Drawing.Font("Noto Sans KR Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.comboBox6.ForeColor = System.Drawing.Color.Gray;
             this.comboBox6.FormattingEnabled = true;
@@ -167,6 +171,7 @@
             // comboBox3
             // 
             this.comboBox3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBox3.Font = new System.Drawing.Font("Noto Sans KR Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.comboBox3.ForeColor = System.Drawing.Color.Gray;
             this.comboBox3.FormattingEnabled = true;
@@ -195,11 +200,12 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold);
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Noto Sans KR Regular", 12F);
+            this.dateTimePicker1.Font = new System.Drawing.Font("Noto Sans KR Regular", 12F);
             this.dateTimePicker1.Location = new System.Drawing.Point(42, 127);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(225, 25);
+            this.dateTimePicker1.Size = new System.Drawing.Size(225, 31);
             this.dateTimePicker1.TabIndex = 0;
             this.dateTimePicker1.Value = new System.DateTime(2020, 1, 6, 0, 0, 0, 0);
             // 
@@ -217,6 +223,7 @@
             // textBox6
             // 
             this.textBox6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox6.Font = new System.Drawing.Font("Noto Sans KR Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox6.ForeColor = System.Drawing.Color.Gray;
             this.textBox6.Location = new System.Drawing.Point(42, 421);
@@ -231,6 +238,7 @@
             // textBox7
             // 
             this.textBox7.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox7.Font = new System.Drawing.Font("Noto Sans KR Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox7.ForeColor = System.Drawing.Color.Gray;
             this.textBox7.Location = new System.Drawing.Point(42, 384);
@@ -245,6 +253,7 @@
             // textBox5
             // 
             this.textBox5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox5.Font = new System.Drawing.Font("Noto Sans KR Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox5.ForeColor = System.Drawing.Color.Gray;
             this.textBox5.Location = new System.Drawing.Point(232, 384);
@@ -259,6 +268,7 @@
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBox1.Font = new System.Drawing.Font("Noto Sans KR Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.comboBox1.ForeColor = System.Drawing.Color.Gray;
             this.comboBox1.FormattingEnabled = true;
