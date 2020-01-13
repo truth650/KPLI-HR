@@ -171,6 +171,10 @@ namespace _20180829
         #region 회원 정보 초기 로드
         public List<User> Member(List<User> userlist)
         {
+            if (conn.State == ConnectionState.Closed)
+                throw new Exception("DB 미연결상태");
+
+
             string comtext = "select * from member";
             SqlCommand command = new SqlCommand(comtext, conn);
 
@@ -409,11 +413,8 @@ namespace _20180829
             {
                 vacationlist.Add(new Vacation((reader["Id"].ToString()), (reader["Name"].ToString()),
                     (int.Parse(reader["Sick_Day"].ToString())), (int.Parse(reader["Year_Vacation"].ToString())),
-                    int.Parse((reader["Annual"].ToString()))));
-
-
+                    int.Parse((reader["Annual"].ToString()))));          
             }
-
             reader.Close();
             command.Dispose();
             conn.Close();
@@ -421,7 +422,164 @@ namespace _20180829
             return vacationlist;
         }
 
+
+        public void Vacation_U(string id,string type, int result)
+        {
+            if (conn.State == ConnectionState.Closed)
+                throw new Exception("DB 미연결상태");
+
+            else if (type == "SickDay")          
+                {
+                    string comtext = "update vacation set Sick_Day = @RESULT WHERE id = @Id";
+                SqlCommand command = new SqlCommand(comtext, conn);
+
+                    //=====================================================
+                    SqlParameter param_id = new SqlParameter("@Id", id);
+                    command.Parameters.Add(param_id);
+                    SqlParameter param_type = new SqlParameter("@RESULT", result);
+                    command.Parameters.Add(param_type);
+
+                    //=====================================================
+                    command.ExecuteNonQuery();
+                }
+                else if(type == "Vacation")
+                {
+                string comtext = "update vacation set Year_Vacation = @RESULT WHERE id = @Id";
+                SqlCommand command = new SqlCommand(comtext, conn);
+
+                //=====================================================
+                SqlParameter param_id = new SqlParameter("@Id", id);
+                command.Parameters.Add(param_id);
+                SqlParameter param_type = new SqlParameter("@RESULT", result);
+                command.Parameters.Add(param_type);
+
+                //=====================================================
+                command.ExecuteNonQuery();
+            }
+
+
+        }
+    
+        
+
+
         #endregion
+
+
+        #region 휴가 요청 기능
+
+        public void Requse_S(List<RequestV> request)
+        {
+            //=====================================================
+            string comtext = "insert into vacation_Request values (@Id,@Name,@Request_Date,@Type,@Vacation_S,@Vacation_E,@Destination,@Contact,@Agent,@Approval)";
+            SqlCommand command = new SqlCommand(comtext, conn);
+
+
+            //=====================================================
+
+
+            SqlParameter param_id = new SqlParameter("@Id", request[0].ID);
+            command.Parameters.Add(param_id);
+
+
+            SqlParameter param_Name = new SqlParameter("@Name", request[0].Name);
+            command.Parameters.Add(param_Name);
+
+
+            SqlParameter param_Request = new SqlParameter("@Request_Date", request[0].RequestDate);
+            command.Parameters.Add(param_Request);
+
+            SqlParameter param_Type = new SqlParameter("@Type", request[0].Type);
+            command.Parameters.Add(param_Type);
+
+
+            SqlParameter param_start = new SqlParameter("@Vacation_S", request[0].StartVacation);
+            command.Parameters.Add(param_start);
+
+            SqlParameter param_end = new SqlParameter("@Vacation_E", request[0].EndVacation);
+            command.Parameters.Add(param_end);
+
+
+            SqlParameter param_des = new SqlParameter("@Destination", request[0].Destination);
+            command.Parameters.Add(param_des);
+
+
+
+            SqlParameter param_contact = new SqlParameter("@Contact", request[0].Contact);
+            command.Parameters.Add(param_contact);
+
+
+
+            SqlParameter param_agent = new SqlParameter("@Agent", request[0].Agent);
+            command.Parameters.Add(param_agent);
+
+
+
+            SqlParameter param_ap = new SqlParameter("@Approval", request[0].Approval);
+            param_ap.SqlDbType = SqlDbType.Bit;
+            command.Parameters.Add(param_ap);
+
+
+            //=====================================================
+            if (command.ExecuteNonQuery() != 1)
+                throw new Exception("추가 실패");
+
+            command.Dispose();
+            conn.Close();
+        }
+
+        public List<RequestV> Requse_L(List<RequestV> request)
+        {
+
+            string comtext = "select * from vacation_Request";
+            SqlCommand command = new SqlCommand(comtext, conn);
+
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+
+                request.Add(new RequestV(reader["Id"].ToString(),reader["Name"].ToString(),Convert.ToDateTime(reader["Request_Date"].ToString()),
+                    (reader["Type"].ToString()), (Convert.ToDateTime(reader["Vacation_S"].ToString())), Convert.ToDateTime(reader["Vacation_E"].ToString()),
+                    (reader["Destination"].ToString()), (reader["Contact"].ToString()), (reader["Agent"].ToString()),(Convert.ToBoolean((reader["Approval"].ToString())))));
+                
+
+            }
+
+            reader.Close();
+            command.Dispose();
+            conn.Close();
+
+            return request;
+        }
+
+
+
+        public void Requse_U(string id,  bool result)
+        {
+            if (conn.State == ConnectionState.Closed)
+                throw new Exception("DB 미연결상태");
+
+           
+                string comtext = "update vacation_Request set Approval = @RESULT WHERE id = @Id";
+                SqlCommand command = new SqlCommand(comtext, conn);
+
+                //=====================================================
+                SqlParameter param_id = new SqlParameter("@Id", id);
+                command.Parameters.Add(param_id);
+                SqlParameter param_type = new SqlParameter("@RESULT", result);
+                param_type.SqlDbType = SqlDbType.Bit;
+                command.Parameters.Add(param_type);
+
+                //=====================================================
+                command.ExecuteNonQuery();
+            }
+           
+            
+
+
+        
+
 
 
 
@@ -480,8 +638,9 @@ namespace _20180829
 
 
 
-   
 
 
 
 
+
+#endregion

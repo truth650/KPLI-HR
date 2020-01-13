@@ -1,4 +1,4 @@
-﻿C:\Users\alvin\Downloads\github\KAPLI-HR\20180829\bin\Debug\20180829.exe.config
+C:\Users\alvin\Downloads\github\KAPLI-HR\20180829\bin\Debug\20180829.exe.config
 C:\Users\alvin\Downloads\github\KAPLI-HR\20180829\bin\Debug\20180829.exe
 C:\Users\alvin\Downloads\github\KAPLI-HR\20180829\obj\Debug\_20180829.B_board.resources
 C:\Users\alvin\Downloads\github\KAPLI-HR\20180829\obj\Debug\_20180829.Login.resources

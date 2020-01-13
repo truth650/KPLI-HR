@@ -16,6 +16,8 @@ namespace _20180829
         int Vacation = 0;
         int Annual = 0;
 
+        public static List<Vacation> vacations = new List<Vacation>();
+
         public SignUp3()
         {
             InitializeComponent();
@@ -57,12 +59,18 @@ namespace _20180829
             //DB 회원추가
             WbDB.Singleton.AddMember(SignUp.sign_up[0]);
             //DB에 vacation 데이터를 보내는 함수
-            Login.VacationList.Add(new Vacation(SignUp.sign_up[0].Id, (SignUp.sign_up[0].F_Name + " " + SignUp.sign_up[0].L_NAME),
-                                                SickDay, Vacation, Annual));
+            //Login.VacationList.Add(new Vacation(SignUp.sign_up[0].Id, (SignUp.sign_up[0].F_Name + " " + SignUp.sign_up[0].L_NAME),
+            //                                    SickDay, Vacation, Annual));
 
+            vacations[0].ID = SignUp.sign_up[0].Id;
+            vacations[0].Name = (SignUp.sign_up[0].F_Name + " " + SignUp.sign_up[0].L_NAME);
+            vacations[0].SickDay = SickDay;
+            vacations[0].YearVacation = Vacation;
+            vacations[0].Annual = Annual;
 
+            //휴가 부여 보내주기
+            WbDB.Singleton.Vacation_S(vacations[0]);
 
-            WbDB.Singleton.Close();
 
             this.Hide();
             Login l_form = new Login();
@@ -189,6 +197,11 @@ namespace _20180829
         private void textBox6_Enter(object sender, EventArgs e)
         {
             textBox6.ForeColor = Color.Black;
+        }
+
+        private void SignUp3_Load(object sender, EventArgs e)
+        {
+            vacations.Add(new Vacation("a", "a", 1, 2, 3));
         }
 
         //휴가 계산 함수

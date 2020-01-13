@@ -40,10 +40,12 @@ namespace _20180829
         {
             WbDB.Singleton.Open();
             UserList = WbDB.Singleton.Member(UserList);
+            WbDB.Singleton.Open();
             VacationList = WbDB.Singleton.Vacation_L(VacationList);
             WbDB.Singleton.Open();
             MemoList = WbDB.Singleton.Memo_L(MemoList);
-            //RequestVList =
+            WbDB.Singleton.Open();
+            RequestVList = WbDB.Singleton.Requse_L(RequestVList);
 
 
         }
@@ -213,6 +215,7 @@ namespace _20180829
                 }
                 else if (ErrorType == 3)
                 {
+                    
                     MessageBox.Show("Welcome to " + UserList[Index].F_Name);
                     form2.Show();  //메인 창 띄우기
                     IsLogin = true; //로그인 상태변경

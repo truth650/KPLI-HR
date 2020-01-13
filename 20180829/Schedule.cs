@@ -150,6 +150,10 @@ namespace _20180829
 
         private void Schedule_Load(object sender, EventArgs e)
         {
+            Login.VacationList.Clear();
+            WbDB.Singleton.Open();
+            WbDB.Singleton.Vacation_L(Login.VacationList);
+
             holidaylist.Clear();
             
             Container();
@@ -1069,7 +1073,7 @@ namespace _20180829
             {
                 if (Login.VacationList[i].ID == Login.LoginID)
                 {
-                    if (Login.VacationList[i].SickDay % 24 == 0)
+                    if (Login.VacationList[i].SickDay % 8 == 0)
                     {
                         textBox2.Text = (Login.VacationList[i].SickDay / 8).ToString();
                         textBox3.Text = "0";
@@ -1080,6 +1084,9 @@ namespace _20180829
                         textBox3.Text = (Login.VacationList[i].SickDay % 8).ToString();
                     }
                 }
+            }
+            for (int i = 0; i < Login.VacationList.Count; i++)
+            {
                 if (Login.VacationList[i].ID == Login.LoginID)
                 {
                     if (Login.VacationList[i].YearVacation % 8 == 0)
@@ -1091,7 +1098,7 @@ namespace _20180829
                     else
                     {
                         textBox5.Text = (Login.VacationList[i].YearVacation / 8).ToString();
-                        textBox5.Text = (Login.VacationList[i].YearVacation % 8).ToString();
+                        textBox4.Text = (Login.VacationList[i].YearVacation % 8).ToString();
                         break;
                     }
                 }
