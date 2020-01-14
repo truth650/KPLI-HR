@@ -12,11 +12,16 @@ namespace _20180829
 {
     public partial class SignUp2 : Form
     {
-        
-
+       
         public SignUp2()
         {
             InitializeComponent();
+        }
+
+        //Form Load
+        private void SignUp2_Load(object sender, EventArgs e)
+        {
+            textBox16.MaxLength = 8;
         }
 
         //다음 페이지
@@ -218,6 +223,8 @@ namespace _20180829
             textBox1.Clear();
             textBox1.ForeColor = Color.Black;
         }
+
+
         private void textBox1_Enter(object sender, EventArgs e)
         {
             textBox1.ForeColor = Color.Black;
