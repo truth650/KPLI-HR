@@ -17,6 +17,12 @@ namespace _20180829
             InitializeComponent();
         }
 
+        //초기셋팅
+        private void MyInfo_Load(object sender, EventArgs e)
+        {
+
+        }
+
         //상단바
         bool TagMove;
         int MValX, MValY;

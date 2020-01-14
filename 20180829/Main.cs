@@ -144,7 +144,11 @@ namespace _20180829
             form1.Visible = false;
         }
 
-
+        private void button8_Click(object sender, EventArgs e)
+        {
+            MyInfo myinfo = new MyInfo();
+            myinfo.ShowDialog();
+        }
 
         private void button3_MouseDown(object sender, MouseEventArgs e)
         {

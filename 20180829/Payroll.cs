@@ -301,24 +301,5 @@ namespace _20180829
             ExpenseStatus expensestatus = new ExpenseStatus();
             expensestatus.Show();
         }
-
-        //다시받아오기
-        private void button7_Click(object sender, EventArgs e)
-        {
-            WbDB.Singleton.Open();
-
-            string fileName;
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Title = "저장경로 지정하세요";
-            saveFileDialog.OverwritePrompt = true;
-            saveFileDialog.Filter = "모든 파일 (*.*) | *.*";
-
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                fileName = saveFileDialog.FileName;
-                File.WriteAllBytes(fileName, file);
-            }
-        }
-
     }
 }

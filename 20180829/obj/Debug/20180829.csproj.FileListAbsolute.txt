@@ -153,3 +153,4 @@ C:\Users\김영종\Documents\GitHub\KPLI-HR\20180829\bin\Debug\20180829.exe.mani
 C:\Users\김영종\Documents\GitHub\KPLI-HR\20180829\bin\Debug\20180829.application
 C:\Users\김영종\Documents\GitHub\KPLI-HR\20180829\obj\Debug\20180829.exe.manifest
 C:\Users\김영종\Documents\GitHub\KPLI-HR\20180829\obj\Debug\20180829.application
+C:\Users\김영종\Documents\GitHub\KPLI-HR\20180829\obj\Debug\_20180829.UserInformation.resources

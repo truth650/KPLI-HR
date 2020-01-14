@@ -56,11 +56,8 @@ namespace _20180829
 
             WbDB.Singleton.Open();
 
-            //DB 회원추가
+            //DB 휴가정보추가
             WbDB.Singleton.AddMember(SignUp.sign_up[0]);
-            //DB에 vacation 데이터를 보내는 함수
-            //Login.VacationList.Add(new Vacation(SignUp.sign_up[0].Id, (SignUp.sign_up[0].F_Name + " " + SignUp.sign_up[0].L_NAME),
-            //                                    SickDay, Vacation, Annual));
 
             vacations[0].ID = SignUp.sign_up[0].Id;
             vacations[0].Name = (SignUp.sign_up[0].F_Name + " " + SignUp.sign_up[0].L_NAME);
@@ -209,14 +206,12 @@ namespace _20180829
         //휴가 계산 함수
         private void VacationCalculation()
         {
-            int Vacation = 0;
-            int Annual = 0;
             DateTime join = SignUp.sign_up[0].Join_Date;
             DateTime today = DateTime.Now.Date;
 
-            SickDay = 3;
+            SickDay = 24;
             Annual = today.Year - join.Year;
-            Vacation = 5 + Annual; 
+            Vacation = 40 + (Annual * 8); 
         }
     }
 }
