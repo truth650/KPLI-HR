@@ -18,7 +18,7 @@ namespace _20180829
         public static int LoginIndex = 0;
         //개인정보
         public static List<User> UserList = new List<User>();
-       public static List<Memo> MemoList = new List<Memo>();
+        public static List<Memo> MemoList = new List<Memo>();
         //남은휴가정보
         public static List<Vacation> VacationList = new List<Vacation>();
         //휴가신청정보
@@ -34,7 +34,6 @@ namespace _20180829
         {
             Container();
             WbDB.Singleton.Close();
-
         }
 
         //초기 회원정보

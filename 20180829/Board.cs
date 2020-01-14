@@ -30,7 +30,6 @@ namespace _20180829
             this.file_name = file_name;
             this.file_binary = file_binary;
             this.time = time;
-            //this.read_num = read_num;
         }
 
         public int Idx { get { return idx; } set { idx = value; } }

@@ -60,7 +60,11 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
+
             this.panel1.Size = new System.Drawing.Size(480, 32);
+
+            this.panel1.Size = new System.Drawing.Size(480, 40);
+
             this.panel1.TabIndex = 3;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseMove);
@@ -70,7 +74,12 @@
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox2.Image = global::_20180829.Properties.Resources.minimize_window_32px;
+
             this.pictureBox2.Location = new System.Drawing.Point(416, 0);
+
+            this.pictureBox2.Location = new System.Drawing.Point(406, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 32);
             this.pictureBox2.TabIndex = 1;
@@ -81,7 +90,12 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.Image = global::_20180829.Properties.Resources.delete_32px;
+
             this.pictureBox1.Location = new System.Drawing.Point(448, 0);
+
+            this.pictureBox1.Location = new System.Drawing.Point(443, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
             this.pictureBox1.TabIndex = 0;
@@ -116,7 +130,11 @@
             this.textBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox9.Name = "textBox9";
             this.textBox9.ReadOnly = true;
+
             this.textBox9.Size = new System.Drawing.Size(197, 23);
+
+            this.textBox9.Size = new System.Drawing.Size(225, 28);
+
             this.textBox9.TabIndex = 5;
             this.textBox9.Text = "Employee";
             this.textBox9.Click += new System.EventHandler(this.textBox9_Click);
@@ -148,7 +166,11 @@
             this.comboBox8.Location = new System.Drawing.Point(161, 242);
             this.comboBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox8.Name = "comboBox8";
+
             this.comboBox8.Size = new System.Drawing.Size(106, 30);
+
+            this.comboBox8.Size = new System.Drawing.Size(121, 36);
+
             this.comboBox8.TabIndex = 4;
             this.comboBox8.Text = "Position";
             this.comboBox8.Enter += new System.EventHandler(this.comboBox8_Enter);
@@ -163,7 +185,11 @@
             this.comboBox6.Location = new System.Drawing.Point(160, 178);
             this.comboBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox6.Name = "comboBox6";
+
             this.comboBox6.Size = new System.Drawing.Size(106, 30);
+
+            this.comboBox6.Size = new System.Drawing.Size(121, 36);
+
             this.comboBox6.TabIndex = 2;
             this.comboBox6.Text = "State";
             this.comboBox6.Enter += new System.EventHandler(this.comboBox6_Enter);
@@ -181,7 +207,11 @@
             this.comboBox3.Location = new System.Drawing.Point(41, 178);
             this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox3.Name = "comboBox3";
+
             this.comboBox3.Size = new System.Drawing.Size(106, 30);
+
+            this.comboBox3.Size = new System.Drawing.Size(121, 36);
+
             this.comboBox3.TabIndex = 1;
             this.comboBox3.Text = "Nation";
             this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
@@ -200,12 +230,21 @@
             // 
             // dateTimePicker1
             // 
+
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Noto Sans KR Regular", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.dateTimePicker1.Font = new System.Drawing.Font("Noto Sans KR Regular", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.dateTimePicker1.Location = new System.Drawing.Point(42, 123);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(197, 27);
+
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Noto Sans KR Regular", 12F);
+            this.dateTimePicker1.Font = new System.Drawing.Font("Noto Sans KR Regular", 12F);
+            this.dateTimePicker1.Location = new System.Drawing.Point(42, 127);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(225, 37);
+
             this.dateTimePicker1.TabIndex = 0;
             this.dateTimePicker1.Value = new System.DateTime(2020, 1, 6, 0, 0, 0, 0);
             // 
@@ -229,7 +268,11 @@
             this.textBox6.Location = new System.Drawing.Point(42, 439);
             this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox6.Name = "textBox6";
+
             this.textBox6.Size = new System.Drawing.Size(380, 30);
+
+            this.textBox6.Size = new System.Drawing.Size(434, 35);
+
             this.textBox6.TabIndex = 8;
             this.textBox6.Text = "Account Number";
             this.textBox6.Click += new System.EventHandler(this.textBox6_Click);
@@ -244,7 +287,11 @@
             this.textBox7.Location = new System.Drawing.Point(42, 402);
             this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox7.Name = "textBox7";
+
             this.textBox7.Size = new System.Drawing.Size(184, 30);
+
+            this.textBox7.Size = new System.Drawing.Size(210, 35);
+
             this.textBox7.TabIndex = 6;
             this.textBox7.Text = "Bank Name";
             this.textBox7.Click += new System.EventHandler(this.textBox7_Click);
@@ -258,8 +305,11 @@
             this.textBox5.ForeColor = System.Drawing.Color.Gray;
             this.textBox5.Location = new System.Drawing.Point(232, 402);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox5.Name = "textBox5";
+
             this.textBox5.Size = new System.Drawing.Size(190, 30);
+
+            this.textBox5.Size = new System.Drawing.Size(217, 35);
+
             this.textBox5.TabIndex = 7;
             this.textBox5.Text = "Routing Number";
             this.textBox5.Click += new System.EventHandler(this.textBox5_Click);
@@ -280,7 +330,11 @@
             this.comboBox1.Location = new System.Drawing.Point(42, 242);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
+
             this.comboBox1.Size = new System.Drawing.Size(106, 30);
+
+            this.comboBox1.Size = new System.Drawing.Size(121, 36);
+
             this.comboBox1.TabIndex = 3;
             this.comboBox1.Text = "Department";
             this.comboBox1.Enter += new System.EventHandler(this.comboBox1_Enter);

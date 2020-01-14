@@ -35,7 +35,6 @@ namespace _20180829
             listView1.Columns.Add("Total", 60);
             listView1.Columns.Add("Approval", 80); //승인여부
 
-
             listView1.View = View.Details;
             listView1.FullRowSelect = true;
             listView1.GridLines = true;
