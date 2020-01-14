@@ -1115,7 +1115,6 @@ namespace _20180829
         }
 
 
-
         private void button12_Click(object sender, EventArgs e)
         {
             panel10.Visible = false;
