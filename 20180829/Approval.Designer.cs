@@ -150,11 +150,12 @@
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(126, 6);
+            this.textBox1.Font = new System.Drawing.Font("Noto Sans KR Regular", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox1.Location = new System.Drawing.Point(126, 4);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(139, 21);
+            this.textBox1.Size = new System.Drawing.Size(139, 25);
             this.textBox1.TabIndex = 52;
             // 
             // label8
@@ -206,11 +207,12 @@
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(126, 39);
+            this.textBox2.Font = new System.Drawing.Font("Noto Sans KR Regular", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox2.Location = new System.Drawing.Point(126, 37);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(183, 21);
+            this.textBox2.Size = new System.Drawing.Size(183, 25);
             this.textBox2.TabIndex = 51;
             // 
             // label2
@@ -241,11 +243,12 @@
             this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(126, 138);
+            this.textBox4.Font = new System.Drawing.Font("Noto Sans KR Regular", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox4.Location = new System.Drawing.Point(126, 136);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(183, 21);
+            this.textBox4.Size = new System.Drawing.Size(183, 25);
             this.textBox4.TabIndex = 53;
             // 
             // textBox3
@@ -253,11 +256,12 @@
             this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(126, 72);
+            this.textBox3.Font = new System.Drawing.Font("Noto Sans KR Regular", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox3.Location = new System.Drawing.Point(126, 70);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(139, 21);
+            this.textBox3.Size = new System.Drawing.Size(139, 25);
             this.textBox3.TabIndex = 52;
             // 
             // textBox5
@@ -265,11 +269,12 @@
             this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(126, 171);
+            this.textBox5.Font = new System.Drawing.Font("Noto Sans KR Regular", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox5.Location = new System.Drawing.Point(126, 169);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(183, 21);
+            this.textBox5.Size = new System.Drawing.Size(183, 25);
             this.textBox5.TabIndex = 54;
             // 
             // label5
@@ -301,11 +306,12 @@
             this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox6.Enabled = false;
-            this.textBox6.Location = new System.Drawing.Point(126, 204);
+            this.textBox6.Font = new System.Drawing.Font("Noto Sans KR Regular", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox6.Location = new System.Drawing.Point(126, 202);
             this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(183, 21);
+            this.textBox6.Size = new System.Drawing.Size(183, 25);
             this.textBox6.TabIndex = 55;
             // 
             // textBox7
@@ -313,11 +319,12 @@
             this.textBox7.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox7.Enabled = false;
-            this.textBox7.Location = new System.Drawing.Point(126, 237);
+            this.textBox7.Font = new System.Drawing.Font("Noto Sans KR Regular", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox7.Location = new System.Drawing.Point(126, 235);
             this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox7.Name = "textBox7";
             this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(183, 21);
+            this.textBox7.Size = new System.Drawing.Size(183, 25);
             this.textBox7.TabIndex = 56;
             // 
             // textBox8
@@ -325,11 +332,12 @@
             this.textBox8.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox8.Enabled = false;
-            this.textBox8.Location = new System.Drawing.Point(126, 271);
+            this.textBox8.Font = new System.Drawing.Font("Noto Sans KR Regular", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox8.Location = new System.Drawing.Point(126, 269);
             this.textBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox8.Name = "textBox8";
             this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(183, 21);
+            this.textBox8.Size = new System.Drawing.Size(183, 25);
             this.textBox8.TabIndex = 57;
             // 
             // button1
