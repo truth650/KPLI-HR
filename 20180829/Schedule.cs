@@ -271,23 +271,6 @@ namespace _20180829
                 holidaylist.Add(new Holiday("KOR", "Static", "한글날", today.Year, 10, 9, 0, "Solar"));
                 holidaylist.Add(new Holiday("KOR", "Static", "크리스마스", today.Year, 12, 25, 0, "Solar"));
             }
-
-            if (Login.MemoList.Count == 0)
-            {
-                //임시, 원래는 프로그램 구동시에 DB에서 가져와 리스트에 담아줌 
-                Login.MemoList.Add(new Memo("truth650", DateTime.Today, "집에가고싶어요"));
-                Login.MemoList.Add(new Memo("truth650", DateTime.Today.AddDays(1), "허리가 아파요"));
-                Login.MemoList.Add(new Memo("truth650", DateTime.Today.AddDays(2), "코딩을 하면 시간가는 줄 몰라요"));
-            }
-
-            if (Login.RequestVList.Count == 0)
-            {
-                //임시, 원래는 프로그램 구동시에 DB에서 가져와 리스트에 담아줌 
-                //Login.RequestVList.Add(new RequestV("truth650", "김영종", DateTime.Today, "SickDay", DateTime.Today, DateTime.Today.AddDays(1),
-                //    "NewYork", "618-723-1234", "성호영", false));
-                //Login.RequestVList.Add(new RequestV("truth650", "김영종", DateTime.Today, "Vacation", DateTime.Today, DateTime.Today.AddDays(1),
-                //    "NewYork", "618-723-1234", "성호영", false));
-            }
         }
 
         //불규칙 휴일계산(ex.세번째 주 월요일)
@@ -1030,11 +1013,11 @@ namespace _20180829
             listView1.GridLines = true;
 
             //리스트뷰에 메모 추가
-            for(int i = 0; i < Login.MemoList.Count; i++)
+            for (int i = 0; i < Login.MemoList.Count; i++)
             {
                 if (Login.LoginID == Login.MemoList[i].ID)
                 {
-                    if(today.Year == Login.MemoList[i].Date.Year && today.Month == Login.MemoList[i].Date.Month)
+                    if (today.Year == Login.MemoList[i].Date.Year && today.Month == Login.MemoList[i].Date.Month)
                     {
                         string[] arr = new string[2];
                         arr[0] = Login.MemoList[i].Date.Day + "일  " + Login.MemoList[i].Date.Hour + ":" + Login.MemoList[i].Date.Minute;
@@ -1045,8 +1028,9 @@ namespace _20180829
                         listView1.Items.Add(item);
                     }
                 }
-            }          
+            }
         }
+
         //휴가신청 폼 열기
         private void button7_Click(object sender, EventArgs e)
         {

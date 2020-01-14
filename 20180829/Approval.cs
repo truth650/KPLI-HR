@@ -106,7 +106,7 @@ namespace _20180829
                                 state = true;
 
                                 WbDB.Singleton.Open();
-                                WbDB.Singleton.Requse_U(Login.RequestVList[i].ID, Convert.ToDateTime(s), state);
+                                WbDB.Singleton.Requse_U(Login.RequestVList[j].ID, Convert.ToDateTime(s), state);
                             }
                         }
                     }

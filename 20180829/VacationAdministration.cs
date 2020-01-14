@@ -60,6 +60,10 @@ namespace _20180829
         {          
             SetVacationList();
             SetRequestList();
+            if(DateTime.Now.Month != 1)
+            {
+                button3.Visible = false;
+            }
         }
 
         #region 휴가정보
@@ -168,6 +172,7 @@ namespace _20180829
         {
             int sickday = 0;
             int vacation = 0;
+            int annual = 0;
             //예외처리
             if (textBox1.Text == "")
             {
@@ -193,14 +198,19 @@ namespace _20180829
                             }
                             vacation = (int.Parse(textBox4.Text) * 8) + int.Parse(textBox6.Text);
 
+                            annual = int.Parse(textBox7.Text);
+
+
                             //리스트 수정
                             if (Login.VacationList[i].ID == textBox3.Text)
                             {
                                 //DB 수정코드
                                 WbDB.Singleton.Open();
                                 WbDB.Singleton.Vacation_U(Login.VacationList[i].ID, "SickDay", sickday);
-
                                 WbDB.Singleton.Vacation_U(Login.VacationList[i].ID, "Vacation", vacation);
+
+                                WbDB.Singleton.Open();
+                                WbDB.Singleton.Annual_U(Login.VacationList[i].ID, annual);
                                 SetVacationList();
                             }
                         }
@@ -308,6 +318,30 @@ namespace _20180829
         }
 
         #endregion
-       
+
+
+        //휴가리셋버튼   병가, 연가, 연차 더해주기
+        private void button3_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < Login.VacationList.Count; i++)
+            {
+                //병가 더해주기
+                int sickday =  Login.VacationList[i].SickDay + 24;
+                
+                //연차 더해주기
+                int annual = (Login.VacationList[i].Annual + 1);
+
+                //연가 더해주기
+                int vacation =  Login.VacationList[i].YearVacation + (40 + (annual * 8));
+
+                WbDB.Singleton.Open();
+                WbDB.Singleton.Vacation_U(Login.VacationList[i].ID, "SickDay", sickday);
+                WbDB.Singleton.Vacation_U(Login.VacationList[i].ID, "Vacation", vacation);
+                WbDB.Singleton.Open();
+                WbDB.Singleton.Annual_U(Login.VacationList[i].ID, annual);
+                SetVacationList();               
+            }
+        }
+
     }
 }
