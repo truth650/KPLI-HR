@@ -173,7 +173,7 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(215, 33);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(241, 33);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // comboBox2
@@ -186,7 +186,7 @@
             this.comboBox2.Items.AddRange(new object[] {
             "14:00",
             "18:00"});
-            this.comboBox2.Location = new System.Drawing.Point(153, 3);
+            this.comboBox2.Location = new System.Drawing.Point(171, 3);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(59, 26);
@@ -200,7 +200,7 @@
             this.dateTimePicker2.Location = new System.Drawing.Point(3, 3);
             this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(144, 27);
+            this.dateTimePicker2.Size = new System.Drawing.Size(162, 27);
             this.dateTimePicker2.TabIndex = 47;
             // 
             // tableLayoutPanel3
@@ -215,7 +215,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(215, 33);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(241, 33);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // comboBox1
@@ -228,7 +228,7 @@
             this.comboBox1.Items.AddRange(new object[] {
             "09:00",
             "14:00"});
-            this.comboBox1.Location = new System.Drawing.Point(153, 3);
+            this.comboBox1.Location = new System.Drawing.Point(171, 3);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(59, 26);
@@ -242,7 +242,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(3, 3);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(144, 27);
+            this.dateTimePicker1.Size = new System.Drawing.Size(162, 27);
             this.dateTimePicker1.TabIndex = 45;
             // 
             // tableLayoutPanel2

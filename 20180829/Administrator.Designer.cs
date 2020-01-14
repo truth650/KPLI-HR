@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -58,30 +57,14 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
-            this.panel1.Controls.Add(this.button8);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(160, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 85);
+            this.panel1.Size = new System.Drawing.Size(420, 85);
             this.panel1.TabIndex = 39;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.Transparent;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Noto Sans KR Medium", 14.25F, System.Drawing.FontStyle.Bold);
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(606, 37);
-            this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(90, 41);
-            this.button8.TabIndex = 26;
-            this.button8.Text = "My Info";
-            this.button8.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
@@ -91,7 +74,7 @@
             this.button1.Font = new System.Drawing.Font("Noto Sans KR Medium", 14.25F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(702, 37);
+            this.button1.Location = new System.Drawing.Point(327, 37);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(90, 41);
@@ -121,7 +104,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(800, 32);
+            this.panel3.Size = new System.Drawing.Size(420, 32);
             this.panel3.TabIndex = 23;
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
             this.panel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseMove);
@@ -133,7 +116,7 @@
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox4.Image = global::_20180829.Properties.Resources.minimize_window_32px;
-            this.pictureBox4.Location = new System.Drawing.Point(736, 0);
+            this.pictureBox4.Location = new System.Drawing.Point(356, 0);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(32, 32);
             this.pictureBox4.TabIndex = 21;
@@ -146,7 +129,7 @@
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox3.Image = global::_20180829.Properties.Resources.delete_32px;
-            this.pictureBox3.Location = new System.Drawing.Point(768, 0);
+            this.pictureBox3.Location = new System.Drawing.Point(388, 0);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(32, 32);
             this.pictureBox3.TabIndex = 20;
@@ -341,7 +324,7 @@
             // Administrator
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(960, 720);
+            this.ClientSize = new System.Drawing.Size(580, 720);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.panel1);
@@ -365,7 +348,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel3;
