@@ -54,5 +54,12 @@ namespace _20180829
             this.Close();
         }
         //상단바
+
+        //이벤트
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CorrectionPW cpw = new CorrectionPW();
+            cpw.ShowDialog();
+        }
     }
 }

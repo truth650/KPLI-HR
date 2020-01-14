@@ -306,8 +306,13 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(335, 38);
+
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(383, 48);
+
             this.tableLayoutPanel4.TabIndex = 82;
             // 
             // label2
@@ -437,9 +442,14 @@
             this.textBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox9.Enabled = false;
+
+            this.textBox9.Font = new System.Drawing.Font("Noto Sans KR Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBox9.Location = new System.Drawing.Point(207, 323);
+
             this.textBox9.Font = new System.Drawing.Font("Noto Sans KR Regular", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox9.Location = new System.Drawing.Point(237, 407);
             this.textBox9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+
             this.textBox9.Name = "textBox9";
             this.textBox9.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.textBox9.Size = new System.Drawing.Size(147, 32);
