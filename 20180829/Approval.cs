@@ -104,8 +104,9 @@ namespace _20180829
                                 VacationAdministration.RequestDate)
                             {
                                 state = true;
-                             
-                                WbDB.Singleton.Requse_U(Login.RequestVList[i].ID, Login.RequestVList[i].RequestDate, state);
+
+                                WbDB.Singleton.Open();
+                                WbDB.Singleton.Requse_U(Login.RequestVList[i].ID, Convert.ToDateTime(s), state);
                             }
                         }
                     }

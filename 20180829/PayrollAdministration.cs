@@ -144,7 +144,7 @@ namespace _20180829
                     if (Login.ExpenseList[i].ID == id && Login.ExpenseList[i].Date.ToString("yyyy-MM-dd HH:mm:ss") == date)
                     {
                         WbDB.Singleton.Open();
-                        WbDB.Singleton.Expense_U(Login.ExpenseList[i].ID,Login.ExpenseList[i].Date, "결제승인");
+                        WbDB.Singleton.Expense_U(Login.ExpenseList[i].ID,Login.ExpenseList[i].Date, "승인");
                     }
                 }
                 Login.ExpenseList.Clear();
