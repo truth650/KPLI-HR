@@ -515,7 +515,7 @@ namespace _20180829
             while (reader.Read())
             {
 
-                request.Add(new RequestV(reader["Id"].ToString(),reader["Name"].ToString(),Convert.ToDateTime(reader["Request_Date"].ToString()),
+                request.Add(new RequestV(reader["Id"].ToString(),reader["Name"].ToString(), Convert.ToDateTime((reader["Request_Date"]).ToString()),
                     (reader["Type"].ToString()), (Convert.ToDateTime(reader["Vacation_S"].ToString())), Convert.ToDateTime(reader["Vacation_E"].ToString()),
                     (reader["Destination"].ToString()), (reader["Contact"].ToString()), (reader["Agent"].ToString()),(Convert.ToBoolean((reader["Approval"].ToString())))));             
             }

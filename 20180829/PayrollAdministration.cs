@@ -123,10 +123,19 @@ namespace _20180829
                     saveFileDialog.OverwritePrompt = true;
                     saveFileDialog.Filter = "모든 파일 (*.*) | *.*";
 
-                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    try
                     {
-                        File.WriteAllBytes(saveFileDialog.FileName, file);
+                        if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                        {
+                            File.WriteAllBytes(saveFileDialog.FileName, file);
+                            MessageBox.Show("Download Complete");
+                        }
                     }
+                    catch
+                    {
+                        MessageBox.Show("Download Fail");
+                    }
+
                 }
             }
         }
@@ -144,7 +153,7 @@ namespace _20180829
                     if (Login.ExpenseList[i].ID == id && Login.ExpenseList[i].Date.ToString("yyyy-MM-dd HH:mm:ss") == date)
                     {
                         WbDB.Singleton.Open();
-                        WbDB.Singleton.Expense_U(Login.ExpenseList[i].ID,Login.ExpenseList[i].Date, "결제승인");
+                        WbDB.Singleton.Expense_U(Login.ExpenseList[i].ID,Login.ExpenseList[i].Date, "승인");
                     }
                 }
                 Login.ExpenseList.Clear();
