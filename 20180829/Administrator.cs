@@ -126,11 +126,12 @@ namespace _20180829
             va.Show();
         }
 
+
         //영수증 관리
         private void button9_Click(object sender, EventArgs e)
         {
             PayrollAdministration pa = new PayrollAdministration();
-            pa.Show();
+            pa.ShowDialog();
         }
 
     }

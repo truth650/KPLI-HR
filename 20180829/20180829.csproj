@@ -93,6 +93,12 @@
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Memo.cs" />
+    <Compile Include="MyInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyInfo.Designer.cs">
+      <DependentUpon>MyInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Notice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,6 +222,9 @@
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MyInfo.resx">
+      <DependentUpon>MyInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Notice.resx">
       <DependentUpon>Notice.cs</DependentUpon>
     </EmbeddedResource>
@@ -325,6 +334,8 @@
     <Content Include="Resources\logo_s_kapli.png" />
     <Content Include="Resources\minimize_window1_32px.png" />
     <Content Include="Resources\minimize_window_32px.png" />
+    <Content Include="Resources\more_info1_32px.png" />
+    <Content Include="Resources\more_info_32px.png" />
     <Content Include="Resources\password1_32px.png" />
     <Content Include="Resources\password_32px.png" />
     <Content Include="Resources\payroll1_32px.png" />
