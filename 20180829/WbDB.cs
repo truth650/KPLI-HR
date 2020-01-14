@@ -366,9 +366,8 @@ namespace _20180829
             //=====================================================
             if (command.ExecuteNonQuery() != 1)
                 throw new Exception("추가 실패");
-
-
-
+            command.Dispose();
+            conn.Close();
         }
 
 

@@ -119,13 +119,19 @@ namespace _20180829
             this.Close();
         }
 
+        //사용자 정보조회 버튼
+        private void button8_Click(object sender, EventArgs e)
+        {
+            UserInformation us = new UserInformation();
+            us.ShowDialog();
+        }
+
         //휴가관리 및 승인
         private void button7_Click(object sender, EventArgs e)
         {
             VacationAdministration va = new VacationAdministration();
             va.Show();
         }
-
 
         //영수증 관리
         private void button9_Click(object sender, EventArgs e)

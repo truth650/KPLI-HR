@@ -45,6 +45,7 @@
             this.logo = new System.Windows.Forms.PictureBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -92,7 +93,7 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(6, 34);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(261, 50);
+            this.label5.Size = new System.Drawing.Size(323, 62);
             this.label5.TabIndex = 22;
             this.label5.Text = "Administrator";
             // 
@@ -321,10 +322,22 @@
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
+            // button8
+            // 
+            this.button8.Font = new System.Drawing.Font("Noto Sans KR Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button8.Location = new System.Drawing.Point(205, 326);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(316, 48);
+            this.button8.TabIndex = 43;
+            this.button8.Text = "User information check";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // Administrator
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(580, 720);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.panel1);
@@ -364,5 +377,6 @@
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button8;
     }
 }
