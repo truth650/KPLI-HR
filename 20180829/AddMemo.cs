@@ -32,6 +32,8 @@ namespace _20180829
             textBox2.Text = Schedule.ChoseMonth.ToString();
             textBox3.Text = Schedule.ChoseDay.ToString();
             this.ActiveControl = textBox4;
+            textBox4.MaxLength = 2;
+            textBox5.MaxLength = 2;
 
             memos.Add(new Memo("a", DateTime.Now.Date, "a"));
         }
@@ -39,22 +41,29 @@ namespace _20180829
         //메모 등록 버튼
         private void button1_Click(object sender, EventArgs e)
         {
-            //시간 등록
-            DateTime dt = new DateTime(Schedule.ChoseYear, Schedule.ChoseMonth, Schedule.ChoseDay,
-                int.Parse(textBox4.Text), int.Parse(textBox5.Text), 0);
+            try
+            {
+                //시간 등록
+                DateTime dt = new DateTime(Schedule.ChoseYear, Schedule.ChoseMonth, Schedule.ChoseDay,
+                    int.Parse(textBox4.Text), int.Parse(textBox5.Text), 0);
 
-            memos[0].ID = Login.LoginID;
-            memos[0].Date = dt;
-            memos[0].Content = textBox6.Text;
+                memos[0].ID = Login.LoginID;
+                memos[0].Date = dt;
+                memos[0].Content = textBox6.Text;
 
 
-            WbDB.Singleton.Open();
-            WbDB.Singleton.Memo_S(memos[0]);
-            Login.MemoList.Clear();
-            WbDB.Singleton.Memo_L(Login.MemoList);
-            WbDB.Singleton.Close();
-            sd.SetMemoList();
-            this.Close();
+                WbDB.Singleton.Open();
+                WbDB.Singleton.Memo_S(memos[0]);
+                Login.MemoList.Clear();
+                WbDB.Singleton.Memo_L(Login.MemoList);
+                WbDB.Singleton.Close();
+                sd.SetMemoList();
+                this.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Check Time Value");
+            }
         }
 
 

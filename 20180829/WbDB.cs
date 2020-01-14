@@ -335,8 +335,6 @@ namespace _20180829
             if (conn.State == ConnectionState.Closed)
                 throw new Exception("DB 미연결상태");
 
-
-
             //=====================================================
             string comtext = "insert into vacation values (@Id,@Name,@Sick_Day,@Year_Vacation,@Annual)";
             SqlCommand command = new SqlCommand(comtext, conn);
@@ -376,7 +374,6 @@ namespace _20180829
 
         public List<Vacation> Vacation_L(List<Vacation> vacationlist)
         {
-
             string comtext = "select * from vacation";
             SqlCommand command = new SqlCommand(comtext, conn);
 
@@ -432,11 +429,31 @@ namespace _20180829
                 command.Dispose();
                 conn.Close();
             }
-
-
         }
-    
-        
+
+        //연차더해주기
+        public void Annual_U(string id, int result)
+        {
+            if (conn.State == ConnectionState.Closed)
+                throw new Exception("DB 미연결상태");
+
+            string comtext = "update vacation set Annual = @RESULT WHERE id = @Id";
+            SqlCommand command = new SqlCommand(comtext, conn);
+
+            //=====================================================
+            SqlParameter param_id = new SqlParameter("@Id", id);
+            command.Parameters.Add(param_id);
+            SqlParameter param_type = new SqlParameter("@RESULT", result);
+            command.Parameters.Add(param_type);
+
+            //=====================================================
+            command.ExecuteNonQuery();
+
+            command.Dispose();
+            conn.Close();         
+        }
+
+
 
 
         #endregion

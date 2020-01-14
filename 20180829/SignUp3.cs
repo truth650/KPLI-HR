@@ -202,6 +202,8 @@ namespace _20180829
         private void SignUp3_Load(object sender, EventArgs e)
         {
             vacations.Add(new Vacation("a", "a", 1, 2, 3));
+            textBox5.MaxLength = 9;
+            textBox6.MaxLength = 18;
         }
 
         //휴가 계산 함수

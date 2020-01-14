@@ -68,10 +68,10 @@
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(16, 65);
+            this.panel1.Location = new System.Drawing.Point(18, 81);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(470, 43);
+            this.panel1.Size = new System.Drawing.Size(537, 53);
             this.panel1.TabIndex = 0;
             // 
             // label5
@@ -79,9 +79,9 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Noto Sans KR Regular", 10.75F);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(374, 10);
+            this.label5.Location = new System.Drawing.Point(427, 12);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(14, 22);
+            this.label5.Size = new System.Drawing.Size(17, 27);
             this.label5.TabIndex = 9;
             this.label5.Text = ":";
             // 
@@ -91,11 +91,12 @@
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox5.Font = new System.Drawing.Font("Noto Sans KR Regular", 11F);
             this.textBox5.ForeColor = System.Drawing.Color.Black;
-            this.textBox5.Location = new System.Drawing.Point(389, 7);
+            this.textBox5.Location = new System.Drawing.Point(445, 9);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(45, 29);
+            this.textBox5.Size = new System.Drawing.Size(51, 35);
             this.textBox5.TabIndex = 8;
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox4
             // 
@@ -103,20 +104,21 @@
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox4.Font = new System.Drawing.Font("Noto Sans KR Regular", 11F);
             this.textBox4.ForeColor = System.Drawing.Color.Black;
-            this.textBox4.Location = new System.Drawing.Point(326, 7);
+            this.textBox4.Location = new System.Drawing.Point(373, 9);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(45, 29);
+            this.textBox4.Size = new System.Drawing.Size(51, 35);
             this.textBox4.TabIndex = 7;
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Noto Sans KR Regular", 10.75F);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(283, 9);
+            this.label4.Location = new System.Drawing.Point(323, 11);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 22);
+            this.label4.Size = new System.Drawing.Size(55, 27);
             this.label4.TabIndex = 6;
             this.label4.Text = "Time";
             // 
@@ -128,11 +130,11 @@
             this.textBox3.Enabled = false;
             this.textBox3.Font = new System.Drawing.Font("Noto Sans KR Regular", 11F);
             this.textBox3.ForeColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(216, 10);
+            this.textBox3.Location = new System.Drawing.Point(247, 12);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(40, 22);
+            this.textBox3.Size = new System.Drawing.Size(46, 28);
             this.textBox3.TabIndex = 5;
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -141,9 +143,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Noto Sans KR Regular", 10.75F);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(179, 9);
+            this.label3.Location = new System.Drawing.Point(205, 11);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 22);
+            this.label3.Size = new System.Drawing.Size(43, 27);
             this.label3.TabIndex = 4;
             this.label3.Text = "Day";
             // 
@@ -152,9 +154,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Noto Sans KR Regular", 10.75F);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(93, 9);
+            this.label2.Location = new System.Drawing.Point(106, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 22);
+            this.label2.Size = new System.Drawing.Size(67, 27);
             this.label2.TabIndex = 3;
             this.label2.Text = "Month";
             // 
@@ -166,11 +168,11 @@
             this.textBox2.Enabled = false;
             this.textBox2.Font = new System.Drawing.Font("Noto Sans KR Regular", 11F);
             this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(143, 10);
+            this.textBox2.Location = new System.Drawing.Point(163, 12);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(37, 22);
+            this.textBox2.Size = new System.Drawing.Size(42, 28);
             this.textBox2.TabIndex = 2;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -182,11 +184,11 @@
             this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Noto Sans KR Regular", 11F);
             this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(47, 10);
+            this.textBox1.Location = new System.Drawing.Point(54, 12);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(43, 22);
+            this.textBox1.Size = new System.Drawing.Size(49, 28);
             this.textBox1.TabIndex = 1;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -195,9 +197,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Noto Sans KR Regular", 10.75F);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(8, 9);
+            this.label1.Location = new System.Drawing.Point(9, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 22);
+            this.label1.Size = new System.Drawing.Size(48, 27);
             this.label1.TabIndex = 0;
             this.label1.Text = "Year";
             // 
@@ -206,10 +208,10 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.textBox6);
-            this.panel2.Location = new System.Drawing.Point(16, 138);
+            this.panel2.Location = new System.Drawing.Point(18, 172);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(470, 100);
+            this.panel2.Size = new System.Drawing.Size(537, 124);
             this.panel2.TabIndex = 10;
             // 
             // textBox6
@@ -218,11 +220,11 @@
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox6.Font = new System.Drawing.Font("Noto Sans KR Regular", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox6.ForeColor = System.Drawing.Color.Gray;
-            this.textBox6.Location = new System.Drawing.Point(6, 7);
+            this.textBox6.Location = new System.Drawing.Point(7, 9);
             this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(455, 85);
+            this.textBox6.Size = new System.Drawing.Size(520, 106);
             this.textBox6.TabIndex = 0;
             this.textBox6.Text = "What to Note.....";
             this.textBox6.Click += new System.EventHandler(this.textBox6_Click);
@@ -237,10 +239,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Noto Sans KR Bold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(405, 248);
+            this.button1.Location = new System.Drawing.Point(463, 310);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 31);
+            this.button1.Size = new System.Drawing.Size(91, 39);
             this.button1.TabIndex = 11;
             this.button1.Text = "Confirm";
             this.button1.UseVisualStyleBackColor = false;
@@ -253,8 +255,9 @@
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(500, 31);
+            this.panel3.Size = new System.Drawing.Size(571, 39);
             this.panel3.TabIndex = 24;
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
             this.panel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseMove);
@@ -266,9 +269,10 @@
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox4.Image = global::_20180829.Properties.Resources.minimize_window1_32px;
-            this.pictureBox4.Location = new System.Drawing.Point(436, 0);
+            this.pictureBox4.Location = new System.Drawing.Point(497, 0);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(32, 31);
+            this.pictureBox4.Size = new System.Drawing.Size(37, 39);
             this.pictureBox4.TabIndex = 21;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
@@ -279,9 +283,10 @@
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox3.Image = global::_20180829.Properties.Resources.delete1_32px;
-            this.pictureBox3.Location = new System.Drawing.Point(468, 0);
+            this.pictureBox3.Location = new System.Drawing.Point(534, 0);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 31);
+            this.pictureBox3.Size = new System.Drawing.Size(37, 39);
             this.pictureBox3.TabIndex = 20;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
@@ -292,9 +297,9 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Noto Sans KR Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(17, 110);
+            this.label6.Location = new System.Drawing.Point(19, 138);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 24);
+            this.label6.Size = new System.Drawing.Size(93, 30);
             this.label6.TabIndex = 10;
             this.label6.Text = "Content";
             // 
@@ -304,18 +309,18 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Noto Sans KR Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(17, 34);
+            this.label7.Location = new System.Drawing.Point(19, 42);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 24);
+            this.label7.Size = new System.Drawing.Size(63, 30);
             this.label7.TabIndex = 25;
             this.label7.Text = "Time";
             // 
             // AddMemo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(209)))));
-            this.ClientSize = new System.Drawing.Size(500, 290);
+            this.ClientSize = new System.Drawing.Size(571, 362);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel3);

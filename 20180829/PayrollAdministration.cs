@@ -105,11 +105,11 @@ namespace _20180829
         }
 
         //다운로드 버튼
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
-            for(int i = 0; i < Login.ExpenseList.Count; i++)
+            for (int i = 0; i < Login.ExpenseList.Count; i++)
             {
-                if(Login.ExpenseList[i].ID == id && Login.ExpenseList[i].Date.ToString("yyyy-MM-dd HH:mm:ss") == date)
+                if (Login.ExpenseList[i].ID == id && Login.ExpenseList[i].Date.ToString("yyyy-MM-dd HH:mm:ss") == date)
                 {
                     //파일담기
                     byte[] file = Login.ExpenseList[i].Image;
@@ -117,7 +117,7 @@ namespace _20180829
                     SaveFileDialog saveFileDialog = new SaveFileDialog();
                     saveFileDialog.FileName = Login.ExpenseList[i].Filename;
                     saveFileDialog.DefaultExt = Login.ExpenseList[i].Extension;
-                    
+
                     saveFileDialog.Title = "저장경로 지정하세요";
                     saveFileDialog.OverwritePrompt = true;
                     saveFileDialog.Filter = "모든 파일 (*.*) | *.*";
@@ -140,7 +140,7 @@ namespace _20180829
         }
 
         //영수증 결제승인
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
             //다이얼로그 박스
             DialogResult res = MessageBox.Show("영수증을 승인하시겠습니까?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
@@ -152,20 +152,21 @@ namespace _20180829
                     if (Login.ExpenseList[i].ID == id && Login.ExpenseList[i].Date.ToString("yyyy-MM-dd HH:mm:ss") == date)
                     {
                         WbDB.Singleton.Open();
-                        WbDB.Singleton.Expense_U(Login.ExpenseList[i].ID,Login.ExpenseList[i].Date, "승인");
+                        WbDB.Singleton.Expense_U(Login.ExpenseList[i].ID, Login.ExpenseList[i].Date, "승인");
                     }
                 }
                 Login.ExpenseList.Clear();
                 WbDB.Singleton.Open();
                 WbDB.Singleton.LoadExpense(Login.ExpenseList);
-                SetParollList();           
-
+                MessageBox.Show("Corrected Vacation");
+                SetParollList();
             }
             if (res == DialogResult.Cancel)
             {
                 MessageBox.Show("You have clicked Cancel Button");
             }
         }
+
         //상단바
         bool TagMove;
         int MValX, MValY;
