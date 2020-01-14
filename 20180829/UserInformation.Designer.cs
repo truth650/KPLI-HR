@@ -68,6 +68,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,6 +80,7 @@
             this.listView1.Size = new System.Drawing.Size(595, 490);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseClick);
             // 
             // label1
             // 
@@ -92,6 +94,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.textBox18);
             this.groupBox1.Controls.Add(this.label19);
             this.groupBox1.Controls.Add(this.textBox17);
@@ -231,9 +234,14 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Employee",
+            "Accounting Manager",
+            "HR Manager",
+            "Administrator"});
             this.comboBox1.Location = new System.Drawing.Point(372, 325);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(168, 35);
+            this.comboBox1.Size = new System.Drawing.Size(181, 35);
             this.comboBox1.TabIndex = 28;
             // 
             // label14
@@ -470,6 +478,17 @@
             this.textBox1.Size = new System.Drawing.Size(147, 34);
             this.textBox1.TabIndex = 2;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.button1.Location = new System.Drawing.Point(597, 325);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(121, 35);
+            this.button1.TabIndex = 39;
+            this.button1.Text = "권한 변경";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // UserInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -528,5 +547,6 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox textBox18;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -199,6 +199,28 @@ namespace _20180829
 
         #endregion
 
+        //보안권한 변경
+        public void Authority_U(string id, int authority)
+        {
+            if (conn.State == ConnectionState.Closed)
+                throw new Exception("DB 미연결상태");
+
+
+            string comtext = "update member set Authority = @Authority WHERE id = @Id";
+            SqlCommand command = new SqlCommand(comtext, conn);
+
+            //=====================================================
+            SqlParameter param_id = new SqlParameter("@Id", id);
+            command.Parameters.Add(param_id);
+            SqlParameter param_authority = new SqlParameter("@Authority", authority);
+            command.Parameters.Add(param_authority);
+
+            //=====================================================
+            command.ExecuteNonQuery();
+            command.Dispose();
+            conn.Close();
+        }
+
 
         #region 게시판 기능
         public void Notice(Board board)
@@ -365,7 +387,10 @@ namespace _20180829
             
             //=====================================================
             if (command.ExecuteNonQuery() != 1)
+            {
                 throw new Exception("추가 실패");
+            }
+
             command.Dispose();
             conn.Close();
         }
