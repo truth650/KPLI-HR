@@ -148,7 +148,6 @@ C:\Users\김영종\Documents\GitHub\KPLI-HR\20180829\obj\Debug\_20180829.Payroll
 C:\Users\alvin\Downloads\github\KPLI-HR\20180829\obj\Debug\_20180829.ExpenseStatus.resources
 C:\Users\alvin\Downloads\github\KPLI-HR\20180829\obj\Debug\_20180829.MyInfo.resources
 C:\Users\alvin\Downloads\github\KPLI-HR\20180829\obj\Debug\_20180829.PayrollAdministration.resources
-C:\Users\김영종\Documents\GitHub\KPLI-HR\20180829\obj\Debug\_20180829.MyInfo.resources
 C:\Users\김영종\Documents\GitHub\KPLI-HR\20180829\bin\Debug\20180829.exe.manifest
 C:\Users\김영종\Documents\GitHub\KPLI-HR\20180829\bin\Debug\20180829.application
 C:\Users\김영종\Documents\GitHub\KPLI-HR\20180829\obj\Debug\20180829.exe.manifest
