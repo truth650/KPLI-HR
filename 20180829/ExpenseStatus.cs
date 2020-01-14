@@ -32,16 +32,17 @@ namespace _20180829
             WbDB.Singleton.LoadExpense(Login.ExpenseList);
             WbDB.Singleton.Close();
 
-            dataGridView1.Rows.Clear();
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            listView1.Clear();
+            listView1.Columns.Add("Date", 100);
+            listView1.Columns.Add("ID", 70);
+            listView1.Columns.Add("Name", 100);
+            listView1.Columns.Add("Total", 70);
+            listView1.Columns.Add("Contents", 100);
+            listView1.Columns.Add("Approval", 70);
 
-            dataGridView1.ColumnCount = 6;
-            dataGridView1.Columns[0].Name = "Data";
-            dataGridView1.Columns[1].Name = "ID";
-            dataGridView1.Columns[2].Name = "Name";
-            dataGridView1.Columns[3].Name = "Total";
-            dataGridView1.Columns[4].Name = "Contents";
-            dataGridView1.Columns[5].Name = "Approval"; //승인여부
+            listView1.View = View.Details;
+            listView1.FullRowSelect = true;
+            listView1.GridLines = true;
 
             //신청자 이름조회
             for (int i = 0; i < Login.UserList.Count; i++)
@@ -56,14 +57,18 @@ namespace _20180829
             {
                 if (Login.LoginID == Login.ExpenseList[i].ID)
                 {
-                    ArrayList row = new ArrayList();
-                    row.Add(Login.ExpenseList[i].Date.ToString("yyyy-MM-dd HH:mm"));
-                    row.Add(Login.ExpenseList[i].ID);
-                    row.Add(Login.ExpenseList[i].Name);
-                    row.Add(Login.ExpenseList[i].Total);
-                    row.Add(Login.ExpenseList[i].Contents);
-                    row.Add(Login.ExpenseList[i].Approval);
-                    dataGridView1.Rows.Add(row.ToArray());
+                    string[] arr = new string[6];
+                    arr[0] = Login.ExpenseList[i].Date.ToString("yyyy-MM-dd HH:mm:ss");
+                    arr[1] = Login.ExpenseList[i].ID;
+                    arr[2] = name;
+                    arr[3] = Login.ExpenseList[i].Total.ToString();
+                    arr[4] = Login.ExpenseList[i].Contents;
+                    arr[5] = Login.ExpenseList[i].Approval;
+
+                    ListViewItem item = new ListViewItem(arr);
+                    item.UseItemStyleForSubItems = false;
+                    //추가
+                    listView1.Items.Add(item);
                 }
             }
         }

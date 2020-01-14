@@ -200,7 +200,6 @@ namespace _20180829
         #endregion
 
 
-
         #region 게시판 기능
         public void Notice(Board board)
         {
@@ -281,7 +280,6 @@ namespace _20180829
         #endregion
 
 
-
         #region 메모
 
         public void Memo_S(Memo memo)
@@ -327,102 +325,6 @@ namespace _20180829
             command.Dispose();
             conn.Close();
             return memolist;
-        }
-
-        //영수증 신청
-        public void InsertExpense(Expense expense)
-        {
-            if (conn.State == ConnectionState.Closed)
-                throw new Exception("DB 미연결상태");
-
-            //=====================================================
-            string comtext = "insert into expense values (@Date, @ID, @Name, @AE, @ME, @OS, @Gift, @OE, @Advertisement, " +
-                             "@ETC, @Total, @Contents, @IMG, @Extension, @Approval)";
-            SqlCommand command = new SqlCommand(comtext, conn);
-            //=====================================================
-            SqlParameter param_date = new SqlParameter("@Date", expense.Date);
-            command.Parameters.Add(param_date);
-
-            SqlParameter param_id = new SqlParameter("@ID", expense.ID);
-            command.Parameters.Add(param_id);
-
-            SqlParameter param_name = new SqlParameter("@Name", expense.Name);
-            command.Parameters.Add(param_name);
-
-            SqlParameter param_ae = new SqlParameter("@AE", expense.AE);
-            command.Parameters.Add(param_ae);
-
-            SqlParameter param_me = new SqlParameter("@ME", expense.ME);
-            command.Parameters.Add(param_me);
-
-            SqlParameter param_os = new SqlParameter("@OS", expense.OS);
-            command.Parameters.Add(param_os);
-
-            SqlParameter param_gift = new SqlParameter("@Gift", expense.Gift);
-            command.Parameters.Add(param_gift);
-
-            SqlParameter param_oe = new SqlParameter("@OE", expense.OE);
-            command.Parameters.Add(param_oe);
-
-            SqlParameter param_advertisment = new SqlParameter("@Advertisement", expense.Advertisment);
-            command.Parameters.Add(param_advertisment);
-
-            SqlParameter param_etc = new SqlParameter("@ETC", expense.ETC);
-            command.Parameters.Add(param_etc);
-
-            SqlParameter param_total = new SqlParameter("@Total", expense.Total);
-            command.Parameters.Add(param_total);
-
-            SqlParameter param_contents = new SqlParameter("@Contents", expense.Contents);
-            command.Parameters.Add(param_contents);
-
-            SqlParameter param_img = new SqlParameter("@IMG", expense.Image);
-            command.Parameters.Add(param_img);
-
-            SqlParameter param_extension = new SqlParameter("@Extension", expense.Extension);
-            command.Parameters.Add(param_extension);
-
-            SqlParameter param_approval = new SqlParameter("@Approval", expense.Approval);
-            command.Parameters.Add(param_approval);
-            //=====================================================
-
-            if (command.ExecuteNonQuery() != 1)
-                throw new Exception("추가 실패");
-            else
-            {
-                MessageBox.Show("등록완료");
-            }
-
-            command.Dispose();
-            conn.Close();
-        }
-
-        //영수증 정보 가져오기
-        public List<Expense> LoadExpense(List<Expense> expenselist)
-        {
-            if (conn.State == ConnectionState.Closed)
-                throw new Exception("DB 미연결상태");
-
-            //=====================================================
-            string comtext = "select * from expense";
-            SqlCommand command = new SqlCommand(comtext, conn);
-
-            SqlDataReader reader = command.ExecuteReader();
-
-            while (reader.Read())
-            {
-                expenselist.Add(new Expense(Convert.ToDateTime((reader["Date"]).ToString()), (reader["Id"]).ToString(), (reader["Name"]).ToString(),
-                float.Parse((reader["Ae"]).ToString()), float.Parse((reader["Me"]).ToString()), float.Parse((reader["Os"]).ToString()), 
-                float.Parse((reader["Gift"]).ToString()), float.Parse((reader["Oe"]).ToString()), float.Parse((reader["Advertisement"]).ToString()),
-                float.Parse((reader["Etc"]).ToString()), float.Parse((reader["Total"]).ToString()), (reader["Contents"]).ToString(),
-                (byte[])reader["Image"], (reader["Extension"]).ToString(), (reader["Approval"]).ToString()));
-            }
-            reader.Close();
-            command.Dispose();
-            conn.Close();
-
-            return expenselist;
-
         }
         #endregion
 
@@ -494,7 +396,7 @@ namespace _20180829
         }
 
 
-        public void Vacation_U(string id,string type, int result)
+        public void Vacation_U(string id, string type, int result)
         {
             if (conn.State == ConnectionState.Closed)
                 throw new Exception("DB 미연결상태");
@@ -526,6 +428,9 @@ namespace _20180829
 
                 //=====================================================
                 command.ExecuteNonQuery();
+
+                command.Dispose();
+                conn.Close();
             }
 
 
@@ -612,9 +517,7 @@ namespace _20180829
 
                 request.Add(new RequestV(reader["Id"].ToString(),reader["Name"].ToString(),Convert.ToDateTime(reader["Request_Date"].ToString()),
                     (reader["Type"].ToString()), (Convert.ToDateTime(reader["Vacation_S"].ToString())), Convert.ToDateTime(reader["Vacation_E"].ToString()),
-                    (reader["Destination"].ToString()), (reader["Contact"].ToString()), (reader["Agent"].ToString()),(Convert.ToBoolean((reader["Approval"].ToString())))));
-                
-
+                    (reader["Destination"].ToString()), (reader["Contact"].ToString()), (reader["Agent"].ToString()),(Convert.ToBoolean((reader["Approval"].ToString())))));             
             }
 
             reader.Close();
@@ -624,85 +527,155 @@ namespace _20180829
             return request;
         }
 
-
-
-        public void Requse_U(string id,  bool result)
+        public void Requse_U(string id, DateTime date, bool result)
         {
             if (conn.State == ConnectionState.Closed)
                 throw new Exception("DB 미연결상태");
 
            
-                string comtext = "update vacation_Request set Approval = @RESULT WHERE id = @Id";
-                SqlCommand command = new SqlCommand(comtext, conn);
+            string comtext = "update vacation_Request set Approval = @RESULT WHERE id = @Id and Request_Date = @Date";
+            SqlCommand command = new SqlCommand(comtext, conn);
 
                 //=====================================================
-                SqlParameter param_id = new SqlParameter("@Id", id);
-                command.Parameters.Add(param_id);
-                SqlParameter param_type = new SqlParameter("@RESULT", result);
-                param_type.SqlDbType = SqlDbType.Bit;
-                command.Parameters.Add(param_type);
+            SqlParameter param_id = new SqlParameter("@Id", id);
+            command.Parameters.Add(param_id);
+            SqlParameter param_date = new SqlParameter("@Date", date);
+            command.Parameters.Add(param_date);
+            SqlParameter param_type = new SqlParameter("@RESULT", result);
+            param_type.SqlDbType = SqlDbType.Bit;
+            command.Parameters.Add(param_type);
 
                 //=====================================================
-                command.ExecuteNonQuery();
+            command.ExecuteNonQuery();
+            command.Dispose();
+            conn.Close();
+        }
+        #endregion
+
+
+        #region 영수증 
+        //영수증 신청
+        public void InsertExpense(Expense expense)
+        {
+            if (conn.State == ConnectionState.Closed)
+                throw new Exception("DB 미연결상태");
+
+            //=====================================================
+            string comtext = "insert into expense values (@Date, @ID, @Name, @AE, @ME, @OS, @Gift, @OE, @Advertisement, " +
+                             "@ETC, @Total, @Contents, @IMG, @FileName, @Extension, @Approval)";
+            SqlCommand command = new SqlCommand(comtext, conn);
+            //=====================================================
+            SqlParameter param_date = new SqlParameter("@Date", expense.Date);
+            command.Parameters.Add(param_date);
+
+            SqlParameter param_id = new SqlParameter("@ID", expense.ID);
+            command.Parameters.Add(param_id);
+
+            SqlParameter param_name = new SqlParameter("@Name", expense.Name);
+            command.Parameters.Add(param_name);
+
+            SqlParameter param_ae = new SqlParameter("@AE", expense.AE);
+            command.Parameters.Add(param_ae);
+
+            SqlParameter param_me = new SqlParameter("@ME", expense.ME);
+            command.Parameters.Add(param_me);
+
+            SqlParameter param_os = new SqlParameter("@OS", expense.OS);
+            command.Parameters.Add(param_os);
+
+            SqlParameter param_gift = new SqlParameter("@Gift", expense.Gift);
+            command.Parameters.Add(param_gift);
+
+            SqlParameter param_oe = new SqlParameter("@OE", expense.OE);
+            command.Parameters.Add(param_oe);
+
+            SqlParameter param_advertisment = new SqlParameter("@Advertisement", expense.Advertisment);
+            command.Parameters.Add(param_advertisment);
+
+            SqlParameter param_etc = new SqlParameter("@ETC", expense.ETC);
+            command.Parameters.Add(param_etc);
+
+            SqlParameter param_total = new SqlParameter("@Total", expense.Total);
+            command.Parameters.Add(param_total);
+
+            SqlParameter param_contents = new SqlParameter("@Contents", expense.Contents);
+            command.Parameters.Add(param_contents);
+
+            SqlParameter param_img = new SqlParameter("@IMG", expense.Image);
+            command.Parameters.Add(param_img);
+
+            SqlParameter param_filename = new SqlParameter("@FileName", expense.Filename);
+            command.Parameters.Add(param_filename);
+
+            SqlParameter param_extension = new SqlParameter("@Extension", expense.Extension);
+            command.Parameters.Add(param_extension);
+
+            SqlParameter param_approval = new SqlParameter("@Approval", expense.Approval);
+            command.Parameters.Add(param_approval);
+            //=====================================================
+
+            if (command.ExecuteNonQuery() != 1)
+                throw new Exception("추가 실패");
+            else
+            {
+                MessageBox.Show("등록완료");
             }
-           
-            
 
+            command.Dispose();
+            conn.Close();
+        }
 
-        
-
-
-
-
-        #region 로그인 기능
-
-        public void LogIn(ref User user)
+        //영수증 정보 가져오기
+        public List<Expense> LoadExpense(List<Expense> expenselist)
         {
             if (conn.State == ConnectionState.Closed)
                 throw new Exception("DB 미연결상태");
 
-            string comtext = "select L_Name from member where id =@ID and pw=@PW";
+            //=====================================================
+            string comtext = "select * from expense";
             SqlCommand command = new SqlCommand(comtext, conn);
 
-            //=====================================================
-            SqlParameter param_id = new SqlParameter("@ID", user.Id);
-            command.Parameters.Add(param_id);
-            SqlParameter param_pw = new SqlParameter("@PW", user.Pw);
-            command.Parameters.Add(param_pw);
-            //=====================================================
-            user.L_NAME = (string)command.ExecuteScalar();
-            if (user.F_Name == null)
-                throw new Exception("로그인 오류");
+            SqlDataReader reader = command.ExecuteReader();
 
-            //comtext = "update Member set islogin=1 where id =@ID";
-            //command = new SqlCommand(comtext, conn);
+            while (reader.Read())
+            {
+                expenselist.Add(new Expense(Convert.ToDateTime((reader["Date"]).ToString()), (reader["Id"]).ToString(), (reader["Name"]).ToString(),
+                float.Parse((reader["Ae"]).ToString()), float.Parse((reader["Me"]).ToString()), float.Parse((reader["Os"]).ToString()),
+                float.Parse((reader["Gift"]).ToString()), float.Parse((reader["Oe"]).ToString()), float.Parse((reader["Advertisement"]).ToString()),
+                float.Parse((reader["Etc"]).ToString()), float.Parse((reader["Total"]).ToString()), (reader["Contents"]).ToString(),
+                (byte[])reader["Image"], (reader["Filename"]).ToString(),(reader["Extension"]).ToString(), (reader["Approval"]).ToString()));
+            }
+            reader.Close();
+            command.Dispose();
+            conn.Close();
 
-            ////=====================================================
-            //SqlParameter param_id1 = new SqlParameter("@ID", user.Id);
-            //command.Parameters.Add(param_id1);
-
-            ////=====================================================
-            command.ExecuteNonQuery();
-
-
+            return expenselist;
 
         }
 
-        public void LogOut(string id)
+        //영수증 승인
+        public void Expense_U(string id, DateTime date, string approval)
         {
-            string comtext = "update Member set islogin=0 where id =@ID";
+            if (conn.State == ConnectionState.Closed)
+                throw new Exception("DB 미연결상태");
+
+
+            string comtext = "update Expense set Approval = @Approval WHERE id = @Id and Date = @Date";
             SqlCommand command = new SqlCommand(comtext, conn);
 
             //=====================================================
-            SqlParameter param_id = new SqlParameter("@ID", id);
+            SqlParameter param_id = new SqlParameter("@Id", id);
             command.Parameters.Add(param_id);
+            SqlParameter param_date = new SqlParameter("@Date", date);
+            command.Parameters.Add(param_date);
+            SqlParameter param_approval = new SqlParameter("@Approval", approval);
+            command.Parameters.Add(param_approval);
 
             //=====================================================
             command.ExecuteNonQuery();
-
-
+            command.Dispose();
+            conn.Close();
         }
-
         #endregion
     }
 }
@@ -714,4 +687,3 @@ namespace _20180829
 
 
 
-#endregion

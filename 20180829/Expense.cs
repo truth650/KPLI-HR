@@ -22,11 +22,12 @@ namespace _20180829
         private float total;
         private string contents;
         private byte[] image;
+        private string filename;
         private string extension;
         private string approval;
 
         public Expense(DateTime date, string id, string name, float ae, float me, float os, float gift, float oe, float advertisement, float etc, 
-            float total, string contents, byte[] image, string extension, string approval)
+            float total, string contents, byte[] image, string filename, string extension, string approval)
         {
             this.date = date;
             this.id = id;
@@ -41,6 +42,7 @@ namespace _20180829
             this.total = total;
             this.contents = contents;
             this.image = image;
+            this.filename = filename;
             this.extension = extension;
             this.approval = approval; //결제대기 OR 결제승인
         }
@@ -58,6 +60,7 @@ namespace _20180829
         public float Total { get { return total; } set { total = value; } }
         public string Contents { get { return contents; } set { contents = value; } }
         public byte[] Image { get { return image; } set { image = value; } }
+        public string Filename { get { return filename; } set { filename = value; } }
         public string Extension { get { return extension; } set { extension = value; } }
         public string Approval { get { return approval; } set { approval = value; } }
     }

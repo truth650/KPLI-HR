@@ -60,11 +60,7 @@ namespace _20180829
             form3.Show(this);
             this.Visible = false;
         }
-
-
-
-
-       
+ 
 
         //ID/PW 찾기
         private void Button4_Click(object sender, EventArgs e)

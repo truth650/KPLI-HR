@@ -18,6 +18,7 @@ namespace _20180829
         float Total = 0;
         string UserID = null;
         byte[] file = null;
+        string filename = null;
         string extension = null;  
 
         public Payroll()
@@ -29,7 +30,7 @@ namespace _20180829
         {
             Total = 0;
             byte[] b = new byte[100];
-            expenses.Add(new Expense(DateTime.Now, "a", "a", 1, 1, 1 ,1, 1, 1, 1, 1,"a", b, "a", "a"));
+            expenses.Add(new Expense(DateTime.Now, "a", "a", 1, 1, 1 ,1, 1, 1, 1, 1,"a", b, "a","a", "a"));
 
             DateTime dt = DateTime.Now;
             textBox10.Text = dt.Year.ToString() + " - " + dt.Date.Month.ToString() + " - " + dt.Date.Day;
@@ -246,8 +247,8 @@ namespace _20180829
             if (dr == DialogResult.OK)
             {
                 //파일이름 띄어주기
-                string filename = ofd.FileName;
-                textBox12.Text = Path.GetFileName(filename);
+                filename = Path.GetFileName(ofd.FileName);
+                textBox12.Text = filename;
                 file = File.ReadAllBytes(ofd.FileName); //파일 바이트 변환 후 보내주기
                 extension = Path.GetExtension(ofd.FileName);   //파일 확장자 보내주기
             }
@@ -257,8 +258,9 @@ namespace _20180829
         private void button9_Click(object sender, EventArgs e)
         {
             //영수증 정보담기
-            DateTime dt = DateTime.Now;
-            expenses[0].Date = new DateTime(dt.Year, dt.Month, dt.Day, dt.Hour, dt.Minute, dt.Second);
+            DateTime dt = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour,
+                DateTime.Now.Minute, DateTime.Now.Second);
+            expenses[0].Date = dt;
             expenses[0].ID = UserID;
             expenses[0].Name = textBox1.Text;
             expenses[0].AE = float.Parse(textBox2.Text);
@@ -271,7 +273,21 @@ namespace _20180829
             string s = textBox9.Text.Replace("$", "");
             expenses[0].Total = float.Parse(s);
             expenses[0].Contents = textBox11.Text;
+            if(file == null)
+            {
+                byte[] b = new byte[100];
+                file = b;
+            }
             expenses[0].Image = file;
+            if(filename == null)
+            {
+                filename = "";
+            }
+            expenses[0].Filename = filename;
+            if (extension == null)
+            {
+                extension = "";
+            }         
             expenses[0].Extension = extension;
             expenses[0].Approval = "결제대기";
 

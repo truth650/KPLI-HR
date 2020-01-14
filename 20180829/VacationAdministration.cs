@@ -57,20 +57,7 @@ namespace _20180829
         //상단바
 
         private void VacationAdministration_Load(object sender, EventArgs e)
-        {
-            //if (Login.VacationList.Count == 0)
-            //{
-            //    //8시간당 하루, 4시간은 반차
-            //    Login.VacationList.Add(new Vacation("truth650", "김영종", 20, 40, 0));
-            //    Login.VacationList.Add(new Vacation("samjasin", "성호영", 24, 48, 0));
-            //    Login.VacationList.Add(new Vacation("leechangjae", "이창재", 24, 48, 0));
-            //}
-
-            //if (Login.RequestVList.Count == 0)
-            //{
-
-            //}
-            
+        {          
             SetVacationList();
             SetRequestList();
         }
@@ -80,6 +67,9 @@ namespace _20180829
         public void SetVacationList()
         {
             listView1.Clear();
+            Login.VacationList.Clear();
+            WbDB.Singleton.Open();
+            WbDB.Singleton.Vacation_L(Login.VacationList);
             listView1.Columns.Add("ID", 60);
             listView1.Columns.Add("Name", 70);
             listView1.Columns.Add("SickDay", 80);
@@ -206,9 +196,12 @@ namespace _20180829
                             //리스트 수정
                             if (Login.VacationList[i].ID == textBox3.Text)
                             {
-                                Login.VacationList[i].SickDay = sickday;
-                                Login.VacationList[i].YearVacation = vacation;
                                 //DB 수정코드
+                                WbDB.Singleton.Open();
+                                WbDB.Singleton.Vacation_U(Login.VacationList[i].ID, "SickDay", sickday);
+
+                                WbDB.Singleton.Vacation_U(Login.VacationList[i].ID, "Vacation", vacation);
+                                SetVacationList();
                             }
                         }
                     }
@@ -230,6 +223,9 @@ namespace _20180829
         public void SetRequestList()
         {
             listView2.Clear();
+            Login.RequestVList.Clear();
+            WbDB.Singleton.Open();
+            WbDB.Singleton.Requse_L(Login.RequestVList);
             listView2.Columns.Add("Date", 120);
             listView2.Columns.Add("Name", 60);
             listView2.Columns.Add("Type", 65);
@@ -285,6 +281,7 @@ namespace _20180829
 
             }
         }
+
 
         //휴가 상세보기 버튼
         private void button2_Click(object sender, EventArgs e)

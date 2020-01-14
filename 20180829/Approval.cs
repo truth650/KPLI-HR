@@ -34,7 +34,6 @@ namespace _20180829
         }
 
 
-
         private void Approval_Load(object sender, EventArgs e)
         {
             this.ActiveControl = button1;
@@ -80,44 +79,40 @@ namespace _20180829
                 Calculator();
                 for (int i = 0; i < Login.VacationList.Count; i++)
                 {
-                    if(Login.VacationList[i].ID == id && Login.RequestVList[i].RequestDate.ToString("yyyy-MM-dd HH:mm:ss") == rd)
-                    if (Login.VacationList[i].ID == id)
+                    if(Login.VacationList[i].ID == id)
                     {
                         if (textBox3.Text == "SickDay")
                         {
-                            //휴가연산
-                            //Login.VacationList[i].SickDay -= result;
                             WbDB.Singleton.Open();
-                            int a = Login.VacationList[i].SickDay -= result;                            
-                            Login.VacationList.Clear();
-                            WbDB.Singleton.Vacation_U(Login.LoginID, "SickDay", a);                            
+                            int a = Login.VacationList[i].SickDay -= result;
+                            WbDB.Singleton.Vacation_U(Login.LoginID, "SickDay", a);
                         }
                         else if (textBox3.Text == "Vacation")
                         {
-                            //Login.VacationList[i].YearVacation -= result;
                             WbDB.Singleton.Open();
                             int b = Login.VacationList[i].YearVacation -= result;
-                            Login.VacationList.Clear();
                             WbDB.Singleton.Vacation_U(Login.LoginID, "Vacation", b);
                         }
+
                         //휴가상태 변경
                         for (int j = 0; j < Login.RequestVList.Count; j++)
                         {
-                            if (Login.RequestVList[j].ID == id && Login.RequestVList[j].RequestDate.ToString("yyyy-MM-dd HH:mm:ss") ==
+                            Login.RequestVList[j].RequestDate.ToString();
+                            string s = Login.RequestVList[j].RequestDate.ToString("yyyy-MM-dd HH:mm:ss");
+
+                            if (Login.RequestVList[j].ID == id && s ==
                                 VacationAdministration.RequestDate)
                             {
-                                Login.RequestVList[j].Approval = true;                                                          
-                                state = Login.RequestVList[j].Approval = true;
-                               
-                                
-                                WbDB.Singleton.Requse_U(Login.LoginID, state);
+                                state = true;
+                             
+                                WbDB.Singleton.Requse_U(Login.RequestVList[i].ID, Login.RequestVList[i].RequestDate, state);
                             }
                         }
                     }
                 }
+                WbDB.Singleton.Close();
                 va.SetVacationList();
                 va.SetRequestList();
-                WbDB.Singleton.Close();
                 this.Close();
 
             }
@@ -144,7 +139,7 @@ namespace _20180829
                 }
                 if (start.Hour == 9 && end.Hour == 14) 
                 {
-                    result = 8;
+                    result = 4;
                 }
                 if (start.Hour == 14 && end.Hour == 18)
                 {

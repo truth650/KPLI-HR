@@ -126,7 +126,7 @@ namespace _20180829
                 {
                     if (Login.VacationList[i].ID == Login.LoginID)
                     {
-                        if (radioButton2.Checked) //병가
+                        if (radioButton1.Checked) //병가
                         {
                             if (Login.VacationList[i].SickDay >= result)
                             {
@@ -134,7 +134,7 @@ namespace _20180829
                                     DateTime.Now.Minute, DateTime.Now.Second);
                                 request.Clear();
                                 request.Add(new RequestV(Login.LoginID, name, dt, "SickDay",
-                                start, end, textBox3.Text, textBox4.Text, textBox6.Text, false));
+                                start, end, textBox2.Text, textBox3.Text, textBox6.Text, false));
 
                                 WbDB.Singleton.Open();
                                 WbDB.Singleton.Requse_S(request);
@@ -142,10 +142,6 @@ namespace _20180829
                                 WbDB.Singleton.Open();
                                 WbDB.Singleton.Requse_L(Login.RequestVList);
                                 SetRequestList();
-
-
-                                Login.RequestVList.Add(new RequestV(Login.LoginID, name, DateTime.Now.Date, "SickDay",
-                                start, end, textBox2.Text, textBox3.Text, textBox6.Text, false));
                             }
                             else
                             {
@@ -153,7 +149,7 @@ namespace _20180829
                             }
 
                         }
-                        else if (radioButton1.Checked) //연가
+                        else if (radioButton2.Checked) //연가
                         {
                             if (Login.VacationList[i].YearVacation >= result)
                             {
@@ -161,7 +157,7 @@ namespace _20180829
                                     DateTime.Now.Minute, DateTime.Now.Second);
                                 request.Clear();
                                 request.Add(new RequestV(Login.LoginID, name, dt, "Vacation",
-                                start, end, textBox3.Text, textBox4.Text, textBox6.Text, false));
+                                start, end, textBox2.Text, textBox3.Text, textBox6.Text, false));
 
                                 WbDB.Singleton.Open();
                                 WbDB.Singleton.Requse_S(request);
@@ -169,8 +165,6 @@ namespace _20180829
                                 WbDB.Singleton.Open();
                                 WbDB.Singleton.Requse_L(Login.RequestVList);
                                 SetRequestList();
-                                Login.RequestVList.Add(new RequestV(Login.LoginID, name, DateTime.Now.Date, "Vacation",
-                                start, end, textBox2.Text, textBox3.Text, textBox6.Text, false));
                             }
                             else
                             {
@@ -200,13 +194,17 @@ namespace _20180829
             //하루이하 사용
             if (start.Day == end.Day)
             {
-                if (end.Hour == 14)
+                if (start.Hour == 9 && end.Hour == 18)
+                {
+                    result = 8;
+                }
+                if (start.Hour == 9 && end.Hour == 14)
                 {
                     result = 4;
                 }
-                else
+                if (start.Hour == 14 && end.Hour == 18)
                 {
-                    result = end.Hour - start.Hour;
+                    result = 4;
                 }
             }
             //하루이상 사용
