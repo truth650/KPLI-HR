@@ -17,6 +17,7 @@ namespace _20180829
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
+
         }
     }
 }

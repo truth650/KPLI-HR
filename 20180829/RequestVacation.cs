@@ -268,8 +268,6 @@ namespace _20180829
             this.WindowState = FormWindowState.Minimized;
         }
 
-        
-
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             WbDB.Singleton.Close();
