@@ -123,10 +123,19 @@ namespace _20180829
                     saveFileDialog.OverwritePrompt = true;
                     saveFileDialog.Filter = "모든 파일 (*.*) | *.*";
 
-                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    try
                     {
-                        File.WriteAllBytes(saveFileDialog.FileName, file);
+                        if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                        {
+                            File.WriteAllBytes(saveFileDialog.FileName, file);
+                            MessageBox.Show("Download Complete");
+                        }
                     }
+                    catch
+                    {
+                        MessageBox.Show("Download Fail");
+                    }
+
                 }
             }
         }
