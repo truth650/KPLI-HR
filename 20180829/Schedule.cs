@@ -752,7 +752,9 @@ namespace _20180829
         //달력 셋팅
         private void CalendarSet()
         {
-            bool office = true; //true : USA, false : KOR
+            string office = null;
+            Color thiscolor = Color.PaleVioletRed; //현재 사무실
+            Color othercolor = Color.LightSkyBlue ; //반대 사무실
             panel7.Controls.Clear();
             panel6.Controls.Clear();
 
@@ -762,6 +764,15 @@ namespace _20180829
             int Week_X = 0;
             int Week_Y = 0;
             int num1 = 1;
+
+            //로그인 사무실 계산
+            for(int i = 0; i < Login.UserList.Count; i++)
+            {
+                if(Login.UserList[i].Id == Login.LoginID)
+                {
+                    office = Login.UserList[i].Office;
+                }
+            }
 
             for (int i = 0; i < 7; i++)
             {
@@ -887,13 +898,29 @@ namespace _20180829
                             {
                                 if (holidaylist[j].Office == "US")
                                 {
-                                    btn[i].BackColor = Color.PaleVioletRed;
-                                    btn[i].Text = count.ToString() + "  " + holidaylist[j].Name;
+                                    if(office == "NY" || office == "NJ" || office == "CA")
+                                    {
+                                        btn[i].BackColor = thiscolor;
+                                        btn[i].Text = count.ToString() + "  " + holidaylist[j].Name;
+                                    }
+                                    else
+                                    {
+                                        btn[i].BackColor = othercolor;
+                                        btn[i].Text = count.ToString() + "  " + holidaylist[j].Name;
+                                    }
                                 }
                                 else if (holidaylist[j].Office == "KOR")
                                 {
-                                    btn[i].BackColor = Color.LightSkyBlue;
-                                    btn[i].Text = count.ToString() + "  " + holidaylist[j].Name;
+                                    if (office == "SEOUL")
+                                    {
+                                        btn[i].BackColor = thiscolor;
+                                        btn[i].Text = count.ToString() + "  " + holidaylist[j].Name;
+                                    }
+                                    else
+                                    {
+                                        btn[i].BackColor = othercolor;
+                                        btn[i].Text = count.ToString() + "  " + holidaylist[j].Name;
+                                    }
                                 }
                             }
                         }

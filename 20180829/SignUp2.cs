@@ -21,7 +21,9 @@ namespace _20180829
         //Form Load
         private void SignUp2_Load(object sender, EventArgs e)
         {
-            textBox16.MaxLength = 8;
+            textBox16.MaxLength = 9;
+            textBox6.MaxLength = 10;
+            textBox1.MaxLength = 5;
         }
 
         //다음 페이지

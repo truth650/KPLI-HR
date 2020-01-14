@@ -450,8 +450,7 @@ namespace _20180829
             command.ExecuteNonQuery();
 
             command.Dispose();
-            conn.Close();
-            
+            conn.Close();         
         }
 
 
