@@ -39,13 +39,13 @@ namespace _20180829
             listView1.Clear();
             listView1.Columns.Add("Date", 100);
             listView1.Columns.Add("Name", 60);
-            listView1.Columns.Add("Type", 65);
-            listView1.Columns.Add("Start", 90);
-            listView1.Columns.Add("End", 90);
-            listView1.Columns.Add("Destination", 70);
+            listView1.Columns.Add("Type", 60);
+            listView1.Columns.Add("Form", 90);
+            listView1.Columns.Add("To", 90);
+            listView1.Columns.Add("Destination", 60);
             listView1.Columns.Add("Contact Num", 70);
-            listView1.Columns.Add("Agent", 60);
-            listView1.Columns.Add("Approval", 70); //승인여부
+            listView1.Columns.Add("Agent", 50);
+            listView1.Columns.Add("Approval", 30); //승인여부
 
 
             listView1.View = View.Details;
@@ -78,11 +78,11 @@ namespace _20180829
                     arr[7] = Login.RequestVList[i].Agent;
                     if (Login.RequestVList[i].Approval == false)
                     {
-                        arr[8] = "승인대기";
+                        arr[8] = "Waiting";
                     }
                     else if (Login.RequestVList[i].Approval == true)
                     {
-                        arr[8] = "승인";
+                        arr[8] = "approve";
                     }
                     ListViewItem item = new ListViewItem(arr);
                     item.UseItemStyleForSubItems = false;
@@ -145,7 +145,7 @@ namespace _20180829
                             }
                             else
                             {
-                                MessageBox.Show("잔여휴가가 부족합니다.");
+                                MessageBox.Show("I don't have enough vacation days.");
                             }
 
                         }
@@ -168,7 +168,7 @@ namespace _20180829
                             }
                             else
                             {
-                                MessageBox.Show("잔여휴가가 부족합니다.");
+                                MessageBox.Show("I don't have enough vacation days.");
                             }
                         }
                                             

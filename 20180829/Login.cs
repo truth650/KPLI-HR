@@ -75,13 +75,13 @@ namespace _20180829
             Environment.Exit(0);
         }
 
-        //종료버튼(완전 종료)
+        //최소화버튼
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
-        //최소화버튼
+        //종료버튼
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
@@ -142,6 +142,25 @@ namespace _20180829
             textBox2.ForeColor = Color.FromArgb(0, 0, 0);
         }
 
+        //버튼(Sign in) 이벤트
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+            button1.ForeColor = Color.Transparent;
+        }
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button1.ForeColor = Color.Black;
+        }
+
+        //버튼(Sign up)
+        private void button2_MouseHover(object sender, EventArgs e)
+        {
+            button2.ForeColor = Color.Black;
+        }
+        private void button2_MouseLeave(object sender, EventArgs e)
+        {
+            button2.ForeColor = Color.Transparent;
+        }
 
         //상단바 코드
         bool TagMove;
@@ -220,6 +239,11 @@ namespace _20180829
                 MessageBox.Show("아이디나 비밀번호를 입력해주세요.");
             }
         }
+
+
+
+
+
         //엔터 로그인
         private void textBox2_KeyDown(object sender, KeyEventArgs e)
         {
