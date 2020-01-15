@@ -82,7 +82,7 @@ namespace _20180829
         {
             this.Hide();
             Login l_form = new Login();
-            l_form.ShowDialog();
+            l_form.Visible = true;
             this.Close();
         }
 
