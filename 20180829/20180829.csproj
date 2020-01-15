@@ -131,6 +131,12 @@
     <Compile Include="Notice.designer.cs">
       <DependentUpon>Notice.cs</DependentUpon>
     </Compile>
+    <Compile Include="OpenNotice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpenNotice.Designer.cs">
+      <DependentUpon>OpenNotice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Payroll.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,12 +192,6 @@
     <Compile Include="SignUp3.Designer.cs">
       <DependentUpon>SignUp3.cs</DependentUpon>
     </Compile>
-    <Compile Include="Title.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Title.designer.cs">
-      <DependentUpon>Title.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserInformation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,6 +233,12 @@
       <DependentUpon>VacationAdministration.cs</DependentUpon>
     </Compile>
     <Compile Include="WbDB.cs" />
+    <Compile Include="Write.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Write.Designer.cs">
+      <DependentUpon>Write.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddMemo.resx">
       <DependentUpon>AddMemo.cs</DependentUpon>
     </EmbeddedResource>
@@ -256,6 +262,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Notice.resx">
       <DependentUpon>Notice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpenNotice.resx">
+      <DependentUpon>OpenNotice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Payroll.resx">
       <DependentUpon>Payroll.cs</DependentUpon>
@@ -284,9 +293,6 @@
     <EmbeddedResource Include="SignUp3.resx">
       <DependentUpon>SignUp3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Title.resx">
-      <DependentUpon>Title.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserInformation.resx">
       <DependentUpon>UserInformation.cs</DependentUpon>
     </EmbeddedResource>
@@ -314,6 +320,9 @@
     </Compile>
     <EmbeddedResource Include="VacationAdministration.resx">
       <DependentUpon>VacationAdministration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Write.resx">
+      <DependentUpon>Write.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="20180829_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">

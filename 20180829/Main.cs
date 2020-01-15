@@ -69,26 +69,6 @@ namespace _20180829
             Environment.Exit(0);
         }
 
-
-
-
-
-        //사용자관리모드
-        //private void Button5_Click(object sender, EventArgs e)
-        //{
-        //    if (Login.UserList[Login.LoginIndex].Level >= 2)
-        //    {
-        //        UserList form6 = new UserList();
-        //        form6.Show();
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("관리자 권한이 없습니다.");
-        //    }
-        //}
-
-
-        //이벤트
         //게시판
         private void button4_Click(object sender, EventArgs e)
         {
@@ -143,8 +123,6 @@ namespace _20180829
             this.Close();
             form1.Visible = false;
         }
-
-
 
         private void button3_MouseDown(object sender, MouseEventArgs e)
         {
