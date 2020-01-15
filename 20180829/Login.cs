@@ -58,9 +58,9 @@ namespace _20180829
         //회원가입 창 열기
         private void Button2_Click(object sender, EventArgs e)
         {
+            this.Hide();
             SignUp form3 = new SignUp();
-            form3.StartPosition = FormStartPosition.CenterParent;
-            form3.Show(this);
+            form3.ShowDialog();
             this.Visible = false;
         }
  
@@ -68,8 +68,9 @@ namespace _20180829
         //ID/PW 찾기
         private void Button4_Click(object sender, EventArgs e)
         {
+            this.Hide();
             FindMem form8 = new FindMem();
-            form8.Show();
+            form8.ShowDialog();
             this.Visible = false;
         }
 
@@ -229,12 +230,12 @@ namespace _20180829
                 }
                 else if (ErrorType == 3)
                 {
-                    
-                    MessageBox.Show("Welcome to " + UserList[Index].F_Name);
-                    form2.ShowDialog();  //메인 창 띄우기
                     IsLogin = true; //로그인 상태변경
                     LoginIndex = Index;
                     LoginID = textBox1.Text; //로그인된 아이디 정보 담아주기
+                    this.Hide();
+                    MessageBox.Show("Welcome to " + UserList[Index].F_Name);
+                    form2.ShowDialog();  //메인 창 띄우기
                     this.Visible = false;  //로그인창 숨기기
                 }
             }

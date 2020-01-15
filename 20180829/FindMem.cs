@@ -13,8 +13,6 @@ namespace _20180829
     public partial class FindMem : Form
     {
         public static int SelectedNum = 0;
-        public static List<User> UserList = new List<User>();
-        public static List<Memo> MemoList = new List<Memo>();
 
         public FindMem()
         {
@@ -51,6 +49,9 @@ namespace _20180829
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            Login l_form = new Login();
+            l_form.Visible = true;
             this.Close();
         }
         //상단바
@@ -96,13 +97,18 @@ namespace _20180829
         {
             bool findid = false;
 
-            for (int i = 0; i < UserList.Count; i++)
+            for (int i = 0; i < Login.UserList.Count; i++)
             {
-                if (UserList[i].F_Name == textBox1.Text &&
-                    UserList[i].L_NAME == textBox4.Text &&
-                    UserList[i].Phone.ToString() == textBox5.Text )
+                if (Login.UserList[i].F_Name == textBox1.Text &&
+                   Login.UserList[i].L_NAME == textBox4.Text &&
+                   Login.UserList[i].Phone.ToString() == textBox5.Text )
                 {
-                    MessageBox.Show(UserList[i].F_Name + "의 아이디 " + UserList[i].Id + "입니다.");
+                    MessageBox.Show(Login.UserList[i].F_Name + "의 아이디 " + Login.UserList[i].Id + "입니다.");
+                    textBox1.ForeColor = Color.Gray;
+                    textBox1.Text = "First name(이름)";
+                    textBox4.ForeColor = Color.Gray;
+                    textBox4.Text = "Last name(성)";
+                    textBox5.Clear();
                     findid = true;
                     break;
                 }
@@ -110,6 +116,11 @@ namespace _20180829
             if (findid == false)
             {
                 MessageBox.Show("일치하는 사용자가 없습니다.");
+                textBox1.ForeColor = Color.Gray;
+                textBox1.Text = "First name(이름)";
+                textBox4.ForeColor = Color.Gray;
+                textBox4.Text = "Last name(성)";
+                textBox5.Clear();
             }
         }
 
@@ -148,11 +159,11 @@ namespace _20180829
         {
             bool findpw = false;
 
-            for (int i = 0; i < UserList.Count; i++)
+            for (int i = 0; i < Login.UserList.Count; i++)
             {
-                if (UserList[i].Id == textBox2.Text &&
-                    UserList[i].Question == comboBox6.Text &&
-                    UserList[i].Answer == textBox3.Text)
+                if (Login.UserList[i].Id == textBox2.Text &&
+                    Login.UserList[i].Question == comboBox6.Text &&
+                    Login.UserList[i].Answer == textBox3.Text)
                 {
                     SelectedNum = i;
                     findpw = true;
@@ -167,6 +178,9 @@ namespace _20180829
             if (findpw == false)
             {
                 MessageBox.Show("일치하는 사용자가 없습니다.");
+                textBox2.Clear();
+                comboBox6.Text = "Question";
+                textBox3.Clear();
             }
         }
         //이벤트

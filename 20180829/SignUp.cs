@@ -25,7 +25,10 @@ namespace _20180829
         //종료이벤트
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            this.Hide();
+            Login l_form = new Login();
+            l_form.Visible = true;
+            this.Close();
         }
 
         //최소화이벤트
@@ -167,6 +170,10 @@ namespace _20180829
         private void comboBox6_Enter(object sender, EventArgs e)
         {
             comboBox6.ForeColor = Color.Black;
+        }
+        private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            label3.Visible = false;
         }
         private void textBox4_Click(object sender, EventArgs e)
         {

@@ -64,6 +64,9 @@ namespace _20180829
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            Login l_form = new Login();
+            l_form.Visible = true;
             this.Close();
         }
         //상단바
