@@ -103,7 +103,7 @@ namespace _20180829
                    Login.UserList[i].L_NAME == textBox4.Text &&
                    Login.UserList[i].Phone.ToString() == textBox5.Text )
                 {
-                    MessageBox.Show(Login.UserList[i].F_Name + "의 아이디 " + Login.UserList[i].Id + "입니다.");
+                    MessageBox.Show(Login.UserList[i].F_Name + "'s user name is  \'" + Login.UserList[i].Id + "\'.");
                     textBox1.ForeColor = Color.Gray;
                     textBox1.Text = "First name(이름)";
                     textBox4.ForeColor = Color.Gray;
@@ -115,7 +115,9 @@ namespace _20180829
             }
             if (findid == false)
             {
-                MessageBox.Show("일치하는 사용자가 없습니다.");
+                MessageBox.Show("There is no matching information. " +
+                    "\t Capitalize the first letter when you write your name. " +
+                    "\t If the phone number is in Korea, do not type 0 in front of the phone!!");
                 textBox1.ForeColor = Color.Gray;
                 textBox1.Text = "First name(이름)";
                 textBox4.ForeColor = Color.Gray;
@@ -167,7 +169,7 @@ namespace _20180829
                 {
                     SelectedNum = i;
                     findpw = true;
-                    MessageBox.Show("비밀번호 변경 페이지로 이동합니다.");
+                    MessageBox.Show("Go to the Change Password page.");
                     this.Hide();
                     CorrectionPW form9 = new CorrectionPW();
                     form9.ShowDialog();
@@ -177,7 +179,7 @@ namespace _20180829
             }
             if (findpw == false)
             {
-                MessageBox.Show("일치하는 사용자가 없습니다.");
+                MessageBox.Show("There is no matching information.");
                 textBox2.Clear();
                 comboBox6.Text = "Question";
                 textBox3.Clear();
