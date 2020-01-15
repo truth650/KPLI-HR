@@ -223,7 +223,7 @@ namespace _20180829
 
 
         #region 게시판 기능
-        public void Notice(Board board)
+        public void Board_Insert(Board board)
         {
             if (conn.State == ConnectionState.Closed)
                 throw new Exception("DB 미연결상태");
@@ -231,9 +231,8 @@ namespace _20180829
 
 
             //=====================================================
-            string comtext = "insert into notice values (@Category,@Id,@Title,@Contents,@Contents_Info,@File_Name,@File_Binary,@Time)";
+            string comtext = "insert into notice values (@Category,@Id,@Title,@Contents,@Contents_Info,@File_Name,@File_Binary, @File_Extension, @Time)";
             SqlCommand command = new SqlCommand(comtext, conn);
-
 
             //=====================================================
 
@@ -257,27 +256,28 @@ namespace _20180829
             command.Parameters.Add(param_File_name);
 
             SqlParameter param_File_binary = new SqlParameter("@File_Binary", board.File_Binary);
-            param_File_binary.SqlDbType = SqlDbType.Binary;
             command.Parameters.Add(param_File_binary);
 
+            SqlParameter param_File_extension = new SqlParameter("@File_Extension", board.Extension);
+            command.Parameters.Add(param_File_extension);
 
             SqlParameter param_Time = new SqlParameter("@Time", board.Time);
             command.Parameters.Add(param_Time);
-
-            //SqlParameter param_Read_Num = new SqlParameter("@Read_Num", board.Read_Num);
-            //param_Read_Num.SqlDbType = SqlDbType.Int;
-            //command.Parameters.Add(param_Read_Num);
-
-
             //=====================================================
             if (command.ExecuteNonQuery() != 1)
                 throw new Exception("추가 실패");
-
+            else
+            {
+                MessageBox.Show("등록완료");
+            }
+            command.Dispose();
+            conn.Close();
 
 
         }
 
-        public List<Board> Write(List<Board> boardlist)
+
+        public List<Board> Board_L(List<Board> boardlist)
         {
             string comtext = "select * from notice";
             SqlCommand command = new SqlCommand(comtext, conn);
@@ -288,11 +288,9 @@ namespace _20180829
             {
                 boardlist.Add(new Board(int.Parse(reader["Idx"].ToString()), (reader["Category"].ToString()), (reader["Id"].ToString()),
                     (reader["Title"].ToString()), (reader["Contents"].ToString()), (reader["Contents_Info"].ToString()),
-                    (reader["File_Name"].ToString()), (byte[])reader["File_Binary"],
+                    (reader["File_Name"].ToString()), (byte[])reader["File_Binary"], (reader["Extension"].ToString()),
                     (Convert.ToDateTime(reader["Time"].ToString()))));
-
             }
-
             reader.Close();
             command.Dispose();
             conn.Close();

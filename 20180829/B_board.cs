@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -12,11 +13,6 @@ namespace _20180829
 {
     public partial class B_board : Form
     {
-        public B_board()
-        {
-            InitializeComponent();
-        }
-
         //상단바
         bool TagMove;
         int MValX, MValY;
@@ -24,11 +20,22 @@ namespace _20180829
         static Label[] label = new Label[5];
         static Panel[] PanelPage = new Panel[100];
         static Panel[] PanelLine = new Panel[100];
-        Button btn = new Button();
-
-
+        public static int NoticeIDX = 0;
+        Button[] button = new Button[5];
         int X = 0;
         int Y = 0;
+
+
+        public B_board()
+        {
+            InitializeComponent();
+        }
+
+        private void B_board_Load(object sender, EventArgs e)
+        {
+            SetBoardList();
+        }
+
         private void panel3_MouseDown(object sender, MouseEventArgs e)
         {
             TagMove = true;
@@ -103,7 +110,7 @@ namespace _20180829
             button6.Image = Properties.Resources.check_32px;
             button6.ForeColor = Color.FromArgb(255, 255, 255);
         }
-        
+
         //관리자모드
         private void button3_Click(object sender, EventArgs e)
         {
@@ -111,17 +118,6 @@ namespace _20180829
             Administrator a_form = new Administrator();
             a_form.ShowDialog();
             this.Close();
-        }
-
-        private void B_board_Load(object sender, EventArgs e)
-        {
-
-            WbDB.Singleton.Open();
-            board = WbDB.Singleton.Write(board);
-           // panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-          
-
-            //SetBoard();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -132,13 +128,266 @@ namespace _20180829
             this.Close();
         }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Write write = new Write();
+            write.ShowDialog();
+        }
+
         private void button3_MouseDown(object sender, MouseEventArgs e)
         {
             button3.Image = Properties.Resources.administrator_32px;
             button3.ForeColor = Color.FromArgb(255, 255, 255);
         }
-        //이벤트
 
+        public void SetBoardList()
+        {
+            int Category_X = 0;
+            int Category_Y = 0;
+            int num1 = 1;
 
+            //카테고리 셋팅
+            for (int i = 0; i < 5; i++)
+            {
+                Label label = new Label();
+                switch (num1)
+                {
+                    //1: 일요일, 7: 월요일
+                    case 1:
+                        label.Text = " Number";
+                        label.Size = new Size(60, 30);
+                        break;
+
+                    case 2:
+                        label.Text = " Category";
+                        label.Size = new Size(100, 30);
+                        break;
+
+                    case 3:
+                        label.Text = " Title";
+                        label.Size = new Size(290, 30);
+                        break;
+
+                    case 4:
+                        label.Text = "Writer";
+                        label.Size = new Size(100, 30);
+                        break;
+
+                    case 5:
+                        label.Text = "Date";
+                        label.Size = new Size(150, 30);
+                        break;
+                }
+                label.Location = new Point(Category_X, Category_Y);
+                label.Visible = true;
+                label.AutoSize = false;
+                label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+                label.TextAlign = ContentAlignment.MiddleCenter;
+
+                panel6.Controls.Add(label);
+                Category_X += label.Size.Width;
+                num1++;
+            }
+
+            int num = 1;
+            int pagenum = 0;
+            int Panel_Y = 0;
+
+            //페이지 계산
+            if((Login.BoardList.Count % 10 ) == 0)
+            {
+                pagenum = Login.BoardList.Count / 10;
+            }
+            else if ((Login.BoardList.Count % 10) != 0)
+            {
+                pagenum = (Login.BoardList.Count / 10) +1;
+            }
+
+            int pagebutton_x = 0;
+            //페이지 버튼 제작
+            for(int i = 0; i < pagenum; i++)
+            {
+                Button[] b = new Button[100];
+                b[i] = new Button();
+                b[i].Name = (i + 1).ToString();
+                b[i].Text = (i + 1).ToString();
+                b[i].Size = new Size(40, 20);
+                b[i].Location = new Point(pagebutton_x, 0);
+                b[i].Visible = true;
+                b[i].AutoSize = false;
+                b[i].TextAlign = ContentAlignment.MiddleCenter;
+                b[i].Click += new EventHandler(b_Click);
+
+                panel8.Controls.Add(b[i]);
+                pagebutton_x += 40;
+                num1++;
+            }
+
+            //게시글 셋팅
+            for(int i = 0; i < 10; i++)
+            {
+                Panel[] panel = new Panel[200];
+
+                panel[i] = new Panel();
+                panel[i].Name = Login.BoardList[i].Idx.ToString();
+                panel[i].Location = new Point(0, Panel_Y);
+                panel[i].Size = new Size(700, 40);
+
+                int Button_X = 0;
+                int Button_Y = 0;
+                int count = 0;
+
+                for (int j = 0; j < 5; j++)
+                {                    
+                    int width = 60;
+                    int height = 30;
+                    //버튼객체 생성
+                    button[j] = new Button();
+                    if(count == 0)
+                    {
+                        Button_X += 0;
+                        button[j].Text = Login.BoardList[i].Idx.ToString();
+                        button[j].Size = new Size(60, 40);
+                    }
+                    if (count == 1)
+                    {
+                        Button_X += 60;
+                        button[j].Text = Login.BoardList[i].Category;
+                        button[j].Size = new Size(100, 40);
+                    }
+                    if (count == 2)
+                    {
+                        Button_X += 100;
+                        button[j].Text = Login.BoardList[i].Title;
+                        button[j].Size = new Size(290, 40);
+                    }
+                    if (count == 3)
+                    {
+                        Button_X += 290;
+                        button[j].Text = Login.BoardList[i].Id;
+                        button[j].Size = new Size(100, 40);
+                    }
+                    if (count == 4)
+                    {
+                        Button_X += 100;
+                        button[j].Text = Login.BoardList[i].Time.ToString("yyyy-mm-dd HH:mm:ss");
+                        button[j].Size = new Size(150, 40);
+
+                    }
+                    button[j].Font = new Font("Noto Sans KR", 9, FontStyle.Regular);
+                    button[j].FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+                    button[j].TextAlign = ContentAlignment.MiddleCenter;
+                    button[j].Location = new Point(Button_X, Button_Y);
+                    button[j].Visible = true;
+                    panel[i].Controls.Add(button[j]);
+                    button[j].Click += new EventHandler(button_Click);
+                    count++;
+                }
+
+                panel7.Controls.Add(panel[i]);
+                Panel_Y += 40;
+            }
+        }
+
+        //페이지 번호 선택시
+        private void b_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Control ctl = sender as Control;
+                if (ctl != null)
+                {
+                    int num = int.Parse(ctl.Text);
+                    panel7.Controls.Clear();
+                    //게시글 셋팅
+                    int Panel_Y = 0;
+                    for (int i = ((num * 10)-10); i < Login.BoardList.Count; i++)
+                    {
+                        Panel[] panel = new Panel[200];
+
+                        panel[i] = new Panel();
+                        panel[i].Name = Login.BoardList[i].Idx.ToString();
+                        panel[i].Location = new Point(0, Panel_Y);
+                        panel[i].Size = new Size(700, 40);
+
+                        int Button_X = 0;
+                        int Button_Y = 0;
+                        int count = 0;
+
+                        for (int j = 0; j < 5; j++)
+                        {
+                            int width = 60;
+                            int height = 30;
+                            //버튼객체 생성
+                            button[j] = new Button();
+                            if (count == 0)
+                            {
+                                Button_X += 0;
+                                button[j].Text = Login.BoardList[i].Idx.ToString();
+                                button[j].Size = new Size(60, 40);
+                            }
+                            if (count == 1)
+                            {
+                                Button_X += 60;
+                                button[j].Text = Login.BoardList[i].Category;
+                                button[j].Size = new Size(100, 40);
+                            }
+                            if (count == 2)
+                            {
+                                Button_X += 100;
+                                button[j].Text = Login.BoardList[i].Title;
+                                button[j].Size = new Size(290, 40);
+                            }
+                            if (count == 3)
+                            {
+                                Button_X += 290;
+                                button[j].Text = Login.BoardList[i].Id;
+                                button[j].Size = new Size(100, 40);
+                            }
+                            if (count == 4)
+                            {
+                                Button_X += 100;
+                                button[j].Text = Login.BoardList[i].Time.ToString("yyyy-mm-dd HH:mm:ss");
+                                button[j].Size = new Size(150, 40);
+
+                            }
+                            button[j].Font = new Font("Noto Sans KR", 9, FontStyle.Regular);
+                            button[j].FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+                            button[j].TextAlign = ContentAlignment.MiddleCenter;
+                            button[j].Location = new Point(Button_X, Button_Y);
+                            button[j].Visible = true;
+                            panel[i].Controls.Add(button[j]);
+                            button[j].Click += new EventHandler(button_Click);
+                            count++;
+                        }
+
+                        panel7.Controls.Add(panel[i]);
+                        Panel_Y += 40;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("게시글을 불러오는데 오류가 발생했습니다.");
+            }
+        }
+
+        private void button_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Control ctl = sender as Control;
+                if (ctl != null)
+                {
+                    NoticeIDX = int.Parse(ctl.Parent.Name);
+                    OpenNotice opennotice = new OpenNotice();
+                    opennotice.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("실패했습니다.");
+            }
+        }
     }
 }

@@ -19,6 +19,8 @@ namespace _20180829
         //개인정보
         public static List<User> UserList = new List<User>();
         public static List<Memo> MemoList = new List<Memo>();
+        //게시글 정보
+        public static List<Board> BoardList = new List<Board>();
         //남은휴가정보
         public static List<Vacation> VacationList = new List<Vacation>();
         //휴가신청정보
@@ -41,6 +43,8 @@ namespace _20180829
         {
             WbDB.Singleton.Open();
             UserList = WbDB.Singleton.Member(UserList);
+            WbDB.Singleton.Open();
+            BoardList = WbDB.Singleton.Board_L(BoardList);
             WbDB.Singleton.Open();
             VacationList = WbDB.Singleton.Vacation_L(VacationList);
             WbDB.Singleton.Open();

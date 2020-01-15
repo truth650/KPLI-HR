@@ -16,10 +16,11 @@ namespace _20180829
         private string contents_info;
         private string file_name;
         private byte[] file_binary;
+        private string extension;
         private DateTime time;
-        //private int read_num;
 
-        public Board(int idx, string category, string id, string title, string contents, string contents_info, string file_name,byte[] file_binary,DateTime time)
+        public Board(int idx, string category, string id, string title, string contents, string contents_info, string file_name, 
+            byte[] file_binary, string extension, DateTime time)
         {
             this.idx = idx;
             this.category = category;
@@ -29,6 +30,7 @@ namespace _20180829
             this.contents_info = contents_info;
             this.file_name = file_name;
             this.file_binary = file_binary;
+            this.extension = extension;
             this.time = time;
         }
 
@@ -40,8 +42,8 @@ namespace _20180829
         public string Contents_Info { get { return contents_info; } set { contents_info = value; } }
         public string File_Name { get { return file_name; } set { file_name = value; } }
         public byte[] File_Binary { get { return file_binary; } set { file_binary = value; } }
+        public string Extension { get { return extension; } set { extension = value; } }
         public DateTime Time {get { return time; } set { time = value; } }
-        //public int Read_Num { get { return read_num; } set { read_num = value; } }
 
     }
 }
