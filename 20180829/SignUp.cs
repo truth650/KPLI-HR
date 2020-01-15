@@ -25,7 +25,10 @@ namespace _20180829
         //종료이벤트
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            this.Hide();
+            Login l_form = new Login();
+            l_form.ShowDialog();
+            this.Close();
         }
 
         //최소화이벤트

@@ -54,9 +54,9 @@ namespace _20180829
         //회원가입 창 열기
         private void Button2_Click(object sender, EventArgs e)
         {
+            this.Hide();
             SignUp form3 = new SignUp();
-            form3.StartPosition = FormStartPosition.CenterParent;
-            form3.Show(this);
+            form3.ShowDialog();
             this.Visible = false;
         }
  
@@ -64,8 +64,9 @@ namespace _20180829
         //ID/PW 찾기
         private void Button4_Click(object sender, EventArgs e)
         {
+            this.Hide();
             FindMem form8 = new FindMem();
-            form8.Show();
+            form8.ShowDialog();
             this.Visible = false;
         }
 
