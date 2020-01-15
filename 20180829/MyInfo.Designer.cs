@@ -79,7 +79,7 @@
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox4.Image = global::_20180829.Properties.Resources.minimize_window_32px;
+            this.pictureBox4.Image = global::_20180829.Properties.Resources.minimize_window1_32px;
             this.pictureBox4.Location = new System.Drawing.Point(386, 0);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(32, 32);
@@ -92,7 +92,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox3.Image = global::_20180829.Properties.Resources.delete_32px;
+            this.pictureBox3.Image = global::_20180829.Properties.Resources.delete1_32px;
             this.pictureBox3.Location = new System.Drawing.Point(418, 0);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(32, 32);
@@ -102,7 +102,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox3.BackColor = System.Drawing.Color.White;
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.textBox3.ForeColor = System.Drawing.Color.Gray;
@@ -116,7 +116,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox2.BackColor = System.Drawing.Color.White;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.textBox2.ForeColor = System.Drawing.Color.Gray;
@@ -142,7 +142,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox1.BackColor = System.Drawing.Color.White;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.textBox1.Enabled = false;
@@ -156,7 +156,7 @@
             // 
             // comboBox2
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox2.BackColor = System.Drawing.Color.White;
             this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBox2.Font = new System.Drawing.Font("Noto Sans KR Light", 10.25F);
             this.comboBox2.ForeColor = System.Drawing.Color.Gray;
@@ -184,7 +184,7 @@
             // 
             // textBox6
             // 
-            this.textBox6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox6.BackColor = System.Drawing.Color.White;
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox6.Font = new System.Drawing.Font("Noto Sans KR Light", 10.25F);
             this.textBox6.ForeColor = System.Drawing.Color.Gray;
@@ -197,7 +197,7 @@
             // 
             // comboBox4
             // 
-            this.comboBox4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox4.BackColor = System.Drawing.Color.White;
             this.comboBox4.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBox4.Font = new System.Drawing.Font("Noto Sans KR Light", 10.25F);
             this.comboBox4.ForeColor = System.Drawing.Color.Gray;
@@ -225,7 +225,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox4.BackColor = System.Drawing.Color.White;
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox4.Font = new System.Drawing.Font("Noto Sans KR Light", 10.25F);
             this.textBox4.ForeColor = System.Drawing.Color.Gray;
@@ -238,7 +238,7 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox1.BackColor = System.Drawing.Color.White;
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBox1.Font = new System.Drawing.Font("Noto Sans KR Light", 10.25F);
             this.comboBox1.ForeColor = System.Drawing.Color.Gray;
@@ -303,7 +303,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox5.BackColor = System.Drawing.Color.White;
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox5.Font = new System.Drawing.Font("Noto Sans KR Light", 10.25F);
             this.textBox5.ForeColor = System.Drawing.Color.Gray;
@@ -316,7 +316,7 @@
             // 
             // textBox7
             // 
-            this.textBox7.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox7.BackColor = System.Drawing.Color.White;
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox7.Font = new System.Drawing.Font("Noto Sans KR Light", 10.25F);
             this.textBox7.ForeColor = System.Drawing.Color.Gray;
@@ -329,7 +329,7 @@
             // 
             // textBox8
             // 
-            this.textBox8.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox8.BackColor = System.Drawing.Color.White;
             this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox8.Font = new System.Drawing.Font("Noto Sans KR Light", 10.25F);
             this.textBox8.ForeColor = System.Drawing.Color.Gray;
@@ -354,7 +354,7 @@
             // 
             // textBox9
             // 
-            this.textBox9.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox9.BackColor = System.Drawing.Color.White;
             this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox9.Font = new System.Drawing.Font("Noto Sans KR Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox9.ForeColor = System.Drawing.Color.Gray;
@@ -367,7 +367,7 @@
             // 
             // textBox10
             // 
-            this.textBox10.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox10.BackColor = System.Drawing.Color.White;
             this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox10.Font = new System.Drawing.Font("Noto Sans KR Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox10.ForeColor = System.Drawing.Color.Gray;
@@ -380,7 +380,7 @@
             // 
             // textBox11
             // 
-            this.textBox11.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox11.BackColor = System.Drawing.Color.White;
             this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox11.Font = new System.Drawing.Font("Noto Sans KR Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox11.ForeColor = System.Drawing.Color.Gray;
@@ -395,7 +395,8 @@
             // 
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(174)))), ((int)(((byte)(127)))));
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Noto Sans KR Bold", 14.25F, System.Drawing.FontStyle.Bold);
             this.button1.Location = new System.Drawing.Point(29, 657);
@@ -432,7 +433,7 @@
             // 
             // textBox12
             // 
-            this.textBox12.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox12.BackColor = System.Drawing.Color.White;
             this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.textBox12.ForeColor = System.Drawing.Color.Gray;
@@ -445,7 +446,7 @@
             // 
             // comboBox6
             // 
-            this.comboBox6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox6.BackColor = System.Drawing.Color.White;
             this.comboBox6.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.comboBox6.ForeColor = System.Drawing.Color.DimGray;

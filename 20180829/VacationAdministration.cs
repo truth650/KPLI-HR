@@ -56,6 +56,38 @@ namespace _20180829
         }
         //상단바
 
+
+        //이벤트
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+            button3.ForeColor = Color.White;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button3.ForeColor = Color.Black;
+        }
+
+        private void button2_MouseHover(object sender, EventArgs e)
+        {
+            button3.ForeColor = Color.White;
+        }
+
+        private void button2_MouseLeave(object sender, EventArgs e)
+        {
+            button3.ForeColor = Color.Black;
+        }
+        private void button3_MouseHover(object sender, EventArgs e)
+        {
+            button3.ForeColor = Color.White;
+        }
+        private void button3_MouseLeave(object sender, EventArgs e)
+        {
+            button3.ForeColor = Color.Black;
+        }
+        //이벤트
+        
+        
         private void VacationAdministration_Load(object sender, EventArgs e)
         {          
             SetVacationList();
@@ -317,31 +349,46 @@ namespace _20180829
             }
         }
 
+        
+
+
+
         #endregion
 
 
         //휴가리셋버튼   병가, 연가, 연차 더해주기
         private void button3_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < Login.VacationList.Count; i++)
-            {
+            if(MessageBox.Show("Do you want to reset the leave for the entire employee?","Reset Vacation",MessageBoxButtons.YesNo) == DialogResult.Yes)
+            { 
+                for (int i = 0; i < Login.VacationList.Count; i++)
+                {
                 //병가 더해주기
-                int sickday =  Login.VacationList[i].SickDay + 24;
-                
+                int sickday = Login.VacationList[i].SickDay + 24;
+
                 //연차 더해주기
                 int annual = (Login.VacationList[i].Annual + 1);
 
                 //연가 더해주기
-                int vacation =  Login.VacationList[i].YearVacation + (40 + (annual * 8));
+                int vacation = Login.VacationList[i].YearVacation + (40 + (annual * 8));
 
                 WbDB.Singleton.Open();
                 WbDB.Singleton.Vacation_U(Login.VacationList[i].ID, "SickDay", sickday);
                 WbDB.Singleton.Vacation_U(Login.VacationList[i].ID, "Vacation", vacation);
                 WbDB.Singleton.Open();
                 WbDB.Singleton.Annual_U(Login.VacationList[i].ID, annual);
-                SetVacationList();               
+                SetVacationList();
+                 }
+
+                MessageBox.Show("Reset Vacation Completed");
+            
             }
+            else
+             {
+                MessageBox.Show("Cancel Reset Vacation");
+             }
         }
+
 
     }
 }

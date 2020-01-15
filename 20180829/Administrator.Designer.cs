@@ -93,7 +93,7 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(6, 34);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(323, 62);
+            this.label5.Size = new System.Drawing.Size(261, 50);
             this.label5.TabIndex = 22;
             this.label5.Text = "Administrator";
             // 
@@ -300,37 +300,47 @@
             // 
             // button7
             // 
+            this.button7.BackColor = System.Drawing.Color.White;
+            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(233)))), ((int)(((byte)(255)))));
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Noto Sans KR Regular", 12F);
-            this.button7.Location = new System.Drawing.Point(205, 241);
+            this.button7.Font = new System.Drawing.Font("Noto Sans KR Regular", 17F);
+            this.button7.Location = new System.Drawing.Point(175, 131);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(316, 49);
+            this.button7.Size = new System.Drawing.Size(370, 100);
             this.button7.TabIndex = 41;
-            this.button7.Text = "Holiday manage and approval";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Text = "Vacation manage and approval";
+            this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button9
             // 
+            this.button9.BackColor = System.Drawing.Color.White;
+            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(171)))));
+            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(209)))));
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Noto Sans KR Regular", 12F);
-            this.button9.Location = new System.Drawing.Point(205, 148);
+            this.button9.Font = new System.Drawing.Font("Noto Sans KR Regular", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button9.Location = new System.Drawing.Point(175, 258);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(316, 47);
+            this.button9.Size = new System.Drawing.Size(370, 100);
             this.button9.TabIndex = 42;
             this.button9.Text = "Expense Voucher manage";
-            this.button9.UseVisualStyleBackColor = true;
+            this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button8
             // 
-            this.button8.Font = new System.Drawing.Font("Noto Sans KR Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button8.Location = new System.Drawing.Point(205, 326);
+            this.button8.BackColor = System.Drawing.Color.White;
+            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Noto Sans KR Regular", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button8.Location = new System.Drawing.Point(175, 397);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(316, 48);
+            this.button8.Size = new System.Drawing.Size(370, 90);
             this.button8.TabIndex = 43;
             this.button8.Text = "User information check";
-            this.button8.UseVisualStyleBackColor = true;
+            this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // Administrator

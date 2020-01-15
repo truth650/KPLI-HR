@@ -253,6 +253,14 @@ namespace _20180829
                 extension = Path.GetExtension(ofd.FileName);   //파일 확장자 보내주기
             }
         }
+        private void button11_MouseHover(object sender, EventArgs e)
+        {
+            button11.ForeColor = Color.Black;
+        }
+        private void button11_MouseLeave(object sender, EventArgs e)
+        {
+            button11.ForeColor = Color.White;
+        }
 
         //영수증 신청
         private void button9_Click(object sender, EventArgs e)
