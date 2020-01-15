@@ -225,12 +225,12 @@ namespace _20180829
                 }
                 else if (ErrorType == 3)
                 {
-                    
-                    MessageBox.Show("Welcome to " + UserList[Index].F_Name);
-                    form2.ShowDialog();  //메인 창 띄우기
                     IsLogin = true; //로그인 상태변경
                     LoginIndex = Index;
                     LoginID = textBox1.Text; //로그인된 아이디 정보 담아주기
+                    this.Hide();
+                    MessageBox.Show("Welcome to " + UserList[Index].F_Name);
+                    form2.ShowDialog();  //메인 창 띄우기
                     this.Visible = false;  //로그인창 숨기기
                 }
             }
