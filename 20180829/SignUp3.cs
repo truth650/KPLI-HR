@@ -119,6 +119,7 @@ namespace _20180829
         //국가
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
+            label6.Visible = false;
             if (comboBox3.Text == "USA")
             {
                 comboBox6.Items.Clear();
@@ -142,7 +143,11 @@ namespace _20180829
         {
             comboBox6.ForeColor = Color.Black;
         }
-        
+        private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            label7.Visible = false;
+        }
+
         //직책
         private void comboBox1_Enter(object sender, EventArgs e)
         {

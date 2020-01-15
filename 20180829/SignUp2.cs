@@ -140,13 +140,14 @@ namespace _20180829
         }
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            label1.Visible = false;
             if (comboBox2.Text == "USA")
             {
                 textBox6.Text = "ex) 6196788496";
             }
             else if (comboBox2.Text == "KOR")
             {
-                textBox6.Text = "ex) 01012345678";
+                textBox6.Text = "ex) 1012345678";
             }
         }
         //폰
@@ -161,8 +162,6 @@ namespace _20180829
         }
 
 
-
-
         //주소
         //나라선택
         private void comboBox4_Enter(object sender, EventArgs e)
@@ -171,6 +170,7 @@ namespace _20180829
         }
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
+            label3.Visible = false;
             if (comboBox4.Text == "USA")
             {
                 this.comboBox1.Enabled = true;
@@ -178,6 +178,7 @@ namespace _20180829
             else if (comboBox4.Text == "Korea")
             {
                 this.comboBox1.Enabled = false;
+                label2.Visible = false;
             }
         }
 
@@ -218,6 +219,10 @@ namespace _20180829
         {
             comboBox1.ForeColor = Color.Black;
         }
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            label2.Visible = false;
+        }
 
         //우편 번호
         private void textBox1_Click(object sender, EventArgs e)
@@ -226,14 +231,10 @@ namespace _20180829
             textBox1.ForeColor = Color.Black;
         }
 
-
         private void textBox1_Enter(object sender, EventArgs e)
         {
             textBox1.ForeColor = Color.Black;
         }
-
-        
-
 
     }
 }

@@ -168,6 +168,10 @@ namespace _20180829
         {
             comboBox6.ForeColor = Color.Black;
         }
+        private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            label3.Visible = false;
+        }
         private void textBox4_Click(object sender, EventArgs e)
         {
             textBox4.Clear();
