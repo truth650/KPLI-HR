@@ -337,7 +337,7 @@
             this.button8.Font = new System.Drawing.Font("Noto Sans KR Regular", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.button8.Location = new System.Drawing.Point(175, 378);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(370, 90);
+            this.button8.Size = new System.Drawing.Size(370, 100);
             this.button8.TabIndex = 43;
             this.button8.Text = "User information check";
             this.button8.UseVisualStyleBackColor = false;
