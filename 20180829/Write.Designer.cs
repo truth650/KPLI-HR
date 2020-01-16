@@ -42,9 +42,10 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(315, 353);
+            this.button5.Location = new System.Drawing.Point(276, 282);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(97, 29);
+            this.button5.Size = new System.Drawing.Size(85, 23);
             this.button5.TabIndex = 17;
             this.button5.Text = "File";
             this.button5.UseVisualStyleBackColor = true;
@@ -52,16 +53,18 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(17, 353);
+            this.textBox2.Location = new System.Drawing.Point(15, 282);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(277, 25);
+            this.textBox2.Size = new System.Drawing.Size(243, 21);
             this.textBox2.TabIndex = 16;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(300, 10);
+            this.textBox1.Location = new System.Drawing.Point(262, 8);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(471, 25);
+            this.textBox1.Size = new System.Drawing.Size(413, 21);
             this.textBox1.TabIndex = 15;
             // 
             // comboBox1
@@ -70,16 +73,18 @@
             this.comboBox1.Items.AddRange(new object[] {
             "공지사항",
             "일반"});
-            this.comboBox1.Location = new System.Drawing.Point(104, 11);
+            this.comboBox1.Location = new System.Drawing.Point(91, 9);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
+            this.comboBox1.Size = new System.Drawing.Size(106, 20);
             this.comboBox1.TabIndex = 14;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(642, 347);
+            this.button3.Location = new System.Drawing.Point(562, 278);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(129, 33);
+            this.button3.Size = new System.Drawing.Size(113, 26);
             this.button3.TabIndex = 13;
             this.button3.Text = "save";
             this.button3.UseVisualStyleBackColor = true;
@@ -87,9 +92,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(777, 143);
+            this.button2.Location = new System.Drawing.Point(680, 114);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(97, 26);
+            this.button2.Size = new System.Drawing.Size(85, 21);
             this.button2.TabIndex = 12;
             this.button2.Text = "font";
             this.button2.UseVisualStyleBackColor = true;
@@ -97,9 +103,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(777, 100);
+            this.button1.Location = new System.Drawing.Point(680, 80);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 26);
+            this.button1.Size = new System.Drawing.Size(85, 21);
             this.button1.TabIndex = 11;
             this.button1.Text = "color";
             this.button1.UseVisualStyleBackColor = true;
@@ -107,9 +114,10 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(17, 53);
+            this.richTextBox1.Location = new System.Drawing.Point(15, 42);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(754, 285);
+            this.richTextBox1.Size = new System.Drawing.Size(660, 229);
             this.richTextBox1.TabIndex = 10;
             this.richTextBox1.Text = "";
             // 
@@ -117,9 +125,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Noto Sans KR Regular", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(243, 7);
+            this.label1.Location = new System.Drawing.Point(213, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 28);
+            this.label1.Size = new System.Drawing.Size(41, 22);
             this.label1.TabIndex = 18;
             this.label1.Text = "Title";
             // 
@@ -127,17 +135,17 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Noto Sans KR Regular", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(12, 5);
+            this.label2.Location = new System.Drawing.Point(10, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 28);
+            this.label2.Size = new System.Drawing.Size(71, 22);
             this.label2.TabIndex = 19;
             this.label2.Text = "category";
             // 
             // Write
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(886, 399);
+            this.ClientSize = new System.Drawing.Size(775, 319);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button5);
@@ -148,7 +156,9 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.richTextBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Write";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Write";
             this.Load += new System.EventHandler(this.Write_Load);
             this.ResumeLayout(false);

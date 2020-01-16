@@ -171,12 +171,12 @@ namespace _20180829
 
         private void button1_MouseHover(object sender, EventArgs e)
         {
-            button8.Font = new Font("Noto Sans KR Medium", 14, FontStyle.Underline);
+            button1.Font = new Font("Noto Sans KR Medium", 14, FontStyle.Underline);
         }
 
         private void button1_MouseLeave(object sender, EventArgs e)
         {
-            button8.Font = new Font("Noto Sans KR Medium", 14, FontStyle.Bold);
+            button1.Font = new Font("Noto Sans KR Medium", 14, FontStyle.Bold);
         }
         //이벤트(바)
 

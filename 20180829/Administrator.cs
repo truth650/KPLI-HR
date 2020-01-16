@@ -62,12 +62,12 @@ namespace _20180829
 
         private void pictureBox3_MouseHover(object sender, EventArgs e)
         {
-            pictureBox4.BackColor = Color.White;
+            pictureBox3.BackColor = Color.White;
         }
 
         private void pictureBox3_MouseLeave(object sender, EventArgs e)
         {
-            pictureBox4.BackColor = Color.Transparent;
+            pictureBox3.BackColor = Color.Transparent;
         }
         //상단바
 
@@ -137,7 +137,15 @@ namespace _20180829
             Login.IsLogin = false; //로그아웃 상태로 변경
             this.Close();
         }
+        private void button1_MouseHover(object sender, EventArgs e)
+         {
+            button1.Font = new Font("Noto Sans KR Medium", 14, FontStyle.Underline);
+         }
 
+        private void button1_MouseLeave(object sender, EventArgs e)
+         {
+            button1.Font = new Font("Noto Sans KR Medium", 14, FontStyle.Bold);
+         }
         //사용자 정보조회 버튼
         private void button8_Click(object sender, EventArgs e)
         {
@@ -151,6 +159,8 @@ namespace _20180829
             VacationAdministration va = new VacationAdministration();
             va.Show();
         }
+
+        
 
         //영수증 관리
         private void button9_Click(object sender, EventArgs e)

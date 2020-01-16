@@ -104,12 +104,12 @@ namespace _20180829
 
         private void pictureBox3_MouseHover(object sender, EventArgs e)
         {
-            pictureBox4.BackColor = Color.Black;
+            pictureBox3.BackColor = Color.Black;
         }
 
         private void pictureBox3_MouseLeave(object sender, EventArgs e)
         {
-            pictureBox4.BackColor = Color.Transparent;
+            pictureBox3.BackColor = Color.Transparent;
         }
         //상단바
 
@@ -181,12 +181,12 @@ namespace _20180829
 
         private void button1_MouseHover(object sender, EventArgs e)
         {
-            button8.Font = new Font("Noto Sans KR Medium", 14, FontStyle.Underline);
+            button1.Font = new Font("Noto Sans KR Medium", 14, FontStyle.Underline);
         }
 
         private void button1_MouseLeave(object sender, EventArgs e)
         {
-            button8.Font = new Font("Noto Sans KR Medium", 14, FontStyle.Bold);
+            button1.Font = new Font("Noto Sans KR Medium", 14, FontStyle.Bold);
         }
         #region Total
         private void textBox2_TextChanged(object sender, EventArgs e)

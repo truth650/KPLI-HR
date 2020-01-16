@@ -933,6 +933,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UserInformation";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "UserInformation";
             this.Load += new System.EventHandler(this.UserInformation_Load);
             this.panel3.ResumeLayout(false);
