@@ -114,6 +114,9 @@
             this.button8.TabIndex = 26;
             this.button8.Text = "My Info";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.button8.MouseLeave += new System.EventHandler(this.button8_MouseLeave);
+            this.button8.MouseHover += new System.EventHandler(this.button8_MouseHover);
             // 
             // button1
             // 
@@ -131,6 +134,8 @@
             this.button1.Text = "Logout";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
+            this.button1.MouseHover += new System.EventHandler(this.button1_MouseHover);
             // 
             // label5
             // 

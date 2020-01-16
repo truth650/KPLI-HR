@@ -77,6 +77,8 @@
             this.button1.Text = "Logout";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
+            this.button1.MouseHover += new System.EventHandler(this.button1_MouseHover);
             // 
             // panel1
             // 
@@ -99,7 +101,7 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(6, 34);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(257, 62);
+            this.label5.Size = new System.Drawing.Size(210, 50);
             this.label5.TabIndex = 22;
             this.label5.Text = "Dashboard";
             // 
@@ -107,6 +109,8 @@
             // 
             this.button8.BackColor = System.Drawing.Color.Transparent;
             this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Noto Sans KR Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button8.ForeColor = System.Drawing.Color.White;
@@ -117,6 +121,9 @@
             this.button8.TabIndex = 24;
             this.button8.Text = "My Info";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.button8.MouseLeave += new System.EventHandler(this.button8_MouseLeave);
+            this.button8.MouseHover += new System.EventHandler(this.button8_MouseHover);
             // 
             // panel3
             // 
@@ -335,7 +342,7 @@
             this.label3.Font = new System.Drawing.Font("Noto Sans KR Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(189, 36);
+            this.label3.Size = new System.Drawing.Size(146, 28);
             this.label3.TabIndex = 2;
             this.label3.Text = "Bulletin board";
             // 
@@ -354,7 +361,7 @@
             this.label4.Font = new System.Drawing.Font("Noto Sans KR Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(127, 36);
+            this.label4.Size = new System.Drawing.Size(98, 28);
             this.label4.TabIndex = 3;
             this.label4.Text = "Schedule";
             // 

@@ -46,7 +46,19 @@ namespace _20180829
             textBox9.Text = "$  " + Total.ToString();
         }
 
-        
+        private void button8_Click(object sender, EventArgs e)
+        {
+            MyInfo my_form = new MyInfo();
+            my_form.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Login form1 = new Login();
+            form1.Visible = true; //로그인창 보이기
+            Login.IsLogin = false; //로그아웃 상태로 변경
+            this.Close();
+        }
 
         //상단바
         bool TagMove;
@@ -133,6 +145,30 @@ namespace _20180829
             a_form.ShowDialog();
             this.Close();
         }
+        private void button3_MouseDown(object sender, MouseEventArgs e)
+        {
+            button3.Image = Properties.Resources.administrator_32px;
+            button3.ForeColor = Color.FromArgb(255, 255, 255);
+        }
+
+        private void button8_MouseHover(object sender, EventArgs e)
+        {
+            button8.Font = new Font("Noto Sans KR Medium", 14, FontStyle.Underline);
+        }
+        private void button8_MouseLeave(object sender, EventArgs e)
+        {
+            button8.Font = new Font("Noto Sans KR Medium", 14, FontStyle.Bold);
+        }
+
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+            button8.Font = new Font("Noto Sans KR Medium", 14, FontStyle.Underline);
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button8.Font = new Font("Noto Sans KR Medium", 14, FontStyle.Bold);
+        }
         #region Total
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
@@ -218,11 +254,7 @@ namespace _20180829
             }
         }
 
-        private void button3_MouseDown(object sender, MouseEventArgs e)
-        {
-            button3.Image = Properties.Resources.administrator_32px;
-            button3.ForeColor = Color.FromArgb(255, 255, 255);
-        }       
+              
 
         private void Result()
         {
@@ -261,6 +293,14 @@ namespace _20180829
         {
             button11.ForeColor = Color.White;
         }
+
+        //내 영수증 처리현황 보기
+        private void button10_Click(object sender, EventArgs e)
+        {
+            ExpenseStatus expensestatus = new ExpenseStatus();
+            expensestatus.Show();
+        }
+
 
         //영수증 신청
         private void button9_Click(object sender, EventArgs e)
@@ -302,12 +342,8 @@ namespace _20180829
             WbDB.Singleton.Open();
             WbDB.Singleton.InsertExpense(expenses[0]);
         }
-
-        //내 영수증 처리현황 보기
-        private void button10_Click(object sender, EventArgs e)
-        {
-            ExpenseStatus expensestatus = new ExpenseStatus();
-            expensestatus.Show();
-        }
-    }
 }
+
+        
+    }
+

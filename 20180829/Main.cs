@@ -29,11 +29,17 @@ namespace _20180829
             Login.IsLogin = false; //로그아웃 상태로 변경
             this.Close();
         }
-
         private void Form_FormClosing(object sender, FormClosingEventArgs e)
         {
             form1.Visible = true; //로그인 창으로
             Login.IsLogin = false; //로그아웃 상태로 변경
+        }
+
+        //내 정보
+        private void button8_Click(object sender, EventArgs e)
+        {
+            MyInfo my_form = new MyInfo();
+            my_form.ShowDialog();
         }
 
         //상단바
@@ -123,13 +129,30 @@ namespace _20180829
             this.Close();
             form1.Visible = false;
         }
-
         private void button3_MouseDown(object sender, MouseEventArgs e)
         {
             button3.Image = Properties.Resources.administrator_32px;
             button3.ForeColor = Color.FromArgb(255, 255, 255);
         }
 
+        private void button8_MouseHover(object sender, EventArgs e)
+        {
+            button8.Font = new Font("Noto Sans KR Medium", 14, FontStyle.Underline);
+        }
+        private void button8_MouseLeave(object sender, EventArgs e)
+        {
+            button8.Font = new Font("Noto Sans KR Medium", 14, FontStyle.Bold);
+        }
+
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+            button8.Font = new Font("Noto Sans KR Medium", 14, FontStyle.Underline);
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button8.Font = new Font("Noto Sans KR Medium", 14, FontStyle.Bold);
+        }
 
     }
 }

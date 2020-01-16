@@ -46,7 +46,12 @@ namespace _20180829
             InitializeComponent();
         }
 
-        
+        //내정보
+        private void button8_Click(object sender, EventArgs e)
+        {
+            MyInfo my_form = new MyInfo();
+            my_form.ShowDialog();
+        }
 
         //상단바
         bool TagMove;
@@ -153,6 +158,25 @@ namespace _20180829
             form1.Visible = true; //로그인창 보이기
             Login.IsLogin = false; //로그아웃 상태로 변경
             this.Close();
+        }
+
+        private void button8_MouseHover(object sender, EventArgs e)
+        {
+            button8.Font = new Font("Noto Sans KR Medium", 14, FontStyle.Underline);
+        }
+        private void button8_MouseLeave(object sender, EventArgs e)
+        {
+            button8.Font = new Font("Noto Sans KR Medium", 14, FontStyle.Bold);
+        }
+
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+            button8.Font = new Font("Noto Sans KR Medium", 14, FontStyle.Underline);
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button8.Font = new Font("Noto Sans KR Medium", 14, FontStyle.Bold);
         }
         //이벤트(바)
 
@@ -1125,7 +1149,7 @@ namespace _20180829
             button11.Visible = false;
         }
 
-
+       
         private void button12_Click(object sender, EventArgs e)
         {
             panel10.Visible = false;

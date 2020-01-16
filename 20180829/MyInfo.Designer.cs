@@ -507,6 +507,7 @@
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MyInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "MyInfo";
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

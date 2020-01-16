@@ -117,6 +117,8 @@
             // 
             this.button8.BackColor = System.Drawing.Color.Transparent;
             this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Noto Sans KR Medium", 14.25F, System.Drawing.FontStyle.Bold);
             this.button8.ForeColor = System.Drawing.Color.White;
@@ -127,11 +129,16 @@
             this.button8.TabIndex = 26;
             this.button8.Text = "My Info";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.button8.MouseLeave += new System.EventHandler(this.button8_MouseLeave);
+            this.button8.MouseHover += new System.EventHandler(this.button8_MouseHover);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Noto Sans KR Medium", 14.25F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
@@ -143,6 +150,9 @@
             this.button1.TabIndex = 25;
             this.button1.Text = "Logout";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
+            this.button1.MouseHover += new System.EventHandler(this.button1_MouseHover);
             // 
             // label5
             // 
@@ -459,8 +469,8 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(335, 38);
             this.tableLayoutPanel4.TabIndex = 82;
             // 
