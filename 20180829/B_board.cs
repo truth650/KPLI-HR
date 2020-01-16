@@ -85,12 +85,12 @@ namespace _20180829
 
         private void pictureBox3_MouseHover(object sender, EventArgs e)
         {
-            pictureBox4.BackColor = Color.Black;
+            pictureBox3.BackColor = Color.Black;
         }
 
         private void pictureBox3_MouseLeave(object sender, EventArgs e)
         {
-            pictureBox4.BackColor = Color.Transparent;
+            pictureBox3.BackColor = Color.Transparent;
         }
         //상단바
 
