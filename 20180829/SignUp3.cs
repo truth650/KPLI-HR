@@ -48,8 +48,8 @@ namespace _20180829
                 SignUp.sign_up[0].Authority = 4;
             }
             SignUp.sign_up[0].Bank = textBox7.Text;
-            SignUp.sign_up[0].Routing_Num = int.Parse(textBox5.Text);
-            SignUp.sign_up[0].Account_Num = int.Parse(textBox6.Text);
+            SignUp.sign_up[0].Routing_Num = textBox5.Text;
+            SignUp.sign_up[0].Account_Num = textBox6.Text;
 
             //휴가계산
             VacationCalculation();

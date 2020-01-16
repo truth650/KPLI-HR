@@ -20,6 +20,7 @@ namespace _20180829
         public static int ChoseYear = 0;
         public static int ChoseMonth = 0;
         public static int ChoseDay = 0;
+        public static int memoidx = 0;
 
         static Button[] btn = new Button[42];
         //n번째 요일검사(btn.name)
@@ -1098,6 +1099,58 @@ namespace _20180829
                         listView1.Items.Add(item);
                     }
                 }
+            }
+        }
+
+        //메모리스트클릭
+        private void listView1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (listView1.SelectedItems.Count == 1)
+            {
+                ListView.SelectedListViewItemCollection items = listView1.SelectedItems;
+                ListViewItem lvItem = items[0];
+
+                for (int i = 0; i < Login.MemoList.Count; i++)
+                {
+                    if (Login.MemoList[i].Content == lvItem.SubItems[1].Text &&
+                        (Login.MemoList[i].Date.Day + "일  " + Login.MemoList[i].Date.Hour + ":" + Login.MemoList[i].Date.Minute).ToString() ==
+                        lvItem.SubItems[0].Text)
+                    {
+                        memoidx = i;
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Plese Selete memo");
+            }
+        }
+
+        //메모삭제
+        private void button13_Click(object sender, EventArgs e)
+        {
+            //다이얼로그 박스
+            DialogResult res = MessageBox.Show("메모를 삭제하시겠습니까?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (res == DialogResult.OK)
+            {
+                for (int i = 0; i < Login.MemoList.Count; i++)
+                {
+                    if (Login.MemoList[i].ID == Login.MemoList[memoidx].ID && Login.MemoList[i].Date == Login.MemoList[memoidx].Date)
+                    {
+                        WbDB.Singleton.Open();
+                        WbDB.Singleton.DeleteMemo(Login.MemoList[i].ID, Login.MemoList[memoidx].Date);
+                    }
+                }
+                Login.MemoList.Clear();
+                WbDB.Singleton.Open();
+                WbDB.Singleton.Memo_L(Login.MemoList);
+                MessageBox.Show("Delete Complete");
+                SetMemoList();
+            }
+
+            if (res == DialogResult.Cancel)
+            {
+                MessageBox.Show("You have clicked Cancel Button");
             }
         }
 

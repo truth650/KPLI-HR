@@ -16,7 +16,7 @@ namespace _20180829
         private int month;
         private int day;
         private string coun_phone;
-        private int phone;
+        private string phone;
         private string addr1;
         private string addr2;
         private string addr_city;
@@ -32,15 +32,15 @@ namespace _20180829
         private string question;
         private string answer;
         private string bank;
-        private int account_num;
-        private int routing_num;
+        private string account_num;
+        private string routing_num;
 
 
 
-        public User(string id, string pw, string f_name, string l_name, int year, int month, int day, string coun_phone, int phone,
+        public User(string id, string pw, string f_name, string l_name, int year, int month, int day, string coun_phone, string phone,
             string addr1, string addr2, string addr_city, string addr_state, int addr_zip, string gender,
             string department, string office, DateTime join_date, string position, int ssn, int authority, string question, string answer,
-            string bank, int account_num, int routing_num)
+            string bank, string account_num, string routing_num)
         {
             this.id = id;
             this.pw = pw;
@@ -79,7 +79,7 @@ namespace _20180829
         public int Month { get { return month; } set { month = value; } }
         public int Day { get { return day; } set { day = value; } }
         public string Coun_Phone { get { return coun_phone; } set { coun_phone = value; } }
-        public int Phone { get { return phone; } set { phone = value; } }
+        public string Phone { get { return phone; } set { phone = value; } }
         public string Addr1 { get { return addr1; } set { addr1 = value; } }
         public string Addr2 { get { return addr2; } set { addr2 = value; } }
         public string Addr_City { get { return addr_city; } set { addr_city = value; } }
@@ -95,8 +95,8 @@ namespace _20180829
         public string Question { get { return question; } set { question = value; } }
         public string Answer { get { return answer; } set { answer = value; } }
         public string Bank { get { return bank; } set { bank = value; } }
-        public int Account_Num { get { return account_num; } set { account_num = value; } }
-        public int Routing_Num { get { return routing_num; } set { routing_num = value; } }
+        public string Account_Num { get { return account_num; } set { account_num = value; } }
+        public string Routing_Num { get { return routing_num; } set { routing_num = value; } }
 
     }
 }

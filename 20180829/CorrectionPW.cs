@@ -24,7 +24,11 @@ namespace _20180829
         {
             if (textBox1.Text == textBox2.Text)
             {
-                //Login.UserList[FindMem.SelectedNum].Pw = textBox1.Text;
+                WbDB.Singleton.Open();
+                WbDB.Singleton.Password_U(Login.UserList[FindMem.SelectedNum].Id, textBox1.Text);
+                Login.UserList.Clear();
+                WbDB.Singleton.Open();
+                WbDB.Singleton.Member(Login.UserList);
                 MessageBox.Show("Password change complete.", "완료");
                 textBox1.Clear();
                 textBox2.Clear();

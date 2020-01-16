@@ -48,7 +48,7 @@ namespace _20180829
 
 
 
-        #region 회원가입기능
+        #region 회원관련기능
         public void AddMember(User user)
         {
             if (conn.State == ConnectionState.Closed)
@@ -92,7 +92,6 @@ namespace _20180829
             command.Parameters.Add(param_coun_phone);
 
             SqlParameter param_phone = new SqlParameter("@Phone", user.Phone);
-            param_phone.SqlDbType = SqlDbType.Int;
             command.Parameters.Add(param_phone);
 
 
@@ -147,12 +146,10 @@ namespace _20180829
             command.Parameters.Add(param_bank);
 
             SqlParameter param_acc_num = new SqlParameter("@Acc_Num", user.Account_Num);
-            param_acc_num.SqlDbType = SqlDbType.Int;
             command.Parameters.Add(param_acc_num);
 
 
             SqlParameter param_rou_num = new SqlParameter("@Rou_Num", user.Routing_Num);
-            param_rou_num.SqlDbType = SqlDbType.Int;
             command.Parameters.Add(param_rou_num);
 
 
@@ -161,10 +158,7 @@ namespace _20180829
                 throw new Exception("추가 실패");
         }
 
-        #endregion
-
-
-        #region 회원 정보 초기 로드
+        //멤버로드
         public List<User> Member(List<User> userlist)
         {
             if (conn.State == ConnectionState.Closed)
@@ -183,11 +177,11 @@ namespace _20180829
             {
                 userlist.Add(new User(reader["ID"].ToString(), reader["PW"].ToString(), reader["F_Name"].ToString(), reader["L_Name"].ToString(),
                 int.Parse(reader["Year"].ToString()), int.Parse(reader["Month"].ToString()), int.Parse(reader["Day"].ToString()), reader["Coun_Phone"].ToString(),
-                int.Parse(reader["Phone"].ToString()), reader["Addr_1"].ToString(), reader["Addr_2"].ToString(), reader["Addr_City"].ToString(),
+                reader["Phone"].ToString(), reader["Addr_1"].ToString(), reader["Addr_2"].ToString(), reader["Addr_City"].ToString(),
                 reader["Addr_State"].ToString(), int.Parse(reader["Addr_ZipCode"].ToString()), reader["Gender"].ToString(), reader["Department"].ToString(),
                 reader["Office"].ToString(), Convert.ToDateTime(reader["Join_Date"]), reader["Position"].ToString(), int.Parse(reader["SSN"].ToString()),
                 int.Parse(reader["Authority"].ToString()), reader["Question"].ToString(), reader["Answer"].ToString(), reader["Bank"].ToString(),
-                int.Parse(reader["Acc_Num"].ToString()), int.Parse(reader["Rou_Num"].ToString())));
+                reader["Acc_Num"].ToString(), reader["Rou_Num"].ToString()));
             }
 
             reader.Close();
@@ -197,8 +191,6 @@ namespace _20180829
             return userlist;
         }
 
-        #endregion
-
         //보안권한 변경
         public void Authority_U(string id, int authority)
         {
@@ -206,7 +198,7 @@ namespace _20180829
                 throw new Exception("DB 미연결상태");
 
 
-            string comtext = "update member set Authority = @Authority WHERE id = @Id";
+            string comtext = "update member set Authority = @Authority WHERE ID = @Id";
             SqlCommand command = new SqlCommand(comtext, conn);
 
             //=====================================================
@@ -221,6 +213,110 @@ namespace _20180829
             conn.Close();
         }
 
+        //비밀번호 변경
+        public void Password_U(string id, string pw)
+        {
+            if (conn.State == ConnectionState.Closed)
+                throw new Exception("DB 미연결상태");
+
+
+            string comtext = "update member set PW = @PW WHERE ID = @Id";
+            SqlCommand command = new SqlCommand(comtext, conn);
+
+            //=====================================================
+            SqlParameter param_id = new SqlParameter("@Id", id);
+            command.Parameters.Add(param_id);
+            SqlParameter param_Pw = new SqlParameter("@PW", pw);
+            command.Parameters.Add(param_Pw);
+
+            //=====================================================
+            command.ExecuteNonQuery();
+            command.Dispose();
+            conn.Close();
+        }
+
+        //개인정보변경
+        public void UpdateMem(string id, string pw, string q, string answer, string con_phone, string phone, string add1, string add2, string city,
+            int zip, string state, string bank, string routing, string accnum)
+        {
+            if (conn.State == ConnectionState.Closed)
+                throw new Exception("DB 미연결상태");
+
+            string comtext = "update member set PW = @Pw,Question =@Q, Answer = @Answer, Coun_Phone = @Con_phone, Phone = @Phone," +
+                "Addr_1 = @Add1, Addr_2 = @Add2, Addr_City = @City, Addr_ZipCode = @Zip, Addr_State = @State, Bank = @Bank, Rou_Num = @Routing," +
+                "Acc_Num = @Accnum   WHERE ID = @Id";
+            SqlCommand command = new SqlCommand(comtext, conn);
+
+            //=====================================================
+            SqlParameter param_id = new SqlParameter("@Id", id);
+            command.Parameters.Add(param_id);
+
+            SqlParameter param_pw = new SqlParameter("@Pw", pw);
+            command.Parameters.Add(param_pw);
+
+            SqlParameter param_q = new SqlParameter("@Q", q);
+            command.Parameters.Add(param_q);
+
+            SqlParameter param_answer = new SqlParameter("@Answer", answer);
+            command.Parameters.Add(param_answer);
+
+            SqlParameter param_con_phone = new SqlParameter("@Con_phone", con_phone);
+            command.Parameters.Add(param_con_phone);
+
+            SqlParameter param_phone = new SqlParameter("@Phone", phone);
+            command.Parameters.Add(param_phone);
+
+            SqlParameter param_add1 = new SqlParameter("@Add1", add1);
+            command.Parameters.Add(param_add1);
+
+            SqlParameter param_add2 = new SqlParameter("@Add2", add2);
+            command.Parameters.Add(param_add2);
+
+            SqlParameter param_city = new SqlParameter("@City", city);
+            command.Parameters.Add(param_city);
+
+            SqlParameter param_zip = new SqlParameter("@Zip", zip);
+            command.Parameters.Add(param_zip);
+
+            SqlParameter param_state = new SqlParameter("@State", state);
+            command.Parameters.Add(param_state);
+
+            SqlParameter param_bank = new SqlParameter("@Bank", bank);
+            command.Parameters.Add(param_bank);
+
+            SqlParameter param_routing = new SqlParameter("@Routing", routing);
+            command.Parameters.Add(param_routing);
+
+            SqlParameter param_accnum = new SqlParameter("@Accnum", accnum);
+            command.Parameters.Add(param_accnum);
+
+            //=====================================================
+            command.ExecuteNonQuery();
+
+            command.Dispose();
+            conn.Close();
+        }
+
+        //회원삭제
+        public void DeleteMem(string id)
+        {
+            if (conn.State == ConnectionState.Closed)
+                throw new Exception("DB 미연결상태");
+
+            string comtext = "Delete from member WHERE ID = @Id";
+            SqlCommand command = new SqlCommand(comtext, conn);
+
+            //=====================================================
+            SqlParameter param_id = new SqlParameter("@Id", id);
+            command.Parameters.Add(param_id);
+
+            //=====================================================
+            command.ExecuteNonQuery();
+            command.Dispose();
+            conn.Close();
+        }
+
+        #endregion
 
         #region 게시판 기능
         public void Board_Insert(Board board)
@@ -276,7 +372,7 @@ namespace _20180829
 
         }
 
-
+        //게시글 불러오기
         public List<Board> Board_L(List<Board> boardlist)
         {
             string comtext = "select * from notice";
@@ -297,6 +393,28 @@ namespace _20180829
 
             return boardlist;
         }
+
+        //게시글 삭제
+        public void DeleteNotice(string id, int idx)
+        {
+            if (conn.State == ConnectionState.Closed)
+                throw new Exception("DB 미연결상태");
+
+            string comtext = "Delete from notice WHERE Id = @Id and Idx = @Idx";
+            SqlCommand command = new SqlCommand(comtext, conn);
+
+            //=====================================================
+            SqlParameter param_id = new SqlParameter("@Id", id);
+            command.Parameters.Add(param_id);
+            SqlParameter param_idx = new SqlParameter("@Idx", idx);
+            command.Parameters.Add(param_idx);
+
+            //=====================================================
+            command.ExecuteNonQuery();
+            command.Dispose();
+            conn.Close();
+        }
+
         #endregion
 
 
@@ -346,6 +464,27 @@ namespace _20180829
             conn.Close();
             return memolist;
         }
+
+        //게시글 삭제
+        public void DeleteMemo(string id, DateTime date)
+        {
+            if (conn.State == ConnectionState.Closed)
+                throw new Exception("DB 미연결상태");
+
+            string comtext = "Delete from memo WHERE Id = @Id and Date = @Date";
+            SqlCommand command = new SqlCommand(comtext, conn);
+
+            //=====================================================
+            SqlParameter param_id = new SqlParameter("@Id", id);
+            command.Parameters.Add(param_id);
+            SqlParameter param_date = new SqlParameter("@Date", date);
+            command.Parameters.Add(param_date);
+
+            //=====================================================
+            command.ExecuteNonQuery();
+            command.Dispose();
+            conn.Close();
+        }
         #endregion
 
 
@@ -393,7 +532,6 @@ namespace _20180829
             conn.Close();
         }
 
-
         public List<Vacation> Vacation_L(List<Vacation> vacationlist)
         {
             string comtext = "select * from vacation";
@@ -413,8 +551,7 @@ namespace _20180829
 
             return vacationlist;
         }
-
-
+    
         public void Vacation_U(string id, string type, int result)
         {
             if (conn.State == ConnectionState.Closed)
@@ -473,6 +610,25 @@ namespace _20180829
 
             command.Dispose();
             conn.Close();         
+        }
+
+        //휴가리스트 삭제
+        public void DeleteVacation(string id)
+        {
+            if (conn.State == ConnectionState.Closed)
+                throw new Exception("DB 미연결상태");
+
+            string comtext = "Delete from vacation WHERE id = @Id";
+            SqlCommand command = new SqlCommand(comtext, conn);
+
+            //=====================================================
+            SqlParameter param_id = new SqlParameter("@Id", id);
+            command.Parameters.Add(param_id);
+
+            //=====================================================
+            command.ExecuteNonQuery();
+            command.Dispose();
+            conn.Close();
         }
 
 
@@ -585,6 +741,27 @@ namespace _20180829
             command.Parameters.Add(param_type);
 
                 //=====================================================
+            command.ExecuteNonQuery();
+            command.Dispose();
+            conn.Close();
+        }
+
+        //휴가요청 삭제
+        public void DeleteRequset(string id, DateTime date)
+        {
+            if (conn.State == ConnectionState.Closed)
+                throw new Exception("DB 미연결상태");
+
+            string comtext = "Delete from vacation_Request WHERE Id = @Id and Request_Date = @Date";
+            SqlCommand command = new SqlCommand(comtext, conn);
+
+            //=====================================================
+            SqlParameter param_id = new SqlParameter("@Id", id);
+            command.Parameters.Add(param_id);
+            SqlParameter param_date = new SqlParameter("@Date", date);
+            command.Parameters.Add(param_date);
+
+            //=====================================================
             command.ExecuteNonQuery();
             command.Dispose();
             conn.Close();
@@ -709,6 +886,27 @@ namespace _20180829
             command.Parameters.Add(param_date);
             SqlParameter param_approval = new SqlParameter("@Approval", approval);
             command.Parameters.Add(param_approval);
+
+            //=====================================================
+            command.ExecuteNonQuery();
+            command.Dispose();
+            conn.Close();
+        }
+
+        //영수증 삭제
+        public void DeleteExpense(string id, DateTime date)
+        {
+            if (conn.State == ConnectionState.Closed)
+                throw new Exception("DB 미연결상태");
+
+            string comtext = "Delete from Expense WHERE id = @Id and Date = @Date";
+            SqlCommand command = new SqlCommand(comtext, conn);
+
+            //=====================================================
+            SqlParameter param_id = new SqlParameter("@Id", id);
+            command.Parameters.Add(param_id);
+            SqlParameter param_date = new SqlParameter("@Date", date);
+            command.Parameters.Add(param_date);
 
             //=====================================================
             command.ExecuteNonQuery();

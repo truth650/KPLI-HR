@@ -210,12 +210,6 @@
     <Compile Include="UserList.Designer.cs">
       <DependentUpon>UserList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Correct.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Correct.Designer.cs">
-      <DependentUpon>Correct.cs</DependentUpon>
-    </Compile>
     <Compile Include="FindMem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -307,9 +301,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserList.resx">
       <DependentUpon>UserList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Correct.resx">
-      <DependentUpon>Correct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FindMem.resx">
       <DependentUpon>FindMem.cs</DependentUpon>

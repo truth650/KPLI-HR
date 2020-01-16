@@ -106,10 +106,10 @@ namespace _20180829
         private void SignUp_Load(object sender, EventArgs e)
         {
             DateTime dateTime = new DateTime();
-            sign_up.Add(new User("asd", "qweqw", "asdasd", "asd", 2019, 9, 27,"a",1234,
+            sign_up.Add(new User("asd", "qweqw", "asdasd", "asd", 2019, 9, 27,"a","a",
             "sadasd", "asdasd", "asdads", "asdads", 123, "asdads",
             "asdads", "asdads", dateTime, "asdads", 123, 12, "asdads", "asdads",
-            "asdads", 21, 212));
+            "asdads", "a", "a"));
         }
 
         

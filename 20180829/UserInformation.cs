@@ -170,6 +170,31 @@ namespace _20180829
 
         }
 
+        //회원삭제
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //다이얼로그 박스
+            DialogResult res = MessageBox.Show(textBox3.Text + " 유저를 삭제하시겠습니까.", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (res == DialogResult.OK)
+            {
+                for (int i = 0; i < Login.UserList.Count; i++)
+                {
+                    if (Login.UserList[i].Id == id)
+                    {
+                        WbDB.Singleton.Open();
+                        WbDB.Singleton.DeleteMem(Login.UserList[i].Id);
+
+                        WbDB.Singleton.Open();
+                        WbDB.Singleton.DeleteVacation(Login.UserList[i].Id);
+                        SetUserList();
+                    }
+                }
+            }
+            if (res == DialogResult.Cancel)
+            {
+                MessageBox.Show("You have clicked Cancel Button");
+            }
+        }
         //상단바
         bool TagMove;
         int MValX, MValY;

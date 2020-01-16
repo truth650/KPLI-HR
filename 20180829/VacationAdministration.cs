@@ -16,6 +16,7 @@ namespace _20180829
         static public string RequestName = "";
         static public string[] RequestID = new string[200];
         static public bool State = false;
+        static public int requestidx = 0;
 
         public VacationAdministration()
         {
@@ -332,7 +333,14 @@ namespace _20180829
             {
                 ListView.SelectedListViewItemCollection items = listView2.SelectedItems;
                 ListViewItem lvItem = items[0];
-                
+
+                for (int i = 0; i < Login.RequestVList.Count; i++)
+                {
+                    if (Login.RequestVList[i].RequestDate.ToString("yyyy-MM-dd HH:mm:ss") == lvItem.SubItems[0].Text)
+                    {
+                        requestidx = i;
+                    }
+                }
                 RequestDate = lvItem.SubItems[0].Text;
                 RequestName = lvItem.SubItems[1].Text;
 
@@ -340,7 +348,6 @@ namespace _20180829
                 {
                     State = false;
                 }
-
             }
         }
 
@@ -368,7 +375,6 @@ namespace _20180829
 
             }
         }
-
         #endregion
 
 
@@ -405,6 +411,34 @@ namespace _20180829
              }
         }
 
+
+        //휴가요청내역 삭제
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //다이얼로그 박스
+            DialogResult res = MessageBox.Show("신청기록을 삭제하시겠습니까?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (res == DialogResult.OK)
+            {
+                //영수증 상태변경
+                for (int i = 0; i < Login.RequestVList.Count; i++)
+                {
+                    if (Login.RequestVList[i].ID == Login.RequestVList[requestidx].ID &&
+                        Login.RequestVList[i].RequestDate == Login.RequestVList[requestidx].RequestDate)
+                    {
+                        WbDB.Singleton.Open();
+                        WbDB.Singleton.DeleteRequset(Login.RequestVList[i].ID, Login.RequestVList[requestidx].RequestDate);
+                    }
+                }
+                WbDB.Singleton.Open();
+                WbDB.Singleton.Requse_L(Login.RequestVList);
+                MessageBox.Show("Delete Complete");
+                SetRequestList();
+            }
+            if (res == DialogResult.Cancel)
+            {
+                MessageBox.Show("You have clicked Cancel Button");
+            }
+        }
 
     }
 }

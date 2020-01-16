@@ -427,7 +427,7 @@ namespace _20180829
                 if (ctl != null)
                 {
                     NoticeIDX = int.Parse(ctl.Parent.Name);
-                    OpenNotice opennotice = new OpenNotice();
+                    OpenNotice opennotice = new OpenNotice(this);
                     opennotice.ShowDialog();
                 }
             }
