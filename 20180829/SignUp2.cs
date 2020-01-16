@@ -37,7 +37,7 @@ namespace _20180829
             SignUp.sign_up[0].Gender = comboBox3.Text;
             SignUp.sign_up[0].Ssn = int.Parse(textBox16.Text);
             SignUp.sign_up[0].Coun_Phone = comboBox2.Text;
-            SignUp.sign_up[0].Phone = int.Parse(textBox6.Text);
+            SignUp.sign_up[0].Phone = textBox6.Text;
             SignUp.sign_up[0].Addr1 = textBox7.Text;
             SignUp.sign_up[0].Addr2 = textBox3.Text;
             SignUp.sign_up[0].Addr_City = textBox2.Text;

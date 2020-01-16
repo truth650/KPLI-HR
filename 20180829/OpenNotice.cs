@@ -13,9 +13,18 @@ namespace _20180829
 {
     public partial class OpenNotice : Form
     {
+        B_board board = null;
+        int idx = 0;
+
         public OpenNotice()
         {
             InitializeComponent();
+        }
+
+        public OpenNotice(B_board _board)
+        {
+            InitializeComponent();
+            board = _board;
         }
 
         private void OpenNotice_Load(object sender, EventArgs e)
@@ -36,6 +45,7 @@ namespace _20180829
                     textBox4.Text = Login.BoardList[i].File_Name;
                     textBox5.Text = Login.BoardList[i].Category;
 
+                    idx = Login.BoardList[i].Idx;
                     richTextBox1.SelectedRtf = Login.BoardList[i].Contents_Info;
                     richTextBox1.Text = Login.BoardList[i].Contents;
                 }
@@ -75,6 +85,7 @@ namespace _20180829
                 }
             }
         }
+
 
         //상단바
         bool TagMove;
@@ -128,5 +139,40 @@ namespace _20180829
             pictureBox3.BackColor = Color.Transparent;
         }
         //상단바
+
+        //게시글삭제
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (textBox2.Text == Login.LoginID)
+            {
+                DialogResult res = MessageBox.Show("게시글을 삭제하시겠습니까?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                if (res == DialogResult.OK)
+                {
+                    for (int i = 0; i < Login.BoardList.Count; i++)
+                    {
+                        if (Login.BoardList[i].Id == Login.LoginID)
+                        {
+                            WbDB.Singleton.Open();
+                            WbDB.Singleton.DeleteNotice(Login.BoardList[i].Id, idx);
+                        }
+                    }
+                    MessageBox.Show("Delete Complete");
+                    Login.BoardList.Clear();
+                    WbDB.Singleton.Open();
+                    WbDB.Singleton.Board_L(Login.BoardList);
+                    board.SetBoardList();
+
+                }
+                if (res == DialogResult.Cancel)
+                {
+                    MessageBox.Show("You have clicked Cancel Button");
+                }
+            }
+            else
+            {
+                MessageBox.Show("삭제권한이 없습니다.");
+            }            
+        }
+
     }
 }

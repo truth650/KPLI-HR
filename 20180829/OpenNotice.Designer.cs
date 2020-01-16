@@ -40,26 +40,38 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+
+            this.button2 = new System.Windows.Forms.Button();
+
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+
             this.label1.Font = new System.Drawing.Font("Noto Sans KR Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label1.Location = new System.Drawing.Point(14, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 24);
+
+            this.label1.Font = new System.Drawing.Font("Noto Sans KR Regular", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(55, 75);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 28);
+
             this.label1.TabIndex = 0;
             this.label1.Text = "Title";
             // 
             // textBox1
             // 
+
             this.textBox1.BackColor = System.Drawing.Color.White;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Noto Sans KR Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -68,20 +80,35 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(362, 27);
+
+            this.textBox1.Location = new System.Drawing.Point(112, 78);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(413, 25);
+
             this.textBox1.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+
             this.label2.Font = new System.Drawing.Font("Noto Sans KR Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label2.Location = new System.Drawing.Point(14, 99);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 24);
+
+            this.label2.Font = new System.Drawing.Font("Noto Sans KR Regular", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(11, 124);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 28);
+
             this.label2.TabIndex = 2;
             this.label2.Text = "Contents";
             // 
             // richTextBox1
             // 
+
             this.richTextBox1.BackColor = System.Drawing.Color.White;
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -91,21 +118,36 @@
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
             this.richTextBox1.Size = new System.Drawing.Size(694, 259);
+
+            this.richTextBox1.Location = new System.Drawing.Point(112, 124);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(645, 269);
+
             this.richTextBox1.TabIndex = 11;
             this.richTextBox1.Text = "";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+
             this.label3.Font = new System.Drawing.Font("Noto Sans KR Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label3.Location = new System.Drawing.Point(298, 96);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 24);
+
+            this.label3.Font = new System.Drawing.Font("Noto Sans KR Regular", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Location = new System.Drawing.Point(555, 75);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 28);
+
             this.label3.TabIndex = 12;
             this.label3.Text = "Writer";
             // 
             // textBox2
             // 
+
             this.textBox2.BackColor = System.Drawing.Color.White;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox2.Font = new System.Drawing.Font("Noto Sans KR Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -114,20 +156,35 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(114, 27);
+
+            this.textBox2.Location = new System.Drawing.Point(627, 80);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(130, 25);
+
             this.textBox2.TabIndex = 13;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+
             this.label4.Font = new System.Drawing.Font("Noto Sans KR Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label4.Location = new System.Drawing.Point(495, 96);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(46, 24);
+
+            this.label4.Font = new System.Drawing.Font("Noto Sans KR Regular", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.Location = new System.Drawing.Point(227, 29);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 28);
+
             this.label4.TabIndex = 14;
             this.label4.Text = "Date";
             // 
             // textBox3
             // 
+
             this.textBox3.BackColor = System.Drawing.Color.White;
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox3.Font = new System.Drawing.Font("Noto Sans KR Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -136,10 +193,18 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(159, 27);
+
+            this.textBox3.Location = new System.Drawing.Point(287, 32);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(155, 25);
+
             this.textBox3.TabIndex = 15;
             // 
             // textBox4
             // 
+
             this.textBox4.BackColor = System.Drawing.Color.White;
             this.textBox4.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox4.Location = new System.Drawing.Point(364, 408);
@@ -147,6 +212,13 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(213, 22);
+
+            this.textBox4.Location = new System.Drawing.Point(112, 404);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(243, 25);
+
             this.textBox4.TabIndex = 16;
             // 
             // button1
@@ -154,11 +226,18 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(220)))), ((int)(((byte)(109)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Noto Sans KR Regular", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(583, 399);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 30);
+
+            this.button1.Location = new System.Drawing.Point(361, 399);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 32);
+
             this.button1.TabIndex = 17;
             this.button1.Text = "File Download";
             this.button1.UseVisualStyleBackColor = false;
@@ -166,6 +245,7 @@
             // 
             // textBox5
             // 
+
             this.textBox5.BackColor = System.Drawing.Color.White;
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox5.Font = new System.Drawing.Font("Noto Sans KR Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -174,11 +254,19 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(86, 27);
+
+            this.textBox5.Location = new System.Drawing.Point(112, 32);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
+            this.textBox5.Size = new System.Drawing.Size(98, 25);
+
             this.textBox5.TabIndex = 19;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+
             this.label5.Font = new System.Drawing.Font("Noto Sans KR Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label5.Location = new System.Drawing.Point(532, 52);
             this.label5.Name = "label5";
@@ -229,14 +317,37 @@
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             this.pictureBox3.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave);
             this.pictureBox3.MouseHover += new System.EventHandler(this.pictureBox3_MouseHover);
+
+            this.label5.Font = new System.Drawing.Font("Noto Sans KR Regular", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Location = new System.Drawing.Point(11, 32);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(94, 28);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Category";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(682, 403);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 20;
+            this.button2.Text = "Delete";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+
             // 
             // OpenNotice
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(720, 440);
             this.Controls.Add(this.panel3);
+
+            this.ClientSize = new System.Drawing.Size(786, 462);
+            this.Controls.Add(this.button2);
+
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);
@@ -277,8 +388,12 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label5;
+
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
+
+        private System.Windows.Forms.Button button2;
+
     }
 }

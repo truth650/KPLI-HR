@@ -15,6 +15,7 @@ namespace _20180829
     {
         string id = null;
         string date = null;
+        public static int idx = 0;
 
         public PayrollAdministration()
         {
@@ -98,6 +99,7 @@ namespace _20180829
 
                         id = Login.ExpenseList[i].ID;
                         date = Login.ExpenseList[i].Date.ToString("yyyy-MM-dd HH:mm:ss");
+                        idx = i;
                     }
                 }
 
@@ -158,7 +160,35 @@ namespace _20180829
                 Login.ExpenseList.Clear();
                 WbDB.Singleton.Open();
                 WbDB.Singleton.LoadExpense(Login.ExpenseList);
-                MessageBox.Show("Corrected Vacation");
+                MessageBox.Show("Corrected Expense");
+                SetParollList();
+            }
+            if (res == DialogResult.Cancel)
+            {
+                MessageBox.Show("You have clicked Cancel Button");
+            }
+        }
+
+        //영수증 신청내역 삭제
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //다이얼로그 박스
+            DialogResult res = MessageBox.Show("영수증을 삭제하시겠습니까?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (res == DialogResult.OK)
+            {
+                //영수증 상태변경
+                for (int i = 0; i < Login.ExpenseList.Count; i++)
+                {
+                    if (Login.ExpenseList[i].ID == Login.ExpenseList[idx].ID && Login.ExpenseList[i].Date == Login.ExpenseList[idx].Date)
+                    {
+                        WbDB.Singleton.Open();
+                        WbDB.Singleton.DeleteExpense(Login.ExpenseList[i].ID, Login.ExpenseList[i].Date);
+                    }
+                }
+                Login.ExpenseList.Clear();
+                WbDB.Singleton.Open();
+                WbDB.Singleton.LoadExpense(Login.ExpenseList);
+                MessageBox.Show("Delete Complete");
                 SetParollList();
             }
             if (res == DialogResult.Cancel)
