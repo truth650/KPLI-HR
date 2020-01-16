@@ -25,7 +25,6 @@ C:\Users\alvin\Downloads\github\KPLI-HR\20180829\obj\Debug\_20180829.SignUp2.res
 C:\Users\alvin\Downloads\github\KPLI-HR\20180829\obj\Debug\_20180829.SignUp3.resources
 C:\Users\alvin\Downloads\github\KPLI-HR\20180829\obj\Debug\_20180829.UserInformation.resources
 C:\Users\alvin\Downloads\github\KPLI-HR\20180829\obj\Debug\_20180829.UserList.resources
-C:\Users\alvin\Downloads\github\KPLI-HR\20180829\obj\Debug\_20180829.Correct.resources
 C:\Users\alvin\Downloads\github\KPLI-HR\20180829\obj\Debug\_20180829.FindMem.resources
 C:\Users\alvin\Downloads\github\KPLI-HR\20180829\obj\Debug\_20180829.CorrectionPW.resources
 C:\Users\alvin\Downloads\github\KPLI-HR\20180829\obj\Debug\_20180829.Properties.Resources.resources

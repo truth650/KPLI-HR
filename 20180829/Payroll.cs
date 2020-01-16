@@ -159,10 +159,17 @@ namespace _20180829
         //관리자모드
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Administrator a_form = new Administrator();
-            a_form.ShowDialog();
-            this.Close();
+            if (Login.UserList[Login.LoginIndex].Authority == 1)
+            {
+                MessageBox.Show("관리자 권한이 없습니다.");
+            }
+            else
+            {
+                this.Hide();
+                Administrator a_form = new Administrator();
+                a_form.ShowDialog();
+                this.Close();
+            }
         }
         private void button3_MouseDown(object sender, MouseEventArgs e)
         {
