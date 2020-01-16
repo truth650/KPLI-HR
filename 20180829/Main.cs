@@ -69,12 +69,27 @@ namespace _20180829
         {
             this.WindowState = FormWindowState.Minimized;
         }
+        private void pictureBox4_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox4.BackColor = Color.Black;
+        }
 
+        private void pictureBox4_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox4.BackColor = Color.Transparent;
+        }
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
         }
-
+        private void pictureBox3_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox3.BackColor = Color.Black;
+        }
+        private void pictureBox3_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox3.BackColor = Color.Transparent;
+        }
         //게시판
         private void button4_Click(object sender, EventArgs e)
         {
@@ -148,6 +163,8 @@ namespace _20180829
         {
             button8.Font = new Font("Noto Sans KR Medium", 14, FontStyle.Underline);
         }
+
+        
 
         private void button1_MouseLeave(object sender, EventArgs e)
         {

@@ -92,6 +92,25 @@ namespace _20180829
         {
             Environment.Exit(0);
         }
+        private void pictureBox4_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox4.BackColor = Color.Black;
+        }
+
+        private void pictureBox4_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox4.BackColor = Color.Transparent;
+        }
+
+        private void pictureBox3_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox4.BackColor = Color.Black;
+        }
+
+        private void pictureBox3_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox4.BackColor = Color.Transparent;
+        }
         //상단바
 
         //이벤트
@@ -300,7 +319,6 @@ namespace _20180829
             ExpenseStatus expensestatus = new ExpenseStatus();
             expensestatus.Show();
         }
-
 
         //영수증 신청
         private void button9_Click(object sender, EventArgs e)

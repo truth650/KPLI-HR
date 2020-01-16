@@ -19,19 +19,24 @@ namespace _20180829
         }
 
         //비밀번호 변경
-        private void Button1_Click(object sender, EventArgs e)
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
-            if(textBox1.Text == textBox2.Text)
+            if (textBox1.Text == textBox2.Text)
             {
-                Login.UserList[FindMem.SelectedNum].Pw = textBox1.Text;
-                MessageBox.Show("비밀번호가 변경되었습니다.", "완료");
+                //Login.UserList[FindMem.SelectedNum].Pw = textBox1.Text;
+                MessageBox.Show("Password change complete.", "완료");
                 textBox1.Clear();
                 textBox2.Clear();
+                this.Hide();
+                Login l_form = new Login();
+                l_form.Visible = true;
                 this.Close();
+
             }
             else
             {
-                MessageBox.Show("비밀번호가 일치하지 않습니다.");
+                MessageBox.Show("Password does not match.");
             }
         }
         //상단바
@@ -68,6 +73,23 @@ namespace _20180829
             Login l_form = new Login();
             l_form.Visible = true;
             this.Close();
+        }
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox2.BackColor = Color.Black;
+        }
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox2.BackColor = Color.Transparent;
+        }
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox1.BackColor = Color.Black;
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox1.BackColor = Color.Transparent;
         }
         //상단바
     }

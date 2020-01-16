@@ -60,13 +60,31 @@ namespace _20180829
             l_form.Visible = true;
             this.Close();
         }
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox1.BackColor = Color.Black;
+        }
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox1.BackColor = Color.Transparent;
+        }
 
         //최소화이벤트
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox2.BackColor = Color.Black;
+        }
 
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox2.BackColor = Color.Transparent;
+        }
+
+        
         //상단바 클릭시 폼 이동
         bool TagMove;
         int MValX, MValY;
@@ -233,7 +251,6 @@ namespace _20180829
             textBox1.Clear();
             textBox1.ForeColor = Color.Black;
         }
-
         private void textBox1_Enter(object sender, EventArgs e)
         {
             textBox1.ForeColor = Color.Black;

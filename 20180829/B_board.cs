@@ -73,6 +73,25 @@ namespace _20180829
         {
             Environment.Exit(0);
         }
+        private void pictureBox4_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox4.BackColor = Color.Black;
+        }
+
+        private void pictureBox4_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox4.BackColor = Color.Transparent;
+        }
+
+        private void pictureBox3_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox4.BackColor = Color.Black;
+        }
+
+        private void pictureBox3_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox4.BackColor = Color.Transparent;
+        }
         //상단바
 
 
@@ -397,6 +416,8 @@ namespace _20180829
                 MessageBox.Show("게시글을 불러오는데 오류가 발생했습니다.");
             }
         }
+
+        
 
         private void button_Click(object sender, EventArgs e)
         {

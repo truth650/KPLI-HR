@@ -54,6 +54,25 @@ namespace _20180829
             l_form.Visible = true;
             this.Close();
         }
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox2.BackColor = Color.Black;
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox2.BackColor = Color.Transparent;
+        }
+
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox1.BackColor = Color.Black;
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox1.BackColor = Color.Transparent;
+        }
         //상단바
 
 
@@ -115,9 +134,7 @@ namespace _20180829
             }
             if (findid == false)
             {
-                MessageBox.Show("There is no matching information. " +
-                    "\t Capitalize the first letter when you write your name. " +
-                    "\t If the phone number is in Korea, do not type 0 in front of the phone!!");
+                MessageBox.Show("There is no matching information.");
                 textBox1.ForeColor = Color.Gray;
                 textBox1.Text = "First name(이름)";
                 textBox4.ForeColor = Color.Gray;
@@ -156,6 +173,8 @@ namespace _20180829
             textBox3.Clear();
             textBox3.ForeColor = Color.Black;
         }
+
+        
 
         private void button2_Click_1(object sender, EventArgs e)
         {

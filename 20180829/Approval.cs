@@ -211,13 +211,33 @@ namespace _20180829
         {
             this.Close();
         }
+        private void pictureBox4_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox4.BackColor = Color.White;
+        }
+
+        private void pictureBox4_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox4.BackColor = Color.Transparent;
+        }
+
+        private void pictureBox3_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox4.BackColor = Color.White;
+        }
+
+        private void pictureBox3_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox4.BackColor = Color.Transparent;
+        }
         //상단바
 
         //이벤트
         private void button1_MouseHover(object sender, EventArgs e)
         {
             button1.ForeColor = Color.White;
-        }
+        }    
+
         private void button1_MouseLeave(object sender, EventArgs e)
         {
             button1.ForeColor = Color.Black;

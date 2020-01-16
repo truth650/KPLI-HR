@@ -73,7 +73,15 @@ namespace _20180829
             form8.ShowDialog();
             this.Visible = false;
         }
+        private void button4_MouseHover(object sender, EventArgs e)
+        {
+            button4.Font = new Font("Noto Sans KR Light", 8, FontStyle.Regular);
+        }
 
+        private void button4_MouseLeave(object sender, EventArgs e)
+        {
+            button4.Font = new Font("Noto Sans KR Light", 8, FontStyle.Underline);
+        }
         //종료버튼(완전 종료)
         private void Form_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -85,11 +93,28 @@ namespace _20180829
         {
             this.WindowState = FormWindowState.Minimized;
         }
+        private void pictureBox4_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox4.BackColor = Color.Black;
+        }
+
+        private void pictureBox4_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox4.BackColor = Color.Transparent;
+        }
 
         //종료버튼
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+        private void pictureBox3_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox3.BackColor = Color.Black;
+        }
+        private void pictureBox3_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox3.BackColor = Color.Transparent;
         }
 
         //아이디 텍스트박스 클릭시
@@ -189,6 +214,11 @@ namespace _20180829
         }
 
 
+       
+
+        
+
+        
 
         //로그인
         private void button1_Click(object sender, EventArgs e)
@@ -244,10 +274,6 @@ namespace _20180829
                 MessageBox.Show("아이디나 비밀번호를 입력해주세요.");
             }
         }
-
-
-
-
 
         //엔터 로그인
         private void textBox2_KeyDown(object sender, KeyEventArgs e)
