@@ -122,6 +122,9 @@ namespace _20180829
             WbDB.Singleton.Board_Insert(boards[0]);
             WbDB.Singleton.Close();
 
+            WbDB.Singleton.Open();
+            Login.BoardList.Clear();
+            WbDB.Singleton.Board_L(Login.BoardList);
 
             this.Close();
         }
