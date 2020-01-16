@@ -417,8 +417,6 @@ namespace _20180829
             }
         }
 
-        
-
         private void button_Click(object sender, EventArgs e)
         {
             try
