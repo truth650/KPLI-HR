@@ -131,12 +131,6 @@
     <Compile Include="MyInfo.Designer.cs">
       <DependentUpon>MyInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Notice.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Notice.designer.cs">
-      <DependentUpon>Notice.cs</DependentUpon>
-    </Compile>
     <Compile Include="OpenNotice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,18 +167,6 @@
     </Compile>
     <Compile Include="SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DeleteMem.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DeleteMem.Designer.cs">
-      <DependentUpon>DeleteMem.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DeleteMem2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DeleteMem2.Designer.cs">
-      <DependentUpon>DeleteMem2.cs</DependentUpon>
     </Compile>
     <Compile Include="SignUp2.cs">
       <SubType>Form</SubType>
@@ -263,9 +245,6 @@
     <EmbeddedResource Include="MyInfo.resx">
       <DependentUpon>MyInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Notice.resx">
-      <DependentUpon>Notice.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="OpenNotice.resx">
       <DependentUpon>OpenNotice.cs</DependentUpon>
     </EmbeddedResource>
@@ -283,12 +262,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DeleteMem.resx">
-      <DependentUpon>DeleteMem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DeleteMem2.resx">
-      <DependentUpon>DeleteMem2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignUp2.resx">
       <DependentUpon>SignUp2.cs</DependentUpon>

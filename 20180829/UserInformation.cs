@@ -137,21 +137,21 @@ namespace _20180829
         //권한 변경
         private void button1_Click(object sender, EventArgs e)
         {
-            int authority = 0;
+            int authority = 1;
 
-            if (comboBox1.Text == "Employee")
+            if (comboBox2.Text == "Employee")
             {
                 authority = 1;
             }
-            if (comboBox1.Text == "Accounting Manager")
+            if (comboBox2.Text == "Accounting Manager")
             {
                 authority = 2;
             }
-            if (comboBox1.Text == "HR Manager")
+            if (comboBox2.Text == "HR Manager")
             {
                 authority = 3;
             }
-            if (comboBox1.Text == "Administrator")
+            if (comboBox2.Text == "Administrator")
             {
                 authority = 4;
             }
@@ -160,7 +160,7 @@ namespace _20180829
             {
                 WbDB.Singleton.Open();
                 WbDB.Singleton.Authority_U(id, authority);
-                MessageBox.Show("보안권한을 " + comboBox1.Text + "로 변경했습니다.");
+                MessageBox.Show("보안권한을 " + comboBox2.Text + "로 변경했습니다.");
                 SetUserList();
             }
             catch
