@@ -240,7 +240,7 @@ namespace _20180829
         //공지사항 
         private void SetHeadLine()
         {
-            for (int i = 0; i < Login.BoardList.Count; i++)
+            for (int i = Login.BoardList.Count - 1; i > 0; i--)
             {
                 if(Login.BoardList[i].Category == "공지사항" && i == (Login.BoardList.Count-1))
                 {
