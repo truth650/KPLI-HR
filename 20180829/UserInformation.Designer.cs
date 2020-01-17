@@ -111,10 +111,10 @@
             // 
             this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(9, 76);
+            this.listView1.Location = new System.Drawing.Point(9, 70);
             this.listView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(520, 599);
+            this.listView1.Size = new System.Drawing.Size(520, 585);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseClick);
@@ -584,7 +584,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Noto Sans KR Bold", 16.25F, System.Drawing.FontStyle.Bold);
-            this.label20.Location = new System.Drawing.Point(3, 41);
+            this.label20.Location = new System.Drawing.Point(3, 35);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(168, 33);
             this.label20.TabIndex = 6;
@@ -594,7 +594,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Noto Sans KR Bold", 16.25F, System.Drawing.FontStyle.Bold);
-            this.label21.Location = new System.Drawing.Point(544, 41);
+            this.label21.Location = new System.Drawing.Point(544, 35);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(90, 33);
             this.label21.TabIndex = 7;
@@ -614,7 +614,7 @@
             this.panel1.Controls.Add(this.label18);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Location = new System.Drawing.Point(550, 103);
+            this.panel1.Location = new System.Drawing.Point(550, 91);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(450, 170);
             this.panel1.TabIndex = 8;
@@ -635,7 +635,7 @@
             this.panel2.Controls.Add(this.textBox7);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.textBox13);
-            this.panel2.Location = new System.Drawing.Point(550, 304);
+            this.panel2.Location = new System.Drawing.Point(550, 289);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(450, 170);
             this.panel2.TabIndex = 9;
@@ -661,7 +661,7 @@
             this.panel4.Controls.Add(this.comboBox1);
             this.panel4.Controls.Add(this.textBox12);
             this.panel4.Controls.Add(this.label14);
-            this.panel4.Location = new System.Drawing.Point(550, 508);
+            this.panel4.Location = new System.Drawing.Point(550, 487);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(450, 200);
             this.panel4.TabIndex = 10;
@@ -669,30 +669,30 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Noto Sans KR Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label22.Location = new System.Drawing.Point(551, 72);
+            this.label22.Font = new System.Drawing.Font("Noto Sans KR Regular", 11F);
+            this.label22.Location = new System.Drawing.Point(551, 66);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(206, 28);
+            this.label22.Size = new System.Drawing.Size(159, 22);
             this.label22.TabIndex = 11;
             this.label22.Text = "Username / Password";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Noto Sans KR Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label23.Location = new System.Drawing.Point(551, 273);
+            this.label23.Font = new System.Drawing.Font("Noto Sans KR Regular", 11F);
+            this.label23.Location = new System.Drawing.Point(551, 264);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(201, 28);
+            this.label23.Size = new System.Drawing.Size(156, 22);
             this.label23.TabIndex = 12;
             this.label23.Text = "Personal information";
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Noto Sans KR Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label24.Location = new System.Drawing.Point(551, 477);
+            this.label24.Font = new System.Drawing.Font("Noto Sans KR Regular", 11F);
+            this.label24.Location = new System.Drawing.Point(546, 462);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(214, 28);
+            this.label24.Size = new System.Drawing.Size(165, 22);
             this.label24.TabIndex = 13;
             this.label24.Text = "Employee Information";
             // 
@@ -717,7 +717,7 @@
             this.panel5.Controls.Add(this.comboBox2);
             this.panel5.Controls.Add(this.textBox25);
             this.panel5.Controls.Add(this.label32);
-            this.panel5.Location = new System.Drawing.Point(550, 508);
+            this.panel5.Location = new System.Drawing.Point(550, 487);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(450, 200);
             this.panel5.TabIndex = 10;
@@ -924,7 +924,7 @@
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Noto Sans KR Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button3.Location = new System.Drawing.Point(421, 676);
+            this.button3.Location = new System.Drawing.Point(421, 662);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(108, 32);
@@ -935,10 +935,10 @@
             // 
             // UserInformation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(1024, 720);
+            this.ClientSize = new System.Drawing.Size(1024, 695);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.label23);

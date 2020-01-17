@@ -97,13 +97,13 @@ namespace _20180829
                         textBox3.Text = Login.UserList[i].F_Name + " " + Login.UserList[i].L_NAME;
                         textBox4.Text = Login.UserList[i].Year.ToString() + "-" + Login.UserList[i].Month.ToString() + "-" + Login.UserList[i].Day.ToString();
                         textBox5.Text = Login.UserList[i].Phone.ToString();
-                        textBox6.Text = Login.UserList[i].Addr1 + " " + Login.UserList[i].Addr2 + Login.UserList[i].Addr_City;
+                        textBox6.Text = Login.UserList[i].Addr1 + " " + Login.UserList[i].Addr2+ " ," + Login.UserList[i].Addr_City + " ," + Login.UserList[i].Addr_Zip + Login.UserList[i].Addr_State;
                         textBox7.Text = Login.UserList[i].Addr_Zip.ToString();
                         textBox8.Text = Login.UserList[i].Gender;
                         textBox20.Text = Login.UserList[i].Office;
                         textBox22.Text = Login.UserList[i].Department;
                         textBox24.Text = Login.UserList[i].Position;
-                        textBox25.Text = Login.UserList[i].Join_Date.ToString("yyyy-mm-dd HH:mm:ss");
+                        textBox25.Text = Login.UserList[i].Join_Date.ToString("yyyy-MM-dd HH:mm:ss");
                         textBox13.Text = Login.UserList[i].Ssn.ToString();
                         textBox23.Text = Login.UserList[i].Bank;
                         textBox21.Text = Login.UserList[i].Routing_Num.ToString();

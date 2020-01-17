@@ -161,15 +161,16 @@ namespace _20180829
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Login form1 = new Login();
-            form1.Visible = true; //로그인창 보이기
+            form1.ShowDialog(); //로그인창 보이기
             Login.IsLogin = false; //로그아웃 상태로 변경
             this.Close();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Write write = new Write();
+            Write write = new Write(this);
             write.ShowDialog();
         }
 
@@ -274,10 +275,14 @@ namespace _20180829
                 num1++;
             }
 
-
+            int BoardListcount = 0;
             //게시글 셋팅
-            for(int i = 0; i < 10; i++)
+            for (int i = 0; i < Login.BoardList.Count; i++)
             {
+                if (BoardListcount == 10)
+                {
+                    break;
+                }
                 Panel[] panel = new Panel[200];
 
                 panel[i] = new Panel(); 

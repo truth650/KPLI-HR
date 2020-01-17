@@ -29,25 +29,33 @@ namespace _20180829
         //다음 페이지
         private void button2_Click(object sender, EventArgs e)
         {
-            SignUp.sign_up[0].F_Name = textBox4.Text;
-            SignUp.sign_up[0].L_NAME = textBox5.Text;
-            SignUp.sign_up[0].Year = dateTimePicker1.Value.Year;
-            SignUp.sign_up[0].Month = dateTimePicker1.Value.Month;
-            SignUp.sign_up[0].Day = dateTimePicker1.Value.Day;
-            SignUp.sign_up[0].Gender = comboBox3.Text;
-            SignUp.sign_up[0].Ssn = int.Parse(textBox16.Text);
-            SignUp.sign_up[0].Coun_Phone = comboBox2.Text;
-            SignUp.sign_up[0].Phone = textBox6.Text;
-            SignUp.sign_up[0].Addr1 = textBox7.Text;
-            SignUp.sign_up[0].Addr2 = textBox3.Text;
-            SignUp.sign_up[0].Addr_City = textBox2.Text;
-            SignUp.sign_up[0].Addr_State = comboBox1.Text;
-            SignUp.sign_up[0].Addr_Zip = int.Parse(textBox1.Text);
+            try
+            {
+                SignUp.sign_up[0].F_Name = textBox4.Text;
+                SignUp.sign_up[0].L_NAME = textBox5.Text;
+                SignUp.sign_up[0].Year = dateTimePicker1.Value.Year;
+                SignUp.sign_up[0].Month = dateTimePicker1.Value.Month;
+                SignUp.sign_up[0].Day = dateTimePicker1.Value.Day;
+                SignUp.sign_up[0].Gender = comboBox3.Text;
+                SignUp.sign_up[0].Ssn = int.Parse(textBox16.Text);
+                SignUp.sign_up[0].Coun_Phone = comboBox2.Text;
+                SignUp.sign_up[0].Phone = textBox6.Text;
+                SignUp.sign_up[0].Addr1 = textBox7.Text;
+                SignUp.sign_up[0].Addr2 = textBox3.Text;
+                SignUp.sign_up[0].Addr_City = textBox2.Text;
+                SignUp.sign_up[0].Addr_State = comboBox1.Text;
+                SignUp.sign_up[0].Addr_Zip = int.Parse(textBox1.Text);
 
-            this.Hide();
-            SignUp3 form1 = new SignUp3();
-            form1.ShowDialog();
-            this.Close();
+                this.Hide();
+                SignUp3 form1 = new SignUp3();
+                form1.ShowDialog();
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please check SSN number or ZIP-code number.");
+            }
+
         }
 
         //아래는 버튼 이벤트및 기타 이벤트입니다.
@@ -57,7 +65,7 @@ namespace _20180829
         {
             this.Hide();
             Login l_form = new Login();
-            l_form.Visible = true;
+            l_form.ShowDialog();
             this.Close();
         }
         private void pictureBox1_MouseHover(object sender, EventArgs e)

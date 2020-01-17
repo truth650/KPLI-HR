@@ -130,8 +130,9 @@ namespace _20180829
         //로그아웃      
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Login form1 = new Login();
-            form1.Visible = true; //로그인창 보이기
+            form1.ShowDialog(); //로그인창 보이기
             Login.IsLogin = false; //로그아웃 상태로 변경
             this.Close();
         }

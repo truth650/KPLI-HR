@@ -13,6 +13,7 @@ namespace _20180829
 {
     public partial class Write : Form
     {
+        B_board board = null;
         public static List<Board> boards = new List<Board>();
         string filename = null;
         byte[] file = null;
@@ -23,6 +24,12 @@ namespace _20180829
         public Write()
         {
             InitializeComponent();
+        }
+
+        public Write(B_board _Board)
+        {
+            InitializeComponent();
+            board = _Board;
         }
 
         private void Write_Load(object sender, EventArgs e)
@@ -125,6 +132,7 @@ namespace _20180829
             WbDB.Singleton.Open();
             Login.BoardList.Clear();
             WbDB.Singleton.Board_L(Login.BoardList);
+            board.SetBoardList();
 
             this.Close();
         }

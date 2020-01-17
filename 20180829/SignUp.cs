@@ -27,7 +27,7 @@ namespace _20180829
         {
             this.Hide();
             Login l_form = new Login();
-            l_form.Visible = true;
+            l_form.ShowDialog();
             this.Close();
         }
         private void pictureBox1_MouseHover(object sender, EventArgs e)

@@ -7,14 +7,14 @@
     <ProjectGuid>{12D8E680-0E76-4D0B-9D99-08267A8E580D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>_20180829</RootNamespace>
-    <AssemblyName>20180829</AssemblyName>
+    <AssemblyName>KAPLI</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\김영종\Desktop\</PublishUrl>
+    <PublishUrl>C:\Users\alvin\OneDrive\Desktop\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -25,12 +25,13 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <UpdateUrl>http://localhost/20180829/</UpdateUrl>
-    <ProductName>KPLI-HR%28Test%29</ProductName>
+    <ProductName>KAPLI-HR</ProductName>
     <PublisherName>Kimyeongjong</PublisherName>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -186,12 +187,6 @@
     <Compile Include="UserInformation.Designer.cs">
       <DependentUpon>UserInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserList.Designer.cs">
-      <DependentUpon>UserList.cs</DependentUpon>
-    </Compile>
     <Compile Include="FindMem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -272,9 +267,6 @@
     <EmbeddedResource Include="UserInformation.resx">
       <DependentUpon>UserInformation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserList.resx">
-      <DependentUpon>UserList.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FindMem.resx">
       <DependentUpon>FindMem.cs</DependentUpon>
     </EmbeddedResource>
@@ -310,18 +302,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\로고.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\캡처2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\요청사항.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\관리자.gif" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\administrator1_32px.png" />

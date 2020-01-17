@@ -362,7 +362,8 @@
             // 
             // Administrator
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(580, 720);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button9);

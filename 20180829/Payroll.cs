@@ -54,8 +54,9 @@ namespace _20180829
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Login form1 = new Login();
-            form1.Visible = true; //로그인창 보이기
+            form1.ShowDialog(); //로그인창 보이기
             Login.IsLogin = false; //로그아웃 상태로 변경
             this.Close();
         }
@@ -204,7 +205,7 @@ namespace _20180829
             }
             catch(Exception ex)
             {
-                MessageBox.Show("다시 입력해주십시오");
+                MessageBox.Show("Please check.");
             }
         }
 
@@ -216,7 +217,7 @@ namespace _20180829
             }
             catch (Exception ex)
             {
-                MessageBox.Show("다시 입력해주십시오");
+                MessageBox.Show("Please check.");
             }
         }
 
@@ -228,7 +229,7 @@ namespace _20180829
             }
             catch (Exception ex)
             {
-                MessageBox.Show("다시 입력해주십시오");
+                MessageBox.Show("Please check.");
             }
         }
 
@@ -240,7 +241,7 @@ namespace _20180829
             }
             catch (Exception ex)
             {
-                MessageBox.Show("다시 입력해주십시오");
+                MessageBox.Show("Please check.");
             }
         }
 
@@ -252,7 +253,7 @@ namespace _20180829
             }
             catch (Exception ex)
             {
-                MessageBox.Show("다시 입력해주십시오");
+                MessageBox.Show("Please check.");
             }
         }
 
@@ -264,7 +265,7 @@ namespace _20180829
             }
             catch (Exception ex)
             {
-                MessageBox.Show("다시 입력해주십시오");
+                MessageBox.Show("Please check.");
             }
         }
 
@@ -276,7 +277,7 @@ namespace _20180829
             }
             catch (Exception ex)
             {
-                MessageBox.Show("다시 입력해주십시오");
+                MessageBox.Show("Please check.");
             }
         }
 

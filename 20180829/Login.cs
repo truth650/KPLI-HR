@@ -61,7 +61,7 @@ namespace _20180829
             this.Hide();
             SignUp form3 = new SignUp();
             form3.ShowDialog();
-            this.Visible = false;
+            this.Close();
         }
  
 
@@ -71,7 +71,7 @@ namespace _20180829
             this.Hide();
             FindMem form8 = new FindMem();
             form8.ShowDialog();
-            this.Visible = false;
+            this.Close();
         }
         private void button4_MouseHover(object sender, EventArgs e)
         {
@@ -266,7 +266,7 @@ namespace _20180829
                     this.Hide();
                     MessageBox.Show("Welcome to " + UserList[Index].F_Name);
                     form2.ShowDialog();  //메인 창 띄우기
-                    this.Visible = false;  //로그인창 숨기기
+                    this.Close();  //로그인창 숨기기
                 }
             }
             else

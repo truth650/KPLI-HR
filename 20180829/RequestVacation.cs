@@ -37,15 +37,15 @@ namespace _20180829
         private void SetRequestList()
         {
             listView1.Clear();
-            listView1.Columns.Add("Date", 100);
-            listView1.Columns.Add("Name", 60);
-            listView1.Columns.Add("Type", 60);
-            listView1.Columns.Add("Form", 90);
-            listView1.Columns.Add("To", 90);
-            listView1.Columns.Add("Destination", 60);
-            listView1.Columns.Add("Contact Num", 70);
-            listView1.Columns.Add("Agent", 50);
-            listView1.Columns.Add("Approval", 30); //승인여부
+            listView1.Columns.Add("Date", 120);
+            listView1.Columns.Add("Name", 80);
+            listView1.Columns.Add("Type", 80);
+            listView1.Columns.Add("Form", 100);
+            listView1.Columns.Add("To", 100);
+            listView1.Columns.Add("Destination", 100);
+            listView1.Columns.Add("Contact Num", 120);
+            listView1.Columns.Add("Agent", 80);
+            listView1.Columns.Add("Approval", 80); //승인여부
 
 
             listView1.View = View.Details;
