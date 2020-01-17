@@ -274,12 +274,13 @@ namespace _20180829
                 num1++;
             }
 
+
             //게시글 셋팅
             for(int i = 0; i < 10; i++)
             {
                 Panel[] panel = new Panel[200];
 
-                panel[i] = new Panel();
+                panel[i] = new Panel(); 
                 panel[i].Name = Login.BoardList[i].Idx.ToString();
                 panel[i].Location = new Point(0, Panel_Y);
                 panel[i].Size = new Size(700, 50);
@@ -325,7 +326,7 @@ namespace _20180829
                     if (count == 4)
                     {
                         Button_X += 100;
-                        button[j].Text = Login.BoardList[i].Time.ToString("yyyy-mm-dd HH:mm:ss");
+                        button[j].Text = Login.BoardList[i].Time.ToString("yyyy-MM-dd HH:mm:ss");
                         button[j].Size = new Size(150, 50);
                         button[j].Enabled = false;
 
@@ -407,7 +408,7 @@ namespace _20180829
                             if (count == 4)
                             {
                                 Button_X += 100;
-                                button[j].Text = Login.BoardList[i].Time.ToString("yyyy-mm-dd HH:mm:ss");
+                                button[j].Text = Login.BoardList[i].Time.ToString("yyyy-MM-dd HH:mm:ss");
                                 button[j].Size = new Size(150, 50);
                                 button[j].Enabled = false;
 

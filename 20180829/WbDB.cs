@@ -27,26 +27,28 @@ namespace _20180829
 
         public void Open()
         {
-            if (conn.State == ConnectionState.Open)
-                throw new Exception("이미 연결된 상태입니다.");
-            conn.ConnectionString = @"Server=67.231.26.149;database=
+            try
+            {
+                if (conn.State == ConnectionState.Open)
+                    throw new Exception("서버에 오류가 발생했습니다. 다시 시도해주십시오.");
+                conn.ConnectionString = @"Server=67.231.26.149;database=
                                    kapli;uid=kapli;pwd=tjd1gh2dud3!;";
 
-
-            conn.Open();    //  데이터베이스 연결
-
+                conn.Open();    //  데이터베이스 연결
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("에러: "+ ex);
+            }     
         }
 
         public void Close()
         {
             if (conn.State == ConnectionState.Open)
                 conn.Close();
-
         }
 
-    
-
-
+   
 
         #region 회원관련기능
         public void AddMember(User user)
@@ -155,7 +157,12 @@ namespace _20180829
 
             //=====================================================
             if (command.ExecuteNonQuery() != 1)
+            {
                 throw new Exception("추가 실패");
+            }
+
+            command.Dispose();
+            conn.Close();
         }
 
         //멤버로드
@@ -361,7 +368,9 @@ namespace _20180829
             command.Parameters.Add(param_Time);
             //=====================================================
             if (command.ExecuteNonQuery() != 1)
+            {
                 throw new Exception("추가 실패");
+            }
             else
             {
                 MessageBox.Show("등록완료");
@@ -438,10 +447,15 @@ namespace _20180829
             command.Parameters.Add(param_Time);
 
             SqlParameter param_contents = new SqlParameter("@Contents", memo.Content);
-            command.Parameters.Add(param_contents);         
+            command.Parameters.Add(param_contents);
             //=====================================================
             if (command.ExecuteNonQuery() != 1)
+            {
                 throw new Exception("추가 실패");
+            }
+
+            command.Dispose();
+            conn.Close();
         }
 
         public List<Memo> Memo_L(List<Memo> memolist)
@@ -831,7 +845,9 @@ namespace _20180829
             //=====================================================
 
             if (command.ExecuteNonQuery() != 1)
+            {
                 throw new Exception("추가 실패");
+            }
             else
             {
                 MessageBox.Show("등록완료");
@@ -907,7 +923,6 @@ namespace _20180829
             command.Parameters.Add(param_id);
             SqlParameter param_date = new SqlParameter("@Date", date);
             command.Parameters.Add(param_date);
-
             //=====================================================
             command.ExecuteNonQuery();
             command.Dispose();

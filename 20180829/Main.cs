@@ -247,7 +247,10 @@ namespace _20180829
                     richTextBox1.SelectedRtf = Login.BoardList[i].Contents_Info;
                     richTextBox1.Text = Login.BoardList[i].Contents;
                     richTextBox1.SelectionAlignment = HorizontalAlignment.Center;
-                    richTextBox1.Font = new Font("Noto Sans KR", 35, FontStyle.Regular);
+                    richTextBox1.Font = new Font("Noto Sans KR", 25, FontStyle.Regular);
+                    richTextBox1.WordWrap = false;
+                    richTextBox1.Multiline = true;
+                    richTextBox1.ScrollToCaret();
                     break;
                 }
             }
