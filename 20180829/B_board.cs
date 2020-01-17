@@ -262,7 +262,7 @@ namespace _20180829
                 b[i] = new Button();
                 b[i].Name = (i + 1).ToString();
                 b[i].Text = (i + 1).ToString();
-                b[i].Size = new Size(40, 20);
+                b[i].Size = new Size(30, 20);
                 b[i].Location = new Point(pagebutton_x, 0);
                 b[i].Visible = true;
                 b[i].AutoSize = false;
@@ -270,16 +270,17 @@ namespace _20180829
                 b[i].Click += new EventHandler(b_Click);
 
                 panel8.Controls.Add(b[i]);
-                pagebutton_x += 40;
+                pagebutton_x += 30;
                 num1++;
             }
+
 
             //게시글 셋팅
             for(int i = 0; i < 10; i++)
             {
                 Panel[] panel = new Panel[200];
 
-                panel[i] = new Panel();
+                panel[i] = new Panel(); 
                 panel[i].Name = Login.BoardList[i].Idx.ToString();
                 panel[i].Location = new Point(0, Panel_Y);
                 panel[i].Size = new Size(700, 50);
@@ -325,7 +326,7 @@ namespace _20180829
                     if (count == 4)
                     {
                         Button_X += 100;
-                        button[j].Text = Login.BoardList[i].Time.ToString("yyyy-mm-dd HH:mm:ss");
+                        button[j].Text = Login.BoardList[i].Time.ToString("yyyy-MM-dd HH:mm:ss");
                         button[j].Size = new Size(150, 50);
                         button[j].Enabled = false;
 
@@ -381,31 +382,35 @@ namespace _20180829
                                 Button_X += 0;
                                 button[j].Text = Login.BoardList[i].Idx.ToString();
                                 button[j].Size = new Size(60, 50);
+                                button[j].Enabled = false;
                             }
                             if (count == 1)
                             {
                                 Button_X += 60;
                                 button[j].Text = Login.BoardList[i].Category;
                                 button[j].Size = new Size(100, 50);
+                                button[j].Enabled = false;
                             }
                             if (count == 2)
                             {
                                 Button_X += 100;
                                 button[j].Text = Login.BoardList[i].Title;
                                 button[j].Size = new Size(290, 50);
+                                button[j].Enabled = true;
                             }
                             if (count == 3)
                             {
                                 Button_X += 290;
                                 button[j].Text = Login.BoardList[i].Id;
                                 button[j].Size = new Size(100, 50);
+                                button[j].Enabled = false;
                             }
                             if (count == 4)
                             {
                                 Button_X += 100;
-                                button[j].Text = Login.BoardList[i].Time.ToString("yyyy-mm-dd HH:mm:ss");
+                                button[j].Text = Login.BoardList[i].Time.ToString("yyyy-MM-dd HH:mm:ss");
                                 button[j].Size = new Size(150, 50);
-
+                                button[j].Enabled = false;
                             }
                             button[j].Font = new Font("Noto Sans KR", 9, FontStyle.Regular);
                             button[j].FlatStyle = System.Windows.Forms.FlatStyle.Flat;
