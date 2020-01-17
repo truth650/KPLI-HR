@@ -156,8 +156,16 @@ namespace _20180829
         //휴가관리 및 승인
         private void button7_Click(object sender, EventArgs e)
         {
-            VacationAdministration va = new VacationAdministration();
-            va.Show();
+            if (Login.UserList[Login.LoginIndex].Authority >= 3)
+            {
+                VacationAdministration va = new VacationAdministration();
+                va.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("관리자 권한이 없습니다.");
+            }
+            
         }
 
         
@@ -165,8 +173,17 @@ namespace _20180829
         //영수증 관리
         private void button9_Click(object sender, EventArgs e)
         {
-            PayrollAdministration pa = new PayrollAdministration();
-            pa.ShowDialog();
+            if (Login.UserList[Login.LoginIndex].Authority >= 2)
+            {
+                PayrollAdministration pa = new PayrollAdministration();
+                pa.ShowDialog();
+                
+            }
+            else
+            {
+                MessageBox.Show("관리자 권한이 없습니다.");
+            }
+            
         }
 
     }

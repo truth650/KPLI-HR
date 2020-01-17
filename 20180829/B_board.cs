@@ -381,30 +381,35 @@ namespace _20180829
                                 Button_X += 0;
                                 button[j].Text = Login.BoardList[i].Idx.ToString();
                                 button[j].Size = new Size(60, 50);
+                                button[j].Enabled = false;
                             }
                             if (count == 1)
                             {
                                 Button_X += 60;
                                 button[j].Text = Login.BoardList[i].Category;
                                 button[j].Size = new Size(100, 50);
+                                button[j].Enabled = false;
                             }
                             if (count == 2)
                             {
                                 Button_X += 100;
                                 button[j].Text = Login.BoardList[i].Title;
                                 button[j].Size = new Size(290, 50);
+                                button[j].Enabled = true;
                             }
                             if (count == 3)
                             {
                                 Button_X += 290;
                                 button[j].Text = Login.BoardList[i].Id;
                                 button[j].Size = new Size(100, 50);
+                                button[j].Enabled = false;
                             }
                             if (count == 4)
                             {
                                 Button_X += 100;
                                 button[j].Text = Login.BoardList[i].Time.ToString("yyyy-mm-dd HH:mm:ss");
                                 button[j].Size = new Size(150, 50);
+                                button[j].Enabled = false;
 
                             }
                             button[j].Font = new Font("Noto Sans KR", 9, FontStyle.Regular);
