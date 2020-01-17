@@ -120,9 +120,9 @@ namespace _20180829
                     saveFileDialog.FileName = Login.ExpenseList[i].Filename;
                     saveFileDialog.DefaultExt = Login.ExpenseList[i].Extension;
 
-                    saveFileDialog.Title = "저장경로 지정하세요";
+                    saveFileDialog.Title = "Please specify a storage path.";
                     saveFileDialog.OverwritePrompt = true;
-                    saveFileDialog.Filter = "모든 파일 (*.*) | *.*";
+                    saveFileDialog.Filter = "All files (*.*) | *.*";
 
                     try
                     {
@@ -145,7 +145,7 @@ namespace _20180829
         private void button2_Click_1(object sender, EventArgs e)
         {
             //다이얼로그 박스
-            DialogResult res = MessageBox.Show("영수증을 승인하시겠습니까?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            DialogResult res = MessageBox.Show("Would you approve the application for to expense?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (res == DialogResult.OK)
             {
                 //영수증 상태변경
@@ -154,7 +154,7 @@ namespace _20180829
                     if (Login.ExpenseList[i].ID == id && Login.ExpenseList[i].Date.ToString("yyyy-MM-dd HH:mm:ss") == date)
                     {
                         WbDB.Singleton.Open();
-                        WbDB.Singleton.Expense_U(Login.ExpenseList[i].ID, Login.ExpenseList[i].Date, "승인");
+                        WbDB.Singleton.Expense_U(Login.ExpenseList[i].ID, Login.ExpenseList[i].Date, "Approval");
                     }
                 }
                 Login.ExpenseList.Clear();
@@ -173,7 +173,7 @@ namespace _20180829
         private void button3_Click(object sender, EventArgs e)
         {
             //다이얼로그 박스
-            DialogResult res = MessageBox.Show("영수증을 삭제하시겠습니까?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            DialogResult res = MessageBox.Show("Are you sure you want to delete the to expense voucher?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (res == DialogResult.OK)
             {
                 //영수증 상태변경

@@ -29,7 +29,7 @@ namespace _20180829
                 Login.UserList.Clear();
                 WbDB.Singleton.Open();
                 WbDB.Singleton.Member(Login.UserList);
-                MessageBox.Show("Password change complete.", "완료");
+                MessageBox.Show("Password change complete.", "Complete");
                 textBox1.Clear();
                 textBox2.Clear();
                 this.Hide();

@@ -161,7 +161,7 @@ namespace _20180829
         {
             if (Login.UserList[Login.LoginIndex].Authority == 1 || Login.UserList[Login.LoginIndex].Authority == 0)
             {
-                MessageBox.Show("관리자 권한이 없습니다.");
+                MessageBox.Show("You don't have permission.");
             }
             else
             {
@@ -296,7 +296,7 @@ namespace _20180829
         {
             //파일오픈창 생성 및 설정
             OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "모든 파일 (*.*) | *.*";
+            ofd.Filter = "All files (*.*) | *.*";
 
             //파일 오픈창 로드
             DialogResult dr = ofd.ShowDialog();
@@ -362,7 +362,7 @@ namespace _20180829
                 extension = "";
             }         
             expenses[0].Extension = extension;
-            expenses[0].Approval = "결제대기";
+            expenses[0].Approval = "Payment waiting";
 
             WbDB.Singleton.Open();
             WbDB.Singleton.InsertExpense(expenses[0]);

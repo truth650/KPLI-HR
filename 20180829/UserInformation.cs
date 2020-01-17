@@ -160,12 +160,12 @@ namespace _20180829
             {
                 WbDB.Singleton.Open();
                 WbDB.Singleton.Authority_U(id, authority);
-                MessageBox.Show("보안권한을 " + comboBox2.Text + "로 변경했습니다.");
+                MessageBox.Show("Your security permissions have been changed to" + comboBox2.Text);
                 SetUserList();
             }
             catch
             {
-                MessageBox.Show("실패했습니다.");
+                MessageBox.Show("Failed");
             }
 
         }
@@ -174,7 +174,7 @@ namespace _20180829
         private void button3_Click(object sender, EventArgs e)
         {
             //다이얼로그 박스
-            DialogResult res = MessageBox.Show(textBox3.Text + " 유저를 삭제하시겠습니까.", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            DialogResult res = MessageBox.Show(textBox3.Text + " Are you sure you want to delete the user?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (res == DialogResult.OK)
             {
                 for (int i = 0; i < Login.UserList.Count; i++)

@@ -64,7 +64,7 @@ namespace _20180829
             }
             else
             {
-                MessageBox.Show("비밀번호가 일치하지않습니다.");
+                MessageBox.Show("password is not matched");
             }
         }
 
@@ -118,5 +118,32 @@ namespace _20180829
             pictureBox3.BackColor = Color.Transparent;
         }
         //상단바
+
+        //비밀번호
+        private void textBox3_Click(object sender, EventArgs e)
+        {
+            textBox3.Clear();
+            textBox3.PasswordChar = '●';
+            textBox3.ForeColor = Color.Black;
+        }
+        private void textBox3_Enter(object sender, EventArgs e)
+        {
+            textBox3.Clear();
+            textBox3.PasswordChar = '●';
+            textBox3.ForeColor = Color.Black;
+        }
+
+        private void textBox2_Click(object sender, EventArgs e)
+        {
+            textBox2.Clear();
+            textBox2.PasswordChar = '●';
+            textBox2.ForeColor = Color.Black;
+        }
+        private void textBox2_Enter(object sender, EventArgs e)
+        {
+            textBox2.Clear();
+            textBox2.PasswordChar = '●';
+            textBox2.ForeColor = Color.Black;
+        }
     }
 }

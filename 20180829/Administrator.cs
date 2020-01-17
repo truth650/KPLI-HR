@@ -147,8 +147,15 @@ namespace _20180829
         //사용자 정보조회 버튼
         private void button8_Click(object sender, EventArgs e)
         {
-            UserInformation us = new UserInformation();
-            us.ShowDialog();
+            if (Login.UserList[Login.LoginIndex].Authority == 4)
+            {
+                UserInformation us = new UserInformation();
+                us.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("You don't have permission.");
+            }
         }
 
         //휴가관리 및 승인
@@ -161,7 +168,7 @@ namespace _20180829
             }
             else
             {
-                MessageBox.Show("관리자 권한이 없습니다.");
+                MessageBox.Show("You don't have permission.");
             }
             
         }
@@ -179,7 +186,7 @@ namespace _20180829
             }
             else
             {
-                MessageBox.Show("관리자 권한이 없습니다.");
+                MessageBox.Show("You don't have permission.");
             }
             
         }

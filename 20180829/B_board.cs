@@ -143,7 +143,7 @@ namespace _20180829
         {
             if (Login.UserList[Login.LoginIndex].Authority == 1 || Login.UserList[Login.LoginIndex].Authority == 0)
             {
-                MessageBox.Show("관리자 권한이 없습니다.");
+                MessageBox.Show("You don't have permission.");
             }
             else
             {
@@ -430,7 +430,7 @@ namespace _20180829
             }
             catch (Exception ex)
             {
-                MessageBox.Show("게시글을 불러오는데 오류가 발생했습니다.");
+                MessageBox.Show("Error loading post.");
             }
         }
 
@@ -448,7 +448,7 @@ namespace _20180829
             }
             catch (Exception ex)
             {
-                MessageBox.Show("실패했습니다.");
+                MessageBox.Show("Failed.");
             }
         }
     }

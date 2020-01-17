@@ -73,7 +73,7 @@ namespace _20180829
         {
             string name = VacationAdministration.RequestName;
             //다이얼로그 박스
-            DialogResult res = MessageBox.Show("휴가를 승인하시겠습니까?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            DialogResult res = MessageBox.Show("Would you approve my request for leave?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (res == DialogResult.OK)
             {
                 Calculator();

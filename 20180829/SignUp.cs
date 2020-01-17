@@ -87,7 +87,7 @@ namespace _20180829
                 {
                     if (textBox1.Text == Login.UserList[i].Id)  //이미 아이디가 존재할 경우
                     {
-                        MessageBox.Show("이미 존재하는 아이디입니다.");
+                        MessageBox.Show("This ID already exists.");
                         textBox1.Clear();
                         index = 2;
                         break;
@@ -95,7 +95,7 @@ namespace _20180829
                 }
                 if (index == 1)
                 {
-                    MessageBox.Show("사용가능한 아이디입니다.");
+                    MessageBox.Show("This ID is available.");
                     textBox2.ReadOnly = false;
                     textBox3.ReadOnly = false;
                     textBox4.ReadOnly = false;
@@ -118,7 +118,7 @@ namespace _20180829
         {
             if(textBox2.Text != textBox3.Text)
             {
-                MessageBox.Show("비밀번호와 비밀번호 확인이 다릅니다.");
+                MessageBox.Show("Confirm password and password will be different.");
                 textBox3.Clear();
                 textBox2.Clear();
                 textBox3.Select();

@@ -416,7 +416,7 @@ namespace _20180829
         private void button4_Click(object sender, EventArgs e)
         {
             //다이얼로그 박스
-            DialogResult res = MessageBox.Show("신청기록을 삭제하시겠습니까?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            DialogResult res = MessageBox.Show("Are you sure you want to delete the application history?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (res == DialogResult.OK)
             {
                 //영수증 상태변경

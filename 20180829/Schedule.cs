@@ -159,7 +159,7 @@ namespace _20180829
         {
             if (Login.UserList[Login.LoginIndex].Authority == 1 || Login.UserList[Login.LoginIndex].Authority == 0)
             {
-                MessageBox.Show("관리자 권한이 없습니다.");
+                MessageBox.Show("You don't have permission.");
             }
             else
             {
@@ -1070,7 +1070,7 @@ namespace _20180829
             }
             catch (Exception ex)
             {
-                MessageBox.Show("일자를 다시 선택해주세요");
+                MessageBox.Show("Please select the date again.");
             }
         }
 
@@ -1094,7 +1094,7 @@ namespace _20180829
                     if (today.Year == Login.MemoList[i].Date.Year && today.Month == Login.MemoList[i].Date.Month)
                     {
                         string[] arr = new string[2];
-                        arr[0] = Login.MemoList[i].Date.Day + "일  " + Login.MemoList[i].Date.Hour + ":" + Login.MemoList[i].Date.Minute;
+                        arr[0] = Login.MemoList[i].Date.Day + "day  " + Login.MemoList[i].Date.Hour + ":" + Login.MemoList[i].Date.Minute;
                         arr[1] = Login.MemoList[i].Content;
 
                         //추가
@@ -1116,7 +1116,7 @@ namespace _20180829
                 for (int i = 0; i < Login.MemoList.Count; i++)
                 {
                     if (Login.MemoList[i].Content == lvItem.SubItems[1].Text &&
-                        (Login.MemoList[i].Date.Day + "일  " + Login.MemoList[i].Date.Hour + ":" + Login.MemoList[i].Date.Minute).ToString() ==
+                        (Login.MemoList[i].Date.Day + "day  " + Login.MemoList[i].Date.Hour + ":" + Login.MemoList[i].Date.Minute).ToString() ==
                         lvItem.SubItems[0].Text)
                     {
                         memoidx = i;
@@ -1133,7 +1133,7 @@ namespace _20180829
         private void button13_Click(object sender, EventArgs e)
         {
             //다이얼로그 박스
-            DialogResult res = MessageBox.Show("메모를 삭제하시겠습니까?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            DialogResult res = MessageBox.Show("Are you sure you want to delete the note?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (res == DialogResult.OK)
             {
                 for (int i = 0; i < Login.MemoList.Count; i++)

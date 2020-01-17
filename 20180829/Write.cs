@@ -65,7 +65,7 @@ namespace _20180829
         {
             //파일오픈창 생성 및 설정
             OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "모든 파일 (*.*) | *.*";
+            ofd.Filter = "All files (*.*) | *.*";
 
             //파일 오픈창 로드
             DialogResult dr = ofd.ShowDialog();

@@ -117,6 +117,8 @@
             this.textBox3.Size = new System.Drawing.Size(279, 26);
             this.textBox3.TabIndex = 53;
             this.textBox3.Text = "New Password";
+            this.textBox3.Click += new System.EventHandler(this.textBox3_Click);
+            this.textBox3.Enter += new System.EventHandler(this.textBox3_Enter);
             // 
             // textBox2
             // 
@@ -131,6 +133,8 @@
             this.textBox2.Size = new System.Drawing.Size(279, 26);
             this.textBox2.TabIndex = 54;
             this.textBox2.Text = "Verfity New Password";
+            this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
+            this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
             // 
             // label1
             // 

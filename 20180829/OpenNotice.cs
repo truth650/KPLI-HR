@@ -66,9 +66,9 @@ namespace _20180829
                     saveFileDialog.FileName = Login.BoardList[i].File_Name;
                     saveFileDialog.DefaultExt = Login.BoardList[i].Extension;
 
-                    saveFileDialog.Title = "저장경로 지정하세요";
+                    saveFileDialog.Title = "Please specify a storage path.";
                     saveFileDialog.OverwritePrompt = true;
-                    saveFileDialog.Filter = "모든 파일 (*.*) | *.*";
+                    saveFileDialog.Filter = "All files (*.*) | *.*";
 
                     try
                     {
@@ -145,7 +145,7 @@ namespace _20180829
         {
             if (textBox2.Text == Login.LoginID)
             {
-                DialogResult res = MessageBox.Show("게시글을 삭제하시겠습니까?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                DialogResult res = MessageBox.Show("Are you sure you want to delete the post?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 if (res == DialogResult.OK)
                 {
                     for (int i = 0; i < Login.BoardList.Count; i++)
@@ -170,7 +170,7 @@ namespace _20180829
             }
             else
             {
-                MessageBox.Show("삭제권한이 없습니다.");
+                MessageBox.Show("You do not have permission to delete.");
             }            
         }
 

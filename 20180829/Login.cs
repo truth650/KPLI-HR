@@ -271,7 +271,7 @@ namespace _20180829
             }
             else
             {
-                MessageBox.Show("아이디나 비밀번호를 입력해주세요.");
+                MessageBox.Show("Please enter your ID and password.");
             }
         }
 
