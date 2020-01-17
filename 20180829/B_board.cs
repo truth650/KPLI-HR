@@ -141,7 +141,7 @@ namespace _20180829
         //관리자모드
         private void button3_Click(object sender, EventArgs e)
         {
-            if (Login.UserList[Login.LoginIndex].Authority == 1)
+            if (Login.UserList[Login.LoginIndex].Authority == 1 || Login.UserList[Login.LoginIndex].Authority == 0)
             {
                 MessageBox.Show("관리자 권한이 없습니다.");
             }
@@ -262,7 +262,7 @@ namespace _20180829
                 b[i] = new Button();
                 b[i].Name = (i + 1).ToString();
                 b[i].Text = (i + 1).ToString();
-                b[i].Size = new Size(40, 20);
+                b[i].Size = new Size(30, 20);
                 b[i].Location = new Point(pagebutton_x, 0);
                 b[i].Visible = true;
                 b[i].AutoSize = false;
@@ -270,7 +270,7 @@ namespace _20180829
                 b[i].Click += new EventHandler(b_Click);
 
                 panel8.Controls.Add(b[i]);
-                pagebutton_x += 40;
+                pagebutton_x += 30;
                 num1++;
             }
 

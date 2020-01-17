@@ -180,7 +180,7 @@ namespace _20180829
         //관리자모드
         private void button3_Click(object sender, EventArgs e)
         {
-            if (Login.UserList[Login.LoginIndex].Authority == 1)
+            if (Login.UserList[Login.LoginIndex].Authority == 1 || Login.UserList[Login.LoginIndex].Authority == 0)
             {
                 MessageBox.Show("관리자 권한이 없습니다.");
             }

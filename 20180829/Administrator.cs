@@ -50,21 +50,19 @@ namespace _20180829
         {
             Environment.Exit(0);
         }
+
         private void pictureBox4_MouseHover(object sender, EventArgs e)
         {
             pictureBox4.BackColor = Color.White;
         }
-
         private void pictureBox4_MouseLeave(object sender, EventArgs e)
         {
             pictureBox4.BackColor = Color.Transparent;
         }
-
         private void pictureBox3_MouseHover(object sender, EventArgs e)
         {
             pictureBox3.BackColor = Color.White;
         }
-
         private void pictureBox3_MouseLeave(object sender, EventArgs e)
         {
             pictureBox3.BackColor = Color.Transparent;
@@ -156,7 +154,7 @@ namespace _20180829
         //휴가관리 및 승인
         private void button7_Click(object sender, EventArgs e)
         {
-            if (Login.UserList[Login.LoginIndex].Authority >= 3)
+            if (Login.UserList[Login.LoginIndex].Authority == 3 || Login.UserList[Login.LoginIndex].Authority == 4)
             {
                 VacationAdministration va = new VacationAdministration();
                 va.ShowDialog();
@@ -173,7 +171,7 @@ namespace _20180829
         //영수증 관리
         private void button9_Click(object sender, EventArgs e)
         {
-            if (Login.UserList[Login.LoginIndex].Authority >= 2)
+            if (Login.UserList[Login.LoginIndex].Authority == 2 || Login.UserList[Login.LoginIndex].Authority == 4)
             {
                 PayrollAdministration pa = new PayrollAdministration();
                 pa.ShowDialog();
