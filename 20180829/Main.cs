@@ -242,7 +242,11 @@ namespace _20180829
         {
             for (int i = Login.BoardList.Count - 1; i > 0; i--)
             {
+
                 if (Login.BoardList[i].Category == "공지사항")
+
+                if(Login.BoardList[i].Category == "공지사항")
+
                 {
                     richTextBox1.SelectedRtf = Login.BoardList[i].Contents_Info;
                     richTextBox1.Text = Login.BoardList[i].Contents;

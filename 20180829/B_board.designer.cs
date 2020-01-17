@@ -374,10 +374,17 @@
             // 
             this.panel8.BackColor = System.Drawing.SystemColors.Control;
             this.panel8.Cursor = System.Windows.Forms.Cursors.Hand;
+<<<<<<< HEAD
+            this.panel8.Location = new System.Drawing.Point(322, 836);
+            this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(600, 22);
+=======
             this.panel8.Location = new System.Drawing.Point(211, 672);
             this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(600, 20);
+>>>>>>> 2152ac497d50a0dda772004daea9df1d4191f9b1
             this.panel8.TabIndex = 38;
             // 
             // B_board

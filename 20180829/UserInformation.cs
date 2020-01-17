@@ -137,7 +137,7 @@ namespace _20180829
         //권한 변경
         private void button1_Click(object sender, EventArgs e)
         {
-            int authority = 0;
+            int authority = 1;
 
             if (comboBox2.Text == "Employee")
             {
