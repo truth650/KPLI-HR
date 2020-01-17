@@ -373,6 +373,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.SystemColors.Control;
+            this.panel8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel8.Location = new System.Drawing.Point(391, 666);
             this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel8.Name = "panel8";

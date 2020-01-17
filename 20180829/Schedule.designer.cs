@@ -373,6 +373,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel7.Font = new System.Drawing.Font("Noto Sans KR Regular", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.panel7.Location = new System.Drawing.Point(166, 233);
             this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -479,6 +480,7 @@
             // button11
             // 
             this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(88)))), ((int)(((byte)(178)))));
+            this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(70)))), ((int)(((byte)(143)))));
             this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(70)))), ((int)(((byte)(143)))));
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -697,6 +699,7 @@
             // button7
             // 
             this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(88)))), ((int)(((byte)(178)))));
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(70)))), ((int)(((byte)(143)))));
             this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(70)))), ((int)(((byte)(143)))));
@@ -766,6 +769,7 @@
             // button13
             // 
             this.button13.BackColor = System.Drawing.Color.Transparent;
+            this.button13.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button13.FlatAppearance.BorderSize = 0;
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.Font = new System.Drawing.Font("Noto Sans KR Light", 8.999999F, System.Drawing.FontStyle.Underline);
