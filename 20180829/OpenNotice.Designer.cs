@@ -163,7 +163,7 @@
             this.textBox5.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox5.Font = new System.Drawing.Font("Noto Sans KR Medium", 10.75F, System.Drawing.FontStyle.Bold);
-            this.textBox5.Location = new System.Drawing.Point(582, 84);
+            this.textBox5.Location = new System.Drawing.Point(572, 87);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
