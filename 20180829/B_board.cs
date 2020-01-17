@@ -204,7 +204,6 @@ namespace _20180829
                 Label label = new Label();
                 switch (num1)
                 {
-                    //1: 일요일, 7: 월요일
                     case 1:
                         label.Text = " Number";
                         label.Size = new Size(60, 30);
@@ -283,7 +282,7 @@ namespace _20180829
                 panel[i] = new Panel();
                 panel[i].Name = Login.BoardList[i].Idx.ToString();
                 panel[i].Location = new Point(0, Panel_Y);
-                panel[i].Size = new Size(700, 40);
+                panel[i].Size = new Size(700, 50);
 
                 int Button_X = 0;
                 int Button_Y = 0;
@@ -299,31 +298,31 @@ namespace _20180829
                     {
                         Button_X += 0;
                         button[j].Text = Login.BoardList[i].Idx.ToString();
-                        button[j].Size = new Size(60, 40);
+                        button[j].Size = new Size(60, 50);
                     }
                     if (count == 1)
                     {
                         Button_X += 60;
                         button[j].Text = Login.BoardList[i].Category;
-                        button[j].Size = new Size(100, 40);
+                        button[j].Size = new Size(100, 50);
                     }
                     if (count == 2)
                     {
                         Button_X += 100;
                         button[j].Text = Login.BoardList[i].Title;
-                        button[j].Size = new Size(290, 40);
+                        button[j].Size = new Size(290, 50);
                     }
                     if (count == 3)
                     {
                         Button_X += 290;
                         button[j].Text = Login.BoardList[i].Id;
-                        button[j].Size = new Size(100, 40);
+                        button[j].Size = new Size(100, 50);
                     }
                     if (count == 4)
                     {
                         Button_X += 100;
                         button[j].Text = Login.BoardList[i].Time.ToString("yyyy-mm-dd HH:mm:ss");
-                        button[j].Size = new Size(150, 40);
+                        button[j].Size = new Size(150, 50);
 
                     }
                     button[j].Font = new Font("Noto Sans KR", 9, FontStyle.Regular);
@@ -337,7 +336,7 @@ namespace _20180829
                 }
 
                 panel7.Controls.Add(panel[i]);
-                Panel_Y += 40;
+                Panel_Y += 50;
             }
         }
 
@@ -360,7 +359,7 @@ namespace _20180829
                         panel[i] = new Panel();
                         panel[i].Name = Login.BoardList[i].Idx.ToString();
                         panel[i].Location = new Point(0, Panel_Y);
-                        panel[i].Size = new Size(700, 40);
+                        panel[i].Size = new Size(700, 50);
 
                         int Button_X = 0;
                         int Button_Y = 0;
@@ -376,31 +375,31 @@ namespace _20180829
                             {
                                 Button_X += 0;
                                 button[j].Text = Login.BoardList[i].Idx.ToString();
-                                button[j].Size = new Size(60, 40);
+                                button[j].Size = new Size(60, 50);
                             }
                             if (count == 1)
                             {
                                 Button_X += 60;
                                 button[j].Text = Login.BoardList[i].Category;
-                                button[j].Size = new Size(100, 40);
+                                button[j].Size = new Size(100, 50);
                             }
                             if (count == 2)
                             {
                                 Button_X += 100;
                                 button[j].Text = Login.BoardList[i].Title;
-                                button[j].Size = new Size(290, 40);
+                                button[j].Size = new Size(290, 50);
                             }
                             if (count == 3)
                             {
                                 Button_X += 290;
                                 button[j].Text = Login.BoardList[i].Id;
-                                button[j].Size = new Size(100, 40);
+                                button[j].Size = new Size(100, 50);
                             }
                             if (count == 4)
                             {
                                 Button_X += 100;
                                 button[j].Text = Login.BoardList[i].Time.ToString("yyyy-mm-dd HH:mm:ss");
-                                button[j].Size = new Size(150, 40);
+                                button[j].Size = new Size(150, 50);
 
                             }
                             button[j].Font = new Font("Noto Sans KR", 9, FontStyle.Regular);
@@ -414,7 +413,7 @@ namespace _20180829
                         }
 
                         panel7.Controls.Add(panel[i]);
-                        Panel_Y += 40;
+                        Panel_Y += 50;
                     }
                 }
             }

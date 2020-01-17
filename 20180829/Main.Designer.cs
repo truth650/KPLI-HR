@@ -75,6 +75,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -121,6 +122,7 @@
             // button8
             // 
             this.button8.BackColor = System.Drawing.Color.Transparent;
+            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -201,6 +203,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Dock = System.Windows.Forms.DockStyle.Top;
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(112)))), ((int)(((byte)(178)))));
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(70)))), ((int)(((byte)(143)))));
@@ -224,6 +227,7 @@
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.White;
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button6.Dock = System.Windows.Forms.DockStyle.Top;
             this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(112)))), ((int)(((byte)(178)))));
             this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(70)))), ((int)(((byte)(143)))));
@@ -247,6 +251,7 @@
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.White;
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.Dock = System.Windows.Forms.DockStyle.Top;
             this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(112)))), ((int)(((byte)(178)))));
             this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(70)))), ((int)(((byte)(143)))));
@@ -270,6 +275,7 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.White;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.Dock = System.Windows.Forms.DockStyle.Top;
             this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(112)))), ((int)(((byte)(178)))));
             this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(70)))), ((int)(((byte)(143)))));
@@ -302,6 +308,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(70)))), ((int)(((byte)(143)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(112)))), ((int)(((byte)(178)))));
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(70)))), ((int)(((byte)(143)))));
@@ -346,18 +353,18 @@
             // 
             // panel8
             // 
-            this.panel8.BackColor = System.Drawing.Color.MediumPurple;
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(220)))), ((int)(((byte)(109)))));
             this.panel8.Controls.Add(this.richTextBox1);
             this.panel8.Controls.Add(this.label3);
             this.panel8.Location = new System.Drawing.Point(188, 101);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(739, 140);
+            this.panel8.Size = new System.Drawing.Size(739, 132);
             this.panel8.TabIndex = 29;
             // 
             // richTextBox1
             // 
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.richTextBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.richTextBox1.Location = new System.Drawing.Point(31, 38);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(679, 76);
@@ -368,23 +375,24 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Noto Sans KR Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label3.Location = new System.Drawing.Point(3, 0);
+            this.label3.Font = new System.Drawing.Font("Noto Sans KR Medium", 16.25F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(4, 3);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(146, 28);
+            this.label3.Size = new System.Drawing.Size(172, 33);
             this.label3.TabIndex = 2;
             this.label3.Text = "Bulletin board";
             // 
             // panel9
             // 
-            this.panel9.BackColor = System.Drawing.Color.MediumOrchid;
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(99)))), ((int)(((byte)(216)))));
             this.panel9.Controls.Add(this.panel7);
             this.panel9.Controls.Add(this.panel6);
             this.panel9.Controls.Add(this.panel10);
             this.panel9.Controls.Add(this.label4);
-            this.panel9.Location = new System.Drawing.Point(188, 258);
+            this.panel9.Location = new System.Drawing.Point(188, 265);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(740, 450);
+            this.panel9.Size = new System.Drawing.Size(740, 443);
             this.panel9.TabIndex = 30;
             // 
             // panel7
@@ -401,6 +409,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel6.Font = new System.Drawing.Font("Noto Sans KR Regular", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.panel6.Location = new System.Drawing.Point(31, 88);
             this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -415,6 +424,7 @@
             this.panel10.Controls.Add(this.button9);
             this.panel10.Controls.Add(this.button10);
             this.panel10.Controls.Add(this.panel11);
+            this.panel10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel10.ForeColor = System.Drawing.Color.White;
             this.panel10.Location = new System.Drawing.Point(31, 48);
             this.panel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -430,7 +440,7 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.Location = new System.Drawing.Point(430, 3);
+            this.button9.Location = new System.Drawing.Point(439, 3);
             this.button9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(32, 32);
@@ -445,7 +455,7 @@
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
-            this.button10.Location = new System.Drawing.Point(190, 3);
+            this.button10.Location = new System.Drawing.Point(199, 3);
             this.button10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(32, 32);
@@ -459,7 +469,7 @@
             this.panel11.Controls.Add(this.label11);
             this.panel11.Controls.Add(this.textBox8);
             this.panel11.Controls.Add(this.textBox7);
-            this.panel11.Location = new System.Drawing.Point(251, 3);
+            this.panel11.Location = new System.Drawing.Point(260, 3);
             this.panel11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(144, 33);
@@ -509,10 +519,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Noto Sans KR Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label4.Location = new System.Drawing.Point(3, 0);
+            this.label4.Font = new System.Drawing.Font("Noto Sans KR Medium", 16.25F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(5, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 28);
+            this.label4.Size = new System.Drawing.Size(116, 33);
             this.label4.TabIndex = 3;
             this.label4.Text = "Schedule";
             // 

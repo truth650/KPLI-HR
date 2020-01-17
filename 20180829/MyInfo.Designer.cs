@@ -67,9 +67,8 @@
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(514, 40);
+            this.panel3.Size = new System.Drawing.Size(450, 32);
             this.panel3.TabIndex = 24;
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
             this.panel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseMove);
@@ -81,10 +80,9 @@
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox4.Image = global::_20180829.Properties.Resources.minimize_window1_32px;
-            this.pictureBox4.Location = new System.Drawing.Point(440, 0);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox4.Location = new System.Drawing.Point(386, 0);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(37, 40);
+            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
             this.pictureBox4.TabIndex = 21;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
@@ -97,10 +95,9 @@
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox3.Image = global::_20180829.Properties.Resources.delete1_32px;
-            this.pictureBox3.Location = new System.Drawing.Point(477, 0);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox3.Location = new System.Drawing.Point(418, 0);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(37, 40);
+            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
             this.pictureBox3.TabIndex = 20;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
@@ -113,11 +110,11 @@
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.textBox3.ForeColor = System.Drawing.Color.Gray;
-            this.textBox3.Location = new System.Drawing.Point(33, 224);
+            this.textBox3.Location = new System.Drawing.Point(29, 179);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.MaxLength = 20;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(319, 31);
+            this.textBox3.Size = new System.Drawing.Size(279, 26);
             this.textBox3.TabIndex = 53;
             this.textBox3.Text = "New Password";
             // 
@@ -127,11 +124,11 @@
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.textBox2.ForeColor = System.Drawing.Color.Gray;
-            this.textBox2.Location = new System.Drawing.Point(33, 261);
+            this.textBox2.Location = new System.Drawing.Point(29, 209);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.MaxLength = 20;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(319, 31);
+            this.textBox2.Size = new System.Drawing.Size(279, 26);
             this.textBox2.TabIndex = 54;
             this.textBox2.Text = "Verfity New Password";
             // 
@@ -141,9 +138,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Noto Sans KR Regular", 14.25F);
             this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(27, 114);
+            this.label1.Location = new System.Drawing.Point(24, 91);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 36);
+            this.label1.Size = new System.Drawing.Size(105, 28);
             this.label1.TabIndex = 55;
             this.label1.Text = "Username";
             // 
@@ -155,10 +152,10 @@
             this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.textBox1.ForeColor = System.Drawing.Color.Gray;
-            this.textBox1.Location = new System.Drawing.Point(33, 151);
+            this.textBox1.Location = new System.Drawing.Point(29, 121);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(320, 24);
+            this.textBox1.Size = new System.Drawing.Size(280, 19);
             this.textBox1.TabIndex = 52;
             // 
             // comboBox2
@@ -171,10 +168,10 @@
             this.comboBox2.Items.AddRange(new object[] {
             "KOR",
             "USA"});
-            this.comboBox2.Location = new System.Drawing.Point(33, 451);
+            this.comboBox2.Location = new System.Drawing.Point(29, 361);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(84, 33);
+            this.comboBox2.Size = new System.Drawing.Size(74, 29);
             this.comboBox2.TabIndex = 59;
             this.comboBox2.Text = "KR/US";
             // 
@@ -183,9 +180,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Noto Sans KR Regular", 14.25F);
             this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(27, 414);
+            this.label4.Location = new System.Drawing.Point(24, 331);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(184, 36);
+            this.label4.Size = new System.Drawing.Size(149, 28);
             this.label4.TabIndex = 61;
             this.label4.Text = "Phone Number";
             // 
@@ -195,10 +192,10 @@
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox6.Font = new System.Drawing.Font("Noto Sans KR Light", 10.25F);
             this.textBox6.ForeColor = System.Drawing.Color.Gray;
-            this.textBox6.Location = new System.Drawing.Point(125, 451);
+            this.textBox6.Location = new System.Drawing.Point(109, 361);
             this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(227, 33);
+            this.textBox6.Size = new System.Drawing.Size(199, 28);
             this.textBox6.TabIndex = 60;
             this.textBox6.Text = "enter phone number";
             // 
@@ -212,10 +209,10 @@
             this.comboBox4.Items.AddRange(new object[] {
             "Korea",
             "USA"});
-            this.comboBox4.Location = new System.Drawing.Point(33, 528);
+            this.comboBox4.Location = new System.Drawing.Point(29, 422);
             this.comboBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 33);
+            this.comboBox4.Size = new System.Drawing.Size(106, 29);
             this.comboBox4.TabIndex = 78;
             this.comboBox4.Text = "Nation";
             // 
@@ -224,9 +221,9 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Noto Sans KR Regular", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label9.ForeColor = System.Drawing.Color.Gray;
-            this.label9.Location = new System.Drawing.Point(27, 490);
+            this.label9.Location = new System.Drawing.Point(24, 392);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(104, 36);
+            this.label9.Size = new System.Drawing.Size(84, 28);
             this.label9.TabIndex = 84;
             this.label9.Text = "Address";
             // 
@@ -236,10 +233,10 @@
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox4.Font = new System.Drawing.Font("Noto Sans KR Light", 10.25F);
             this.textBox4.ForeColor = System.Drawing.Color.Gray;
-            this.textBox4.Location = new System.Drawing.Point(179, 649);
+            this.textBox4.Location = new System.Drawing.Point(157, 519);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(160, 33);
+            this.textBox4.Size = new System.Drawing.Size(140, 28);
             this.textBox4.TabIndex = 82;
             this.textBox4.Text = "Zip-Code (우편번호)";
             // 
@@ -301,10 +298,10 @@
             "West Virginia",
             "Wisconsin",
             "Wyoming"});
-            this.comboBox1.Location = new System.Drawing.Point(346, 649);
+            this.comboBox1.Location = new System.Drawing.Point(303, 519);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 33);
+            this.comboBox1.Size = new System.Drawing.Size(106, 29);
             this.comboBox1.TabIndex = 83;
             this.comboBox1.Text = "State";
             // 
@@ -314,10 +311,10 @@
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox5.Font = new System.Drawing.Font("Noto Sans KR Light", 10.25F);
             this.textBox5.ForeColor = System.Drawing.Color.Gray;
-            this.textBox5.Location = new System.Drawing.Point(33, 649);
+            this.textBox5.Location = new System.Drawing.Point(29, 519);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(139, 33);
+            this.textBox5.Size = new System.Drawing.Size(122, 28);
             this.textBox5.TabIndex = 81;
             this.textBox5.Text = "City";
             // 
@@ -327,10 +324,10 @@
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox7.Font = new System.Drawing.Font("Noto Sans KR Light", 10.25F);
             this.textBox7.ForeColor = System.Drawing.Color.Gray;
-            this.textBox7.Location = new System.Drawing.Point(33, 609);
+            this.textBox7.Location = new System.Drawing.Point(29, 487);
             this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(434, 33);
+            this.textBox7.Size = new System.Drawing.Size(380, 28);
             this.textBox7.TabIndex = 80;
             this.textBox7.Text = "Address2 (Apt/Suite/Bldg) - optional";
             // 
@@ -340,10 +337,10 @@
             this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox8.Font = new System.Drawing.Font("Noto Sans KR Light", 10.25F);
             this.textBox8.ForeColor = System.Drawing.Color.Gray;
-            this.textBox8.Location = new System.Drawing.Point(33, 569);
+            this.textBox8.Location = new System.Drawing.Point(29, 455);
             this.textBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(434, 33);
+            this.textBox8.Size = new System.Drawing.Size(380, 28);
             this.textBox8.TabIndex = 79;
             this.textBox8.Text = "Address1 (Shipping Address)";
             // 
@@ -353,9 +350,9 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Noto Sans KR Regular", 14.25F);
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(27, 686);
+            this.label2.Location = new System.Drawing.Point(24, 549);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 36);
+            this.label2.Size = new System.Drawing.Size(87, 28);
             this.label2.TabIndex = 89;
             this.label2.Text = "Account";
             // 
@@ -365,10 +362,10 @@
             this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox9.Font = new System.Drawing.Font("Noto Sans KR Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox9.ForeColor = System.Drawing.Color.Gray;
-            this.textBox9.Location = new System.Drawing.Point(266, 724);
+            this.textBox9.Location = new System.Drawing.Point(233, 579);
             this.textBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(201, 35);
+            this.textBox9.Size = new System.Drawing.Size(176, 30);
             this.textBox9.TabIndex = 86;
             this.textBox9.Text = "Routing Number";
             // 
@@ -378,10 +375,10 @@
             this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox10.Font = new System.Drawing.Font("Noto Sans KR Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox10.ForeColor = System.Drawing.Color.Gray;
-            this.textBox10.Location = new System.Drawing.Point(33, 766);
+            this.textBox10.Location = new System.Drawing.Point(29, 613);
             this.textBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(434, 35);
+            this.textBox10.Size = new System.Drawing.Size(380, 30);
             this.textBox10.TabIndex = 87;
             this.textBox10.Text = "Account Number";
             // 
@@ -391,25 +388,26 @@
             this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox11.Font = new System.Drawing.Font("Noto Sans KR Regular", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBox11.ForeColor = System.Drawing.Color.Gray;
-            this.textBox11.Location = new System.Drawing.Point(33, 724);
+            this.textBox11.Location = new System.Drawing.Point(29, 579);
             this.textBox11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(226, 35);
+            this.textBox11.Size = new System.Drawing.Size(198, 30);
             this.textBox11.TabIndex = 85;
             this.textBox11.Text = "Bank Name";
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Noto Sans KR Bold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(33, 821);
+            this.button1.Location = new System.Drawing.Point(29, 657);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(434, 56);
+            this.button1.Size = new System.Drawing.Size(380, 45);
             this.button1.TabIndex = 88;
             this.button1.Text = "Modify";
             this.button1.UseVisualStyleBackColor = false;
@@ -421,9 +419,9 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Noto Sans KR Regular", 14.25F);
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(27, 186);
+            this.label3.Location = new System.Drawing.Point(24, 149);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 36);
+            this.label3.Size = new System.Drawing.Size(98, 28);
             this.label3.TabIndex = 90;
             this.label3.Text = "Password";
             // 
@@ -433,9 +431,9 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Noto Sans KR Regular", 14.25F);
             this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(27, 296);
+            this.label5.Location = new System.Drawing.Point(24, 237);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(357, 36);
+            this.label5.Size = new System.Drawing.Size(284, 28);
             this.label5.TabIndex = 93;
             this.label5.Text = "Find Password Question/Reply";
             // 
@@ -445,10 +443,10 @@
             this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.textBox12.ForeColor = System.Drawing.Color.Gray;
-            this.textBox12.Location = new System.Drawing.Point(33, 374);
+            this.textBox12.Location = new System.Drawing.Point(29, 299);
             this.textBox12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(434, 31);
+            this.textBox12.Size = new System.Drawing.Size(380, 26);
             this.textBox12.TabIndex = 92;
             this.textBox12.Text = "Reply";
             // 
@@ -464,10 +462,10 @@
             "What was your dream in your childhood?",
             "Whom do you respect most?",
             "What is your favorite movie?"});
-            this.comboBox6.Location = new System.Drawing.Point(33, 334);
+            this.comboBox6.Location = new System.Drawing.Point(29, 267);
             this.comboBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(434, 33);
+            this.comboBox6.Size = new System.Drawing.Size(380, 28);
             this.comboBox6.TabIndex = 91;
             this.comboBox6.Text = "Question";
             // 
@@ -476,18 +474,18 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Noto Sans KR Bold", 20F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(25, 58);
+            this.label7.Location = new System.Drawing.Point(22, 46);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(280, 50);
+            this.label7.Size = new System.Drawing.Size(220, 40);
             this.label7.TabIndex = 94;
             this.label7.Text = "My Information";
             // 
             // MyInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(514, 900);
+            this.ClientSize = new System.Drawing.Size(450, 720);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox12);
@@ -514,7 +512,6 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MyInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "MyInfo";

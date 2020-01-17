@@ -1156,7 +1156,15 @@ namespace _20180829
                 MessageBox.Show("You have clicked Cancel Button");
             }
         }
+        private void button13_MouseHover(object sender, EventArgs e)
+        {
+            button13.Font = new Font("Noto Sans KR Light", 9, FontStyle.Underline);
+        }
 
+        private void button13_MouseLeave(object sender, EventArgs e)
+        {
+            button13.Font = new Font("Noto Sans KR Light", 9, FontStyle.Regular);
+        }
         //휴가신청 폼 열기
         private void button7_Click(object sender, EventArgs e)
         {
@@ -1223,6 +1231,8 @@ namespace _20180829
             }
             button11.Visible = false;
         }
+
+        
 
         private void button12_Click(object sender, EventArgs e)
         {
