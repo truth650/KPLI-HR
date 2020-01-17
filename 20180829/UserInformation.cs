@@ -71,15 +71,15 @@ namespace _20180829
             textBox6.Clear();
             textBox7.Clear();
             textBox8.Clear();
-            textBox9.Clear();
-            textBox10.Clear();
-            textBox11.Clear();
-            textBox12.Clear();
+            textBox19.Clear();
+            textBox20.Clear();
+            textBox21.Clear();
+            textBox22.Clear();
             textBox13.Clear();
-            textBox14.Clear();
-            textBox15.Clear();
+            textBox23.Clear();
+            textBox25.Clear();
             textBox16.Clear();
-            textBox17.Clear();
+            textBox24.Clear();
             textBox17.Clear();
             textBox18.Clear();
 
@@ -97,34 +97,34 @@ namespace _20180829
                         textBox3.Text = Login.UserList[i].F_Name + " " + Login.UserList[i].L_NAME;
                         textBox4.Text = Login.UserList[i].Year.ToString() + "-" + Login.UserList[i].Month.ToString() + "-" + Login.UserList[i].Day.ToString();
                         textBox5.Text = Login.UserList[i].Phone.ToString();
-                        textBox6.Text = Login.UserList[i].Addr1 + " " + Login.UserList[i].Addr2;
+                        textBox6.Text = Login.UserList[i].Addr1 + " " + Login.UserList[i].Addr2 + Login.UserList[i].Addr_City;
                         textBox7.Text = Login.UserList[i].Addr_Zip.ToString();
                         textBox8.Text = Login.UserList[i].Gender;
-                        textBox9.Text = Login.UserList[i].Office;
-                        textBox10.Text = Login.UserList[i].Department;
-                        textBox11.Text = Login.UserList[i].Position;
-                        textBox12.Text = Login.UserList[i].Join_Date.ToString("yyyy-mm-dd HH:mm:ss");
+                        textBox20.Text = Login.UserList[i].Office;
+                        textBox22.Text = Login.UserList[i].Department;
+                        textBox24.Text = Login.UserList[i].Position;
+                        textBox25.Text = Login.UserList[i].Join_Date.ToString("yyyy-mm-dd HH:mm:ss");
                         textBox13.Text = Login.UserList[i].Ssn.ToString();
-                        textBox14.Text = Login.UserList[i].Bank;
-                        textBox15.Text = Login.UserList[i].Routing_Num.ToString();
-                        textBox16.Text = Login.UserList[i].Account_Num.ToString();
+                        textBox23.Text = Login.UserList[i].Bank;
+                        textBox21.Text = Login.UserList[i].Routing_Num.ToString();
+                        textBox19.Text = Login.UserList[i].Account_Num.ToString();
                         textBox17.Text = Login.UserList[i].Question;
                         textBox18.Text = Login.UserList[i].Answer;
                         if(Login.UserList[i].Authority == 1)
                         {
-                            comboBox1.Text = "Employee";
+                            comboBox2.Text = "Employee";
                         }
                         if (Login.UserList[i].Authority == 2)
                         {
-                            comboBox1.Text = "Accounting Manager";
+                            comboBox2.Text = "Accounting Manager";
                         }
                         if (Login.UserList[i].Authority == 3)
                         {
-                            comboBox1.Text = "HR Manager";
+                            comboBox2.Text = "HR Manager";
                         }
                         if (Login.UserList[i].Authority == 4)
                         {
-                            comboBox1.Text = "Administrator";
+                            comboBox2.Text = "Administrator";
                         }
 
                         id = Login.UserList[i].Id;

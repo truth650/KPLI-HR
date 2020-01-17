@@ -111,10 +111,11 @@ namespace _20180829
         //메인
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Main m_form = new Main();
-            m_form.ShowDialog();
-            this.Close();
+                this.Hide();
+                Main m_form = new Main();
+                m_form.ShowDialog();
+                this.Close();
+       
         }
         private void button2_MouseDown(object sender, MouseEventArgs e)
         {
@@ -125,10 +126,11 @@ namespace _20180829
         //게시판
         private void button4_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            B_board b_form = new B_board();
-            b_form.ShowDialog();
-            this.Close();
+                this.Hide();
+                B_board b_form = new B_board();
+                b_form.ShowDialog();
+                this.Close();
+            
         }
         private void button4_MouseDown(object sender, MouseEventArgs e)
         {
@@ -139,10 +141,12 @@ namespace _20180829
         //급여관리
         private void button6_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Payroll p_form = new Payroll();
-            p_form.ShowDialog();
-            this.Close();
+
+                this.Hide();
+                Payroll p_form = new Payroll();
+                p_form.ShowDialog();
+                this.Close();
+            
         }
         private void button6_MouseDown(object sender, MouseEventArgs e)
         {
@@ -153,7 +157,6 @@ namespace _20180829
         //관리자모드
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Login.UserList[Login.LoginIndex].Authority.ToString());
             if (Login.UserList[Login.LoginIndex].Authority == 1)
             {
                 MessageBox.Show("관리자 권한이 없습니다.");
@@ -1153,7 +1156,15 @@ namespace _20180829
                 MessageBox.Show("You have clicked Cancel Button");
             }
         }
+        private void button13_MouseHover(object sender, EventArgs e)
+        {
+            button13.Font = new Font("Noto Sans KR Light", 9, FontStyle.Underline);
+        }
 
+        private void button13_MouseLeave(object sender, EventArgs e)
+        {
+            button13.Font = new Font("Noto Sans KR Light", 9, FontStyle.Regular);
+        }
         //휴가신청 폼 열기
         private void button7_Click(object sender, EventArgs e)
         {
@@ -1220,6 +1231,8 @@ namespace _20180829
             }
             button11.Visible = false;
         }
+
+        
 
         private void button12_Click(object sender, EventArgs e)
         {
