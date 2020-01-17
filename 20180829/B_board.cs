@@ -411,6 +411,7 @@ namespace _20180829
                                 button[j].Text = Login.BoardList[i].Time.ToString("yyyy-MM-dd HH:mm:ss");
                                 button[j].Size = new Size(150, 50);
                                 button[j].Enabled = false;
+
                             }
                             button[j].Font = new Font("Noto Sans KR", 9, FontStyle.Regular);
                             button[j].FlatStyle = System.Windows.Forms.FlatStyle.Flat;

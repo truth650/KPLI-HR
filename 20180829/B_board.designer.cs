@@ -386,6 +386,10 @@
             this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(600, 28);
+            this.panel8.Location = new System.Drawing.Point(303, 675);
+            this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(400, 22);
             this.panel8.TabIndex = 38;
             // 
             // B_board
